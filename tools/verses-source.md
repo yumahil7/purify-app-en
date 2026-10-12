@@ -78,8 +78,8 @@ Checked: 2026-10-12 · 116 references · verified 116 · excluded 0
 | Matthew 4:11 | ✅ verified | Then the devil leaveth him, and, behold, angels came and ministered unto him. |
 | Matthew 5:6 | ✅ verified | Blessed are they which do hunger and thirst after righteousness: for they shall be filled. |
 | Matthew 6:11 | ✅ verified | Give us this day our daily bread. |
-| Matthew 6:16-18 | ✅ verified | Moreover when ye fast, be not, as the hypocrites, of a sad countenance: for they disfigure their faces, that they may appear unto men to fast. Verily I say unto you, They have their reward. But thou, when thou fastest, anoint thine head, and wash thy face; That thou appear not unto men to fast, but unto thy Father which is in secret: and thy Father, which seeth in secret, shall reward thee openly. |
 | Matthew 6:16 | ✅ verified | Moreover when ye fast, be not, as the hypocrites, of a sad countenance: for they disfigure their faces, that they may appear unto men to fast. Verily I say unto you, They have their reward. |
+| Matthew 6:16-18 | ✅ verified | Moreover when ye fast, be not, as the hypocrites, of a sad countenance: for they disfigure their faces, that they may appear unto men to fast. Verily I say unto you, They have their reward. But thou, when thou fastest, anoint thine head, and wash thy face; That thou appear not unto men to fast, but unto thy Father which is in secret: and thy Father, which seeth in secret, shall reward thee openly. |
 | Matthew 6:17-18 | ✅ verified | But thou, when thou fastest, anoint thine head, and wash thy face; That thou appear not unto men to fast, but unto thy Father which is in secret: and thy Father, which seeth in secret, shall reward thee openly. |
 | Matthew 7:7 | ✅ verified | Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you: |
 | Matthew 11:28 | ✅ verified | Come unto me, all ye that labour and are heavy laden, and I will give you rest. |
@@ -94,16 +94,16 @@ Checked: 2026-10-12 · 116 references · verified 116 · excluded 0
 | John 14:27 | ✅ verified | Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid. |
 | John 15:5 | ✅ verified | I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing. |
 | John 21:12 | ✅ verified | Jesus saith unto them, Come and dine. And none of the disciples durst ask him, Who art thou? knowing that it was the Lord. |
-| Acts 13:2-3 | ✅ verified | As they ministered to the Lord, and fasted, the Holy Ghost said, Separate me Barnabas and Saul for the work whereunto I have called them. And when they had fasted and prayed, and laid their hands on them, they sent them away. |
 | Acts 13:2 | ✅ verified | As they ministered to the Lord, and fasted, the Holy Ghost said, Separate me Barnabas and Saul for the work whereunto I have called them. |
+| Acts 13:2-3 | ✅ verified | As they ministered to the Lord, and fasted, the Holy Ghost said, Separate me Barnabas and Saul for the work whereunto I have called them. And when they had fasted and prayed, and laid their hands on them, they sent them away. |
 | Acts 27:33 | ✅ verified | And while the day was coming on, Paul besought them all to take meat, saying, This day is the fourteenth day that ye have tarried and continued fasting, having taken nothing. |
 | Acts 27:34 | ✅ verified | Wherefore I pray you to take some meat: for this is for your health: for there shall not an hair fall from the head of any of you. |
 | Romans 8:26 | ✅ verified | Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but the Spirit itself maketh intercession for us with groanings which cannot be uttered. |
 | Romans 12:1 | ✅ verified | I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, which is your reasonable service. |
 | Romans 12:2 | ✅ verified | And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God. |
 | Romans 15:13 | ✅ verified | Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost. |
-| 1 Corinthians 6:19 | ✅ verified | What? know ye not that your body is the temple of the Holy Ghost which is in you, which ye have of God, and ye are not your own? |
 | 1 Corinthians 6:19-20 | ✅ verified | What? know ye not that your body is the temple of the Holy Ghost which is in you, which ye have of God, and ye are not your own? For ye are bought with a price: therefore glorify God in your body, and in your spirit, which are God’s. |
+| 1 Corinthians 6:19 | ✅ verified | What? know ye not that your body is the temple of the Holy Ghost which is in you, which ye have of God, and ye are not your own? |
 | 1 Corinthians 9:24 | ✅ verified | Know ye not that they which run in a race run all, but one receiveth the prize? So run, that ye may obtain. |
 | 1 Corinthians 9:25 | ✅ verified | And every man that striveth for the mastery is temperate in all things. Now they do it to obtain a corruptible crown; but we an incorruptible. |
 | 1 Corinthians 9:26 | ✅ verified | I therefore so run, not as uncertainly; so fight I, not as one that beateth the air: |

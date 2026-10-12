@@ -537,8 +537,8 @@ const KRV = {
 "Matthew 4:11": "Then the devil leaveth him, and, behold, angels came and ministered unto him.",
 "Matthew 5:6": "Blessed are they which do hunger and thirst after righteousness: for they shall be filled.",
 "Matthew 6:11": "Give us this day our daily bread.",
-"Matthew 6:16-18": "Moreover when ye fast, be not, as the hypocrites, of a sad countenance: for they disfigure their faces, that they may appear unto men to fast. Verily I say unto you, They have their reward. But thou, when thou fastest, anoint thine head, and wash thy face; That thou appear not unto men to fast, but unto thy Father which is in secret: and thy Father, which seeth in secret, shall reward thee openly.",
 "Matthew 6:16": "Moreover when ye fast, be not, as the hypocrites, of a sad countenance: for they disfigure their faces, that they may appear unto men to fast. Verily I say unto you, They have their reward.",
+"Matthew 6:16-18": "Moreover when ye fast, be not, as the hypocrites, of a sad countenance: for they disfigure their faces, that they may appear unto men to fast. Verily I say unto you, They have their reward. But thou, when thou fastest, anoint thine head, and wash thy face; That thou appear not unto men to fast, but unto thy Father which is in secret: and thy Father, which seeth in secret, shall reward thee openly.",
 "Matthew 6:17-18": "But thou, when thou fastest, anoint thine head, and wash thy face; That thou appear not unto men to fast, but unto thy Father which is in secret: and thy Father, which seeth in secret, shall reward thee openly.",
 "Matthew 7:7": "Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you:",
 "Matthew 11:28": "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
@@ -553,16 +553,16 @@ const KRV = {
 "John 14:27": "Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.",
 "John 15:5": "I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing.",
 "John 21:12": "Jesus saith unto them, Come and dine. And none of the disciples durst ask him, Who art thou? knowing that it was the Lord.",
-"Acts 13:2-3": "As they ministered to the Lord, and fasted, the Holy Ghost said, Separate me Barnabas and Saul for the work whereunto I have called them. And when they had fasted and prayed, and laid their hands on them, they sent them away.",
 "Acts 13:2": "As they ministered to the Lord, and fasted, the Holy Ghost said, Separate me Barnabas and Saul for the work whereunto I have called them.",
+"Acts 13:2-3": "As they ministered to the Lord, and fasted, the Holy Ghost said, Separate me Barnabas and Saul for the work whereunto I have called them. And when they had fasted and prayed, and laid their hands on them, they sent them away.",
 "Acts 27:33": "And while the day was coming on, Paul besought them all to take meat, saying, This day is the fourteenth day that ye have tarried and continued fasting, having taken nothing.",
 "Acts 27:34": "Wherefore I pray you to take some meat: for this is for your health: for there shall not an hair fall from the head of any of you.",
 "Romans 8:26": "Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought: but the Spirit itself maketh intercession for us with groanings which cannot be uttered.",
 "Romans 12:1": "I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, which is your reasonable service.",
 "Romans 12:2": "And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God.",
 "Romans 15:13": "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
-"1 Corinthians 6:19": "What? know ye not that your body is the temple of the Holy Ghost which is in you, which ye have of God, and ye are not your own?",
 "1 Corinthians 6:19-20": "What? know ye not that your body is the temple of the Holy Ghost which is in you, which ye have of God, and ye are not your own? For ye are bought with a price: therefore glorify God in your body, and in your spirit, which are God’s.",
+"1 Corinthians 6:19": "What? know ye not that your body is the temple of the Holy Ghost which is in you, which ye have of God, and ye are not your own?",
 "1 Corinthians 9:24": "Know ye not that they which run in a race run all, but one receiveth the prize? So run, that ye may obtain.",
 "1 Corinthians 9:25": "And every man that striveth for the mastery is temperate in all things. Now they do it to obtain a corruptible crown; but we an incorruptible.",
 "1 Corinthians 9:26": "I therefore so run, not as uncertainly; so fight I, not as one that beateth the air:",
@@ -2495,6 +2495,13 @@ const TX = {
   seek:'New to the Bible? ›',
   prayerL1:'A one-line prayer for today · ',
   exDone:' done',
+  afIdle:'When you fast, your body cleans itself',
+  afHrs:'{0} h fasted',
+  afS0:'your body is getting ready to clean',
+  afS1:'you may be starting to burn fat',
+  afS2:'autophagy may be starting to switch on',
+  afS3:'autophagy may be picking up',
+  afAria:'Open the autophagy story',
 };
 function txf(k) { let s = TX[k]; for (let i = 1; i < arguments.length; i++) s = s.split('{' + (i - 1) + '}').join(arguments[i]); return s; }
 function isUS() { return typeof uMode === 'function' && uMode() === 'us'; }
@@ -2502,7 +2509,8 @@ function volS(ml) { return typeof volTxt === 'function' ? volTxt(ml, true) : com
 function fastGoal() { const pr = PROGRAMS[progId()]; return progActive() && pr.timer ? pr.timer : 12; }
 (function () {
   const st = document.createElement('style');
-  st.textContent = '.core .crow{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line);}' +
+  st.textContent = '.afline{display:flex;align-items:center;gap:8px;margin:0 0 10px;padding:9px 12px;border-radius:12px;background:rgba(180,201,166,.10);color:var(--fg,#ebe5d6);font-size:14px;cursor:pointer;white-space:nowrap;overflow:hidden;}.afline span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.afline i{font-style:normal;opacity:.6;}' +
+    '.core .crow{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line);}' +
     '.core .crow:first-of-type{border-top:none;} .core .cic{width:40px;height:40px;border-radius:20px;border:2px solid rgba(180,201,166,.5);display:flex;align-items:center;justify-content:center;font-size:20px;flex:none;}' +
     '.core .crow.done .cic{background:var(--p);color:#17241f;border-color:var(--p);} .core .ctx{flex:1;min-width:0;cursor:pointer;} .core .ctx b{font-size:17px;} .core .ctx small{display:block;color:var(--m);font-size:13.5px;}' +
     '.core .cbtn{width:auto;min-width:96px;min-height:48px;padding:8px 14px;margin:0;} .corecount{color:var(--p);} .core .bar{margin:6px 0 0;}' +
@@ -2657,6 +2665,14 @@ function weighCard(T, daily) {
 }
 
 // ---------- Today ----------
+function afFasting() { const id = progId(); return (id === 'waterfast' && progActive()) || !!(S.timer && S.timer.running); }
+function afLineText() {
+  if (!afFasting()) return '🔆 ' + TX.afIdle;
+  const h = afHours(), i = h >= 24 ? 3 : h >= 16 ? 2 : h >= 12 ? 1 : 0;
+  return '🔆 ' + txf('afHrs', Math.floor(h)) + ' · ' + TX['afS' + i];
+}
+function afLine() { return '<div class="afline" id="afLine" role="button" tabindex="0" aria-label="' + TX.afAria + '" onclick="openHealth(\'auto\')" onkeydown="if(event.key===\'Enter\')openHealth(\'auto\')"><span id="afLineT">' + afLineText() + '</span><i>›</i></div>'; }
+setInterval(() => { try { const t = document.getElementById('afLineT'); if (t) { const v = afLineText(); if (t.textContent !== v) t.textContent = v; } } catch(e) {} }, 15000);
 renderToday = function () {
   const el = document.getElementById('s-today'); if (!el) return;
   checkTransitions();
@@ -2665,6 +2681,7 @@ renderToday = function () {
   coreState(T); autoSync(T); save();
   const who = S.name ? esc(S.name) + TX.whoSfx : '';
   let h = '<h2 style="margin-bottom:2px;">' + who + greet() + '</h2><p class="muted" style="margin-bottom:14px;">' + fmtMD(T) + ' · ' + tone().greet + '</p>';
+  h += afLine();
   h += coreCard(T, x, P, pid, active);
   const dc = doneCount();
   h += '<div class="card"><div class="ringwrap">' + ring(dc / progLen(), active ? txf('ringDay', n) : TX.ringDone, txf('ringOf', progLen())) +
