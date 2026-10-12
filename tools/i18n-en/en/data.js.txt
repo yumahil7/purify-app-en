@@ -1,0 +1,276 @@
+@@ c37c97d817
+  { r:'1 Corinthians 10:31', e:'Even ordinary eating and drinking can be lived with meaning. Every meal is a gift to receive with thanks.', a:'Put your phone down for one meal today and eat slowly, with gratitude.' },
+@@ 69beb8bb65
+  { r:'1 Corinthians 6:19-20', e:'Your body is a precious gift entrusted to you. Caring for it is itself a holy thing.', a:'Drink one extra glass of water today, for your body’s sake.' },
+@@ 739fdfc4fb
+  { r:'2 Corinthians 5:17', e:'Anyone can begin again. Your past failures don’t define you.', a:'Make today day one of a fresh start, and write down one small goal.' },
+@@ ab84ee7afa
+  { r:'John 3:3', e:'Being “born again” means a heart made new. Just as habits of the body can change, so can the heart.', a:'Choose one habit you’d like to change, starting today.' },
+@@ 087f80a662
+  { r:'1 Corinthians 9:27', e:'Paul trained his body like an athlete. Self-control isn’t punishment — it’s practice toward a goal.', a:'Finish one of today’s exercises all the way through.' },
+@@ b78da938d6
+  { r:'Galatians 5:22-23', e:'Love, joy, peace… and self-control. Good fruit isn’t forced out; it grows slowly.', a:'Try just one small act of restraint — like warm tea instead of a late-night snack.' },
+@@ 2a97d8f404
+  { r:'Matthew 6:16', e:'Don’t fast or hold back just to be seen. Doing it quietly, before God, is enough.', a:'Instead of telling anyone about today’s effort, simply record it quietly.' },
+@@ 04ebe3041b
+  { r:'Matthew 6:17-18', e:'Rather than showing how hard it is, carry yourself with dignity. Even if no one knows, your effort matters.', a:'Wash your face this morning and smile once at the person in the mirror.' },
+@@ 9972570ad1
+  { r:'Isaiah 58:6', e:'True fasting is less about going hungry and more about loosening what binds us and our neighbors.', a:'Use what you saved on snacks today to do a small kindness for someone.' },
+@@ 553298a767
+  { r:'Joel 2:12', e:'“Even now” — a warm invitation that the moment you feel it’s too late is the moment to begin again.', a:'It’s okay if yesterday didn’t go well. Start again today.' },
+@@ 30a8e26fb7
+  { r:'Matthew 4:4', e:'We don’t live on bread alone, but on the words that fill our hearts.', a:'When hunger hits, read this verse out loud once.' },
+@@ a8b754f9ac
+  { r:'Philippians 4:13', e:'A confession that when it’s too much for us alone, the One who gives strength is with us.', a:'Try one thing today that you’ve been putting off.' },
+@@ 1229cd7273
+  { r:'Isaiah 40:31', e:'A promise that even when we’re weary and worn out, we can receive new strength.', a:'Pause and take three slow, deep breaths.' },
+@@ 53e26b5912
+  { r:'Romans 12:1', e:'Every day we live in our bodies can become an act of worship.', a:'Turn today’s walk into a time of thanksgiving.' },
+@@ 026a03371d
+  { r:'Proverbs 25:28', e:'Without self-control we’re like a city with no walls — easily shaken.', a:'When an urge comes, wait just ten minutes.' },
+@@ f3781814e5
+  { r:'Proverbs 16:32', e:'Wisdom says the one who rules their own spirit is truly strong.', a:'When stress hits, start with a glass of water before you eat.' },
+@@ 37c3f5d102
+  { r:'Matthew 26:41', e:'Jesus knew the spirit is willing but the flesh is weak — so He told us to watch ahead of time.', a:'Plan ahead for your toughest hour (say, 10 pm).' },
+@@ 5ac514cb4e
+  { r:'1 Thessalonians 5:16-18', e:'Rejoice, pray often like an ongoing conversation, and give thanks even for small things.', a:'Before bed, write down three things you’re thankful for.' },
+@@ 43d88264ef
+  { r:'Philippians 4:6', e:'An invitation not to clutch your worries alone, but to pour them out to God.', a:'Write down one worry and practice letting it go.' },
+@@ 09094dd5a2
+  { r:'Jeremiah 33:3', e:'A promise that He answers when we call. Prayer is a conversation with no required format.', a:'Even briefly, share what’s on your heart today.' },
+@@ 3caa21db46
+  { r:'Daniel 1:12', e:'Daniel proposed ten days of vegetables and water. A simple diet can be a healthy one.', a:'Fill half your plate with vegetables at one meal today.' },
+@@ 1672d0ac0f
+  { r:'Daniel 10:3', e:'For three weeks Daniel set aside rich food, meat and wine to focus his heart.', a:'Swap one sweet drink for water today.' },
+@@ f47242a92a
+  { r:'Ezra 8:23', e:'Before an important journey they fasted and sought God’s help — and were answered.', a:'Write down the one thing you long for most right now.' },
+@@ 58ed4cef2c
+  { r:'Nehemiah 1:4', e:'Faced with heartbreaking news, Nehemiah fasted and poured out his heart in prayer.', a:'If something is weighing on you, pour it out in today’s reflection.' },
+@@ cbe1146152
+  { r:'Acts 13:2', e:'The early church fasted together as they prepared for important decisions. Together we’re stronger.', a:'Share today’s log with a friend who’s walking with you.' },
+@@ 020891e428
+  { r:'1 Timothy 4:8', e:'Exercise is good, but the health of heart and soul is good for even more. Care for both.', a:'Ten minutes of exercise, and five minutes caring for your soul.' },
+@@ 7360359483
+  { r:'3 John 1:2', e:'A warm blessing wishing health for both soul and body.', a:'Speak this blessing over yourself today — and over a friend.' },
+@@ 4b10064dc1
+  { r:'Psalm 46:1', e:'A confession that there is One who is our refuge when life is hard.', a:'In a hard moment, reach out to someone you can lean on.' },
+@@ 3ec2b91cd2
+  { r:'Nehemiah 8:10', e:'Joy, more than worry, is what gives us strength to keep going.', a:'Do one thing today that makes you smile.' },
+@@ 5dae39276d
+  { r:'2 Corinthians 12:9', e:'Weakness isn’t shameful — it’s the very place grace shows up.', a:'If you slip today, don’t beat yourself up.' },
+@@ 60b5371cb7
+  { r:'Hebrews 12:11', e:'Training is hard in the moment, but later it yields the peaceful fruit.', a:'Today’s small effort is quietly adding up.' },
+@@ 3ec785dbe0
+  { r:'Titus 2:12', e:'An encouragement to live calmly and uprightly instead of being swept along by cravings.', a:'Cut 30 minutes of screen time today.' },
+@@ 88dcfd5afb
+  { r:'Psalm 23:1', e:'With a Shepherd who cares for me, I lack nothing.', a:'Think of one thing you already have that you’re grateful for.' },
+@@ 45926e3a64
+  { r:'John 6:35', e:'Jesus called Himself the “bread of life” — the One who fills even the hunger of the heart.', a:'When you feel empty, ask yourself whether it’s really food you need.' },
+@@ ce3f18feb3
+  { r:'Daniel 1:8', e:'Daniel “purposed in his heart” before temptation came. Deciding ahead of time keeps us steady.', a:'This morning, decide on and write down one thing you’ll keep today.' },
+@@ effd1a908d
+  { r:'1 Corinthians 9:25', e:'Just as athletes are temperate in all things for a prize, we hold back for something far more precious.', a:'Set one thing down today, and picture what you’ll gain instead.' },
+@@ bff1447dd6
+  { r:'Hebrews 12:1', e:'Life isn’t a sprint but a steady race. Lay aside what weighs you down and you can go farther.', a:'Clear away one habit that weighs you down today.' },
+@@ 494f1bc1ab
+  { r:'Philippians 3:13-14', e:'A resolve to leave past failures behind and press on toward the goal ahead.', a:'Don’t be bound by yesterday’s numbers; focus on today’s one step.' },
+@@ 1ceaffa892
+  { r:'Proverbs 16:3', e:'Commit your plans to the Lord and He establishes them. You don’t have to carry it all yourself.', a:'Hand today’s plans to God in a short prayer.' },
+@@ 8ee1b57a99
+  { r:'Joshua 1:9', e:'An encouragement not to fear the road ahead. Wherever you go, He is with you.', a:'When fear comes, remember this verse.' },
+@@ f3358f8155
+  { r:'Galatians 6:9', e:'Keep doing good and in due season you’ll reap. Don’t grow weary.', a:'Praise yourself today for not giving up.' },
+@@ 8143cf3c10
+  { r:'Psalm 63:1', e:'A longing for God like a dry and thirsty land. Hunger can become earnest prayer.', a:'Each time you feel hungry, pray a short prayer.' },
+@@ 7b87c87312
+  { r:'John 4:14', e:'To us who thirst again and again, He promises a spring that never runs dry.', a:'Make sure you reach your water goal today.' }
+@@ b0b03f3c44
+  'Help me treat my body as a precious gift.', 'Make me thankful in all my eating and drinking.', 'In every moment of hunger, fill me with Your Word.',
+@@ 2cd4f83a5f
+  'I pray for my family’s health and peace.', 'Let the fruit of self-control grow in my life.', 'Give strength to the brothers and sisters walking with me.',
+@@ 340ae1b85c
+  'I pray for neighbors who are sick and weak.', 'Break the habits that bind me.', 'I pray for my church and those who serve.',
+@@ 855337aa19
+  'Keep me from losing a thankful heart.', 'Guard my wavering heart and give me new strength.', 'I pray for a friend who doesn’t yet know the Lord.'
+@@ b3b6c06295
+  { id:'1', n:'Mostly sitting', s:'Desk job · little or no exercise', f:1.2 },
+@@ ab32450195
+  { id:'2', n:'Lightly active', s:'Walks or light exercise 1–3 times a week', f:1.375 },
+@@ f3840ee289
+  { id:'3', n:'Moderately active', s:'Exercise 3–5 times a week', f:1.55 },
+@@ e640276a4f
+  { id:'4', n:'Very active', s:'Exercise 6–7 times a week or physical work', f:1.725 }
+@@ 50fb256d7a
+  ['preg','I’m pregnant or breastfeeding'], ['diab','I have diabetes'], ['meds','I take medication regularly'],
+@@ e31d7a03f9
+  ['htn','I have high blood pressure'], ['ed','I have a history of an eating disorder (anorexia, bingeing, etc.)'], ['minor','I’m under 18'], ['t1d','I have type 1 diabetes or use insulin']
+@@ 05e875d1cf
+const LENT_OPTS = ['Media & social media', 'Snacks', 'Coffee & sweet drinks', 'Meat', 'Shopping & takeout', 'Games & streaming'];
+@@ 8eed110597
+  basic: { cat:'faith', name:'Healthy Habits of Self-Control', icon:'🌿', days:30, diff:'Easy', label:'Basic · no fasting', who:'Beginners — anyone', fasting:false, timer:0,
+@@ a1b40caeeb
+    desc:'No fasting — three balanced meals a day. Over 30 days, turn meals, movement, water and Scripture into habits.',
+@@ 156cd79c7c
+    items:['Eat the suggested meal plan', 'Reach my water goal', 'Do today’s exercise', 'Read today’s verse'],
+@@ 54ae849513
+    guide:d => d <= 7 ? 'Week one. Consistency matters more than perfection — keeping even one thing is a win.' : d <= 14 ? 'Week two: learn to tell real hunger from habit cravings.' : d <= 21 ? 'Week three: add five more minutes to your exercise.' : 'Final week: look back on the changes in body and heart, and give thanks.' },
+@@ 9477659600
+  if168: { cat:'faith', name:'Intermittent Fasting 16:8', icon:'⏱', days:7, diff:'Moderate', label:'7 days', who:'Healthy adults who can keep regular mealtimes', fasting:true, timer:16,
+@@ b08bedd2fd
+    desc:'Fast for 16 hours and eat within an 8-hour window (12 pm–8 pm). While fasting: only water and unsweetened tea.',
+@@ cbf1418faf
+    items:['Keep the 16-hour fast', 'Finish eating within 8 hours', 'Reach my water goal', '10 minutes of Scripture & prayer'],
+@@ e1164277b5
+    guide:d => ['Day 1: Fast after 8 pm → first meal at noon tomorrow. Try starting the timer.', 'Hunger comes and goes like a wave. When it hits, have a glass of water and a short prayer.', 'Make your first meal protein and vegetables, eaten slowly.', 'Seven or more hours of sleep makes fasting much easier.', 'Take light walks during your eating window. Avoid hard workouts while fasted.', 'Record the changes in your body and the things you’re thankful for.', 'Finish line! Decide, based on how you feel, whether to continue or drop to 2–3 days a week.'][d-1] || '' },
+@@ 3bc50728c2
+  daniel: { cat:'faith', name:'Daniel Fast 21 Days', icon:'🥗', days:21, diff:'Moderate', label:'21 days', who:'Adults who want to simplify how they eat', fasting:true, timer:0, plant:true,
+@@ 9202a607c6
+    desc:'Built around vegetables, grains, beans, fruit and water. Set aside meat, sweets and alcohol. (Daniel 1:12, 10:3)',
+@@ bc061fe002
+    items:['Meals built on vegetables, grains & beans', 'Mostly water to drink (no sweet drinks or alcohol)', 'No meat or sweets', '15 minutes of prayer & Scripture'],
+@@ 4c0d518a50
+    guide:d => d <= 3 ? 'Starting week: stock up on vegetables, brown rice, beans, tofu and fruit. Cutting back on caffeine may bring headaches.' : d <= 7 ? 'Get your protein from beans, tofu and nuts. Try not to skip any of your three meals.' : d <= 14 ? 'Midpoint: keep it varied with greens, lettuce wraps and vegetable soups.' : d <= 20 ? 'Final week: “till three whole weeks were fulfilled” (Daniel 10:3) — gather your heart in prayer.' : 'Finish line! Reintroduce meat and sweets slowly over several days.' },
+@@ 6dfb1560e9
+  lent: { cat:'faith', name:'Lenten 40-Day Fast', icon:'✝', days:40, diff:'Easy–Moderate', label:'40 days · can be non-food', who:'Those who want to give up something besides food, too', fasting:false, timer:0, hasOpt:true,
+@@ feab96a8a9
+    desc:'Choose one thing — media, snacks or the like — to give up for 40 days, and fill that space with Scripture and prayer.',
+@@ b59498f0d0
+    items:['Read one chapter of Scripture', '10 minutes of prayer', 'Keep my chosen fast', 'One small kindness for a neighbor'],
+@@ 5b2061238f
+    guide:d => d === 40 ? 'Day 40: close with thanksgiving, meditating on the joy of the Resurrection.' : ['', 'Week 1: Returning — Joel 2:12', 'Week 2: Tested in the wilderness — Matthew 4:1-4', 'Week 3: The place of prayer — Matthew 26:41', 'Week 4: Loving and sharing with neighbors — Isaiah 58:6', 'Week 5: Weakness and grace — 2 Corinthians 12:9', 'Week 6: Holy Week — silence and gratitude'][Math.min(6, Math.ceil(d/7))] },
+@@ 5c5ee48ec4
+  oneday: { cat:'faith', name:'One-Day Fast (24 hours)', icon:'🌙', days:1, diff:'Hard', label:'24 hours', who:'Healthy adults · those who have fasted before', fasting:true, timer:24,
+@@ 4d88c4482d
+    desc:'From after dinner until dinner the next day — 24 hours of water and prayer. Break the fast with something light.',
+@@ 8eacd51df6
+    items:['Begin the fast after dinner', 'Plenty of water & unsweetened tea', 'Pray at 3 set times', 'Break the fast lightly with porridge or vegetables'],
+@@ 02930f5ce8
+    guide:() => 'We recommend dinner-to-dinner. Stop right away if you feel dizzy or your heart races. Drink more water than usual.' },
+@@ dc7b675ee5
+  intensive: { cat:'intensive', name:'Focused Weight Loss', icon:'🔥', days:14, lens:[14, 21], diff:'Hard', label:'14 or 21 days', who:'Healthy adults with a BMI of 23 or higher', fasting:true, timer:16, intensive:true,
+@@ f3f0a77307
+    desc:'Cut about 750 kcal a day (never below 1,200 kcal for women or 1,500 for men), with a 16:8 eating window, 30–45 minutes of exercise daily and high-protein meals — focused for 2–3 weeks.',
+@@ 054fd39fb3
+    items:['Keep the 16:8 eating window', 'Eat the protein-rich meal plan', '30–45 minutes of exercise', 'Avoid salty food, sweets & alcohol'],
+@@ 48a81aaf10
+    verses:['Daniel 1:8', '1 Corinthians 9:25', 'Hebrews 12:1', 'Philippians 3:13-14', 'Proverbs 16:3', 'Joshua 1:9', 'Galatians 6:9', 'Proverbs 25:28', '1 Corinthians 9:27', 'Galatians 5:22-23', 'Proverbs 16:32', 'Philippians 4:13', 'Hebrews 12:11', 'Isaiah 40:31'],
+@@ ad1ed36d20
+    guide:d => d <= 3 ? 'In the first few days you lose stored water, so the scale can drop fast. Real fat loss is about ' + wRate(0.5, 1) + ' a week.' : d <= 7 ? 'This is when hunger is strongest. Eat protein and vegetables first, and drink plenty of water.' : d <= 14 ? 'Showing up every day matters more than intensity. Get seven or more hours of sleep.' : 'Final week: renew your resolve (Daniel 1:8) and plan for the maintenance season that follows.' },
+@@ 7fb3365147
+  waterfast: { cat:'water', name:'Water Fast of Prayer & Devotion', icon:'🕯', days:3, custom:true, diff:'Very hard', label:'Your own choice and commitment', who:'Healthy adults (up to 3 days at a healthy weight, up to 40 days at BMI 25+) · who have talked with a doctor', fasting:true, timer:0, water:true,
+@@ 5464ff9fb3
+    desc:'A devotional fast: for the days you choose, you drink only water and go deep in prayer. It’s not about losing weight — it’s a time of commitment and prayer, with daily safety check-ins and a refeeding plan.',
+@@ 4bf1010b9c
+    items:['Reach my water goal', 'Do today’s symptom check', 'Log blood pressure, blood sugar & weight', 'Prayer & Scripture meditation'],
+@@ 22d5d94b84
+    verses:['Matthew 4:4', 'Psalm 63:1', 'Isaiah 58:6', 'Joel 2:12', 'Matthew 6:17-18', 'Ezra 8:23', 'Nehemiah 1:4', 'Acts 13:2', 'John 4:14', 'John 6:35', 'Isaiah 40:31', '2 Corinthians 12:9', 'Psalm 46:1', 'Philippians 4:6'],
+@@ 92dce3ca8f
+  refeed: { cat:'system', system:true, name:'Refeeding', icon:'🥣', days:1, diff:'', label:'Automatic after a fast', who:'', fasting:false, timer:0,
+@@ 7eb7c47d35
+    desc:'After a fast, help your body readjust to food — a little at a time, starting with soft foods.',
+@@ b4852af8fa
+    items:['Only the planned refeeding foods, slowly and in small amounts', 'Drink plenty of water', 'Watch how you feel (swelling, racing heart, shortness of breath)', 'A prayer of thanks'],
+@@ 444cddc895
+  maintain: { cat:'system', system:true, name:'Maintenance Season', icon:'⚖', days:14, diff:'Easy', label:'14 days · maintenance calories', who:'', fasting:false, timer:0,
+@@ 16b9b026ec
+    desc:'Eat at the calories that hold your new weight so your body can settle in. This is the most important time for preventing rebound weight gain.',
+@@ 21ad250924
+    items:['Three meals at maintenance calories', 'Log my weight', '30 minutes of exercise', 'Meditate on one verse'],
+@@ e60b296dca
+    guide:d => d <= 7 ? 'Right after weight loss, appetite can come roaring back. Three regular meals are your best shield.' : 'It’s natural for your weight to move up and down within ' + wRate(2, 4) + '. Look at your log and give thanks.' },
+@@ d8da2fae14
+  companion: { cat:'med', name:'Doctor-Guided Companion for Medication Users', icon:'🤝', days:28, diff:'Easy', label:'28 days · alongside medication', who:'People using a weight-loss medication such as Wegovy or Zepbound', fasting:false, timer:0,
+@@ 94554b707d
+    desc:'Keep taking your medication as prescribed, while building eating, exercise and heart habits you could keep someday even without it.',
+@@ 75e9c5d4f9
+    items:['Regular meals built on protein & vegetables', '20+ minutes of exercise (include strength)', 'Keep an appetite & mood journal', 'Meditate on one verse'],
+@@ a52056bd4a
+    guide:d => d <= 7 ? 'Week 1: take your medication as prescribed. This app never tells you to stop it — this is a time to build habits.' : d <= 14 ? 'Week 2: even as you eat less, protect your muscle with protein and strength training.' : d <= 21 ? 'Week 3: any change in dose (lowering or stopping) must be decided with your doctor. Write down questions for your next visit.' : 'Week 4: after lowering or stopping medication, appetite can rebound. Plan ahead together with your doctor.' }
+@@ 56cfd699e9
+const WF_PHRASE = 'I have talked with my doctor';
+@@ 5d29512021
+const SYMPTOMS = [['dizzy', 'Dizziness'], ['palp', 'Racing or pounding heart'], ['confuse', 'Confusion or fogginess'], ['faint', 'Fainting, or feeling like I might faint'], ['vomit', 'Vomiting']];
+@@ 2e0a2f46bc
+const BODY_CHANGES = [[1, 'Day 1: Your body starts using the sugar stored in your liver (glycogen). Hunger and headaches are common.'], [3, 'Days 2–3: Your body shifts toward burning fat for energy (ketones). Many people say this is the hardest stretch.'], [7, 'Days 4–7: Hunger is often reported to ease, but the risk of electrolyte shortage and dizziness grows. Medical check-ins are essential.'], [14, 'Days 8–14: This is extended-fasting territory. With risks of muscle loss and electrolyte problems, continue only under medical supervision.'], [21, 'Days 15–21: A very long fast. It needs ongoing observation by medical professionals.'], [40, 'Days 22–40: An extremely long fast. Continue only under medical supervision.']];
+@@ 496e0531c2
+  { n:'Stage 1 · Rice water & clear broth', tip:'Start with thin rice water and clear vegetable broth. Half a cup to a cup at a time, slowly.' },
+@@ 8e6329abfd
+  { n:'Stage 2 · Porridge', tip:'Plain rice porridge or vegetable porridge. Eat slowly, as if chewing, and stop before you feel full.' },
+@@ da086a1e41
+  { n:'Stage 3 · Soft foods', tip:'Soft rice, silken tofu, steamed egg, white fish, well-cooked vegetables. Hold off on greasy, fried and sweet foods for now.' },
+@@ c4bd54c6ad
+  { n:'Stage 4 · Back to regular meals', tip:'Return to your usual meals, increasing portions gradually. Avoid salty food and overeating.' }
+@@ e78e39aa86
+  rice:{n:'Brown rice',k:1.5,u:'g',min:80,max:420}, mix:{n:'Mixed-grain rice',k:1.5,u:'g',min:80,max:420}, soba:{n:'Buckwheat soba noodles',k:1.1,u:'g',min:100,max:450},
+@@ e479337649
+  swp:{n:'Sweet potato',k:1.3,u:'g',min:60,max:400}, bread:{n:'Whole-wheat bread',k:2.5,u:'g',min:30,max:180}, oat:{n:'Oatmeal (with soy milk)',k:0.9,u:'g',min:100,max:450},
+@@ 2707e443d9
+  chick:{n:'Grilled chicken breast',k:1.1,u:'g',min:60,max:300}, mack:{n:'Grilled mackerel',k:2.0,u:'g',min:50,max:200}, salmon:{n:'Grilled salmon',k:1.8,u:'g',min:50,max:220},
+@@ 8eb22f23b8
+  beef:{n:'Lean beef stir-fry',k:1.5,u:'g',min:50,max:220}, egg:{n:'Eggs',k:75,u:' pc',min:1,max:4}, yog:{n:'Greek yogurt',k:1.0,u:'g',min:80,max:300},
+@@ ebb390c403
+  tofu:{n:'Pan-seared tofu',k:1.0,u:'g',min:80,max:350}, chickpea:{n:'Chickpea salad',k:1.6,u:'g',min:60,max:250}, lentil:{n:'Braised lentils',k:1.2,u:'g',min:60,max:300},
+@@ a0cc9c870f
+  natto:{n:'Natto',k:2.0,u:'g',min:50,max:150}, soymilk:{n:'Soy milk (unsweetened)',k:0.45,u:'ml',min:190,max:400}, nuts:{n:'Mixed nuts',k:6.0,u:'g',min:10,max:60}
+@@ 854c30459c
+  mieum:{n:'Thin rice water',k:0.4,u:'ml',min:100,max:600}, juk:{n:'Plain rice porridge',k:0.55,u:'g',min:100,max:500}, vjuk:{n:'Vegetable rice porridge',k:0.6,u:'g',min:100,max:500},
+@@ f5f5f3301e
+  jinbap:{n:'Soft-cooked rice',k:1.3,u:'g',min:50,max:300}, sundubu:{n:'Silken tofu',k:0.5,u:'g',min:100,max:400}, eggjjim:{n:'Steamed egg',k:0.9,u:'g',min:80,max:300}, wfish:{n:'Steamed white fish',k:1.0,u:'g',min:50,max:200}
+@@ 677a65e463
+const SIDES = [{n:'Sautéed spinach',k:40},{n:'Broccoli',k:35},{n:'Kimchi or sauerkraut',k:15},{n:'Cucumber salad',k:30},{n:'Sautéed mushrooms',k:50},{n:'Seasoned bean sprouts',k:30},{n:'Sautéed green beans',k:45},{n:'Sautéed zucchini',k:40}];
+@@ 7d864e1691
+const SOUPS = [{n:'Miso soup',k:80},{n:'Seaweed soup',k:60},{n:'Bean sprout soup',k:45},{n:'Cabbage miso soup',k:70}];
+@@ 2cd0b6c9cf
+const BSIDES = [{n:'Green salad',k:35},{n:'10 cherry tomatoes',k:35},{n:'Cucumber & carrot sticks',k:25}];
+@@ 2f7e13d93f
+const FRUITS = [{n:'Half an apple',k:50},{n:'1 banana',k:90},{n:'2 clementines',k:80},{n:'1 kiwi',k:50},{n:'15 cherry tomatoes',k:50}];
+@@ 497d538f16
+const QUICK_FOODS = [['Burger',540],['Instant ramen',500],['Burrito',600],['2 pieces fried chicken',450],['1 slice pizza',285],['Pastry or muffin',350],['Bag of chips',250],['Ice cream',200],['Latte',190],['1 piece of fruit',80]];
+@@ 3f09c443b9
+  walk:{t:'Brisk walk',a:'🚶',met:3.5,min:30,rx:'30 min · a pace where you can still talk',d:'Swing your arms naturally and walk fast enough to breathe a little harder. A walk after meals also helps with blood sugar.'},
+@@ 76ce8a7f9c
+  interval:{t:'Interval walk',a:'🏃',met:5.0,min:30,rx:'3 min fast + 2 min easy × 6',d:'On the fast stretches, walk so you can only speak in short sentences; on the easy ones, catch your breath. If your knees or ankles hurt, switch to a brisk walk on flat ground.'},
+@@ d2c2823f30
+  walk20:{t:'Easy walk',a:'🚶',met:3.0,min:20,rx:'20 min · fine to split it up',d:'Walk on flat ground at a comfortable pace, easy on the knees. Two 10-minute walks are plenty.'},
+@@ 0f8b2591e4
+  chair:{t:'Chair squat',a:'🪑',met:3.5,min:8,rx:'10 reps × 2 sets',d:'Stand in front of a chair, lower until your hips almost touch it, then stand. Keep knees pointing the same way as your toes.'},
+@@ d7720fbd89
+  wallpush:{t:'Wall push-up',a:'🧱',met:3.0,min:6,rx:'10 reps × 2 sets',d:'Stand a step from the wall, hands shoulder-width apart, and slowly bring your chest toward the wall.'},
+@@ 82ea9a4ebe
+  stretch:{t:'Full-body stretch',a:'🤸',met:2.5,min:8,rx:'8 min',d:'Neck → shoulders → chest → lower back → hips → hamstrings, holding each 20–30 seconds. Keep breathing and stop just short of pain.'},
+@@ a58a92960e
+  kick:{t:'Martial-arts kicks',a:'🦵',met:5,min:10,rx:'10 each side × 3 sets',d:'Front, side and roundhouse kicks, slowly. Keep a slight bend in your standing knee and brace your core.'},
+@@ 0ecdb3bd96
+  squat:{t:'Bodyweight squat + lunge',a:'🏋️',met:5,min:10,rx:'12 each × 3 sets',d:'Squat: feet shoulder-width, hips back. Lunge: front knee at 90°, back knee just above the floor.'},
+@@ f5c7384a03
+  db_curl:{t:'Dumbbell curl',a:'💪',met:3.5,min:8,rx:'12 reps × 3 sets',d:'Keep elbows pinned to your sides and curl the dumbbells toward your shoulders. Lower slowly over 2–3 seconds.'},
+@@ 5d68807ea0
+  db_shoulder:{t:'Dumbbell shoulder press',a:'🏋️‍♂️',met:3.5,min:8,rx:'10 reps × 3 sets',d:'Press the dumbbells from shoulder height to overhead. Brace your core so your back doesn’t arch.'},
+@@ 121f27cffe
+  db_lateral:{t:'Lateral raise',a:'🤸‍♂️',met:3.5,min:6,rx:'12 reps × 3 sets',d:'With a slight bend in the elbows, raise your arms out to the sides up to shoulder height.'},
+@@ d13afb4e82
+  db_squat:{t:'Dumbbell squat',a:'🏋️',met:5,min:10,rx:'12 reps × 3 sets',d:'Squat holding a dumbbell in each hand. Keep your weight in your heels.'},
+@@ a01e3c65b6
+  db_row:{t:'Dumbbell row',a:'🔙',met:3.5,min:8,rx:'12 reps × 3 sets',d:'Hinge forward to 45° and pull the dumbbells toward your navel, squeezing your shoulder blades together.'}
+@@ c61f1f8d6a
+  low:{n:'Low-impact', plan:'Joint-friendly exercise · 20–30 min, 5 days a week (walking, chair squats, wall push-ups, stretching)'},
+@@ f52578a4c1
+  easy:{n:'Beginner', plan:'30-min walks 5 days a week + bodyweight strength 2–3 times a week + stretching'},
+@@ 9cb2606bbd
+  mid:{n:'Intermediate', plan:'30-min walks 5 days a week + strength training 3 times a week (with dumbbells)'},
+@@ e1b2b2a465
+  hard:{n:'Active', plan:'40 min, 5–6 days a week · kicks, dumbbell strength + stretching'},
+@@ 54016474a7
+  intense:{n:'Focused', plan:'30–45 min daily · 30-min interval walk + 2 strength exercises'},
+@@ 54aea3f554
+  lowIntense:{n:'Focused · low-impact', plan:'30–45 min daily · 30-min brisk walk + chair squats & wall push-ups (easy on the joints)'},
+@@ 9412c25aae
+  rest:{n:'Rest', plan:'While fasting, only gentle stretching and short walks'}
+@@ 99ed85f691
+const STOP_LIST = ['Dizziness, fainting, or feeling like you might faint', 'Racing or pounding heart, chest pain, shortness of breath', 'Blood sugar under 70 mg/dL, cold sweats or shaky hands', 'Severe headache, confusion, can’t concentrate', 'Ongoing vomiting or diarrhea, or barely urinating'];
+@@ c0349102ab
+const TONE = { vt:'Today’s Verse', rt:'Looking Back on Today', rp:'Write freely — what you’re thankful for, what stayed with you, what you want to pray about', greet:'Another day of caring for yourself — let’s walk it together' };
+@@ 2756145b92
+const PACES = [['slow', '🐢 Slow and healthy', wRate(0.25, 0.5) + ' a week · gentle and sustainable'], ['normal', '🚶 A steady pace', 'About ' + wRate(0.5) + ' a week · balanced'], ['fast', '🔥 Fast and focused', 'A clear push for 2–3 weeks (within a healthy range)'], ['devotion', '🙏 Prayer and self-control matter more than weight', 'I want to care for my heart before my body']];
+@@ 776efba21d
+const MOTIVES = [['health', '💪 I want to get healthier'], ['event', '📅 I have an important event coming up'], ['prevent', '🩺 I want to protect my long-term health'], ['faith', '✝ It’s a decision of faith']];

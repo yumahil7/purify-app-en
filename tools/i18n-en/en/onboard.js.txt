@@ -1,0 +1,235 @@
+@@ 5706807852
+const TAGLINE = 'Not a diet. A path to healing.', TAGSUB = 'Empty, rest, and let your body be made new';
+@@ 6da5c60218
+    '<h1>This is not a diet.</h1><p>It’s not about eating less to lose more.<br>It’s about letting your body rest, empty out,<br>and be rebuilt — <b>a path to health and restoration</b>.</p>',
+@@ 6546cce4a4
+  () => '<div class="mark">🔆</div><h1>Your body has a cleanup crew</h1><p>Your cells wrap up their old, worn-out parts, break them down, and reuse them.</p>' +
+@@ acca927afe
+    '<p>This is called <b>autophagy</b> — literally “self-eating.”</p><p>Professor Yoshinori Ohsumi, who uncovered how it works, received the 2016 Nobel Prize in Physiology or Medicine.</p>',
+@@ e36cc8d53a
+  () => '<div class="mark">🧠</div><h1>When the cleanup stops, things pile up</h1><p>In brains affected by Alzheimer’s and Parkinson’s, damaged proteins build up — and the autophagy that should clear them away is seen to be weakened.</p>' +
+@@ 1dca91552a
+    '<p>Scientists are now searching for ways to bring this cleanup system back to life.</p><p class="note">Most of this research is still in cells and animals. It does not mean fasting prevents or cures these diseases.</p>',
+@@ 2439cdeb32
+  () => '<div class="mark">🍽</div><h1>An age of eating without rest</h1><p>A life of always eating more than enough is deeply linked to metabolic diseases like obesity and diabetes,<br>and to the <b>chronic inflammation</b> that lingers in the body.</p>' +
+@@ fdaca9e1a8
+    '<p>A full body is busy building; an emptied body finds time to clean up and repair.</p>',
+@@ 2daf8f8cd2
+  () => '<div class="mark">🕊</div><h1>We believe</h1><p>That if some illness comes from how we eat,<br>there is also a way to care for the body by pausing and emptying.</p>' +
+@@ 3994adf23e
+    '<p>That fasting is, for the body, a time of rest and cleansing — and for the soul, a time of returning to God.</p>' +
+@@ eca949bf70
+    (vt('1 Corinthians 6:19-20') ? '<p class="vline">“' + vt('1 Corinthians 6:19-20') + '” <span>— 1 Corinthians 6:19-20</span></p>' : '') +
+@@ e841b1dcaf
+    '<details class="srcbox" id="introSrc"><summary>Sources</summary><p class="fn">Sources: Nobel Assembly, 2016 Prize in Physiology or Medicine · Mizushima &amp; Levine, NEJM 2020 (autophagy in human disease) · Nixon, Nat Med 2013 (autophagy in neurodegeneration) · Hotamisligil, Nature 2017 (overnutrition and chronic inflammation) · de Cabo &amp; Mattson, NEJM 2019 (review of intermittent fasting). Most findings on brain disease come from cell and animal studies. <b>Purify does not replace medical treatment.</b></p>' +
+@@ e86646e842
+function obInput(path, el) { setD(path, el.value); if (STEPS[obStep] === 'body') updateBodyLive(); if (STEPS[obStep] === 'basic') updateAgeNote(); }
+function obUnitInput() {
+  const us = D.profile.units !== 'metric', v = id => (document.getElementById(id) || {}).value;
+  if (us) { const ft = v('obHft'), inch = v('obHin'); D.profile.height = (ft === '' && inch === '') ? '' : ftin2cm(ft, inch);
+    ['W', 'G'].forEach(k => { const x = v('ob' + k); D.profile[k === 'W' ? 'weight' : 'goal'] = x === '' ? '' : lb2kg(+x); }); }
+  else { D.profile.height = v('obH'); D.profile.weight = v('obW'); D.profile.goal = v('obG'); }
+  updateBodyLive();
+}
+function obSetUnits(u) { D.profile.units = u; renderOb(); }
+@@ 282030c059
+  if (k === 'minor' && +D.profile.age > 0 && +D.profile.age < 18) return toast('Since you’re under 18, this is selected automatically.');
+@@ d861faaf0e
+  next.textContent = 'Next'; next.disabled = false;
+@@ 6dfb660dcb
+  if (step === 'intro') next.textContent = !last ? 'Next' : obMode === 'tour' ? 'Go back' : 'Begin the Path of Cleansing';
+@@ 8a849a62f9
+  if (step === 'summary') next.textContent = obMode === 'edit' ? 'Save' : 'Get started';
+@@ f8f4e8abb8
+  goal: () => '<h2>We’d love to<br>get to know you</h2><p class="lead">Tell us what’s on your heart as you begin, and we’ll suggest a plan that fits.</p>' +
+@@ 26f1ff1d1d
+    '<h3 style="margin:4px 0 10px;">How would you like to lose weight?</h3>' +
+@@ e0fb6b3c8d
+    '<h3 style="margin:18px 0 10px;">What’s your main reason?</h3>' +
+@@ 2a14d6872a
+  basic: () => '<h2>The basics</h2><p class="lead">We need this to calculate your personal calorie target.</p>' +
+@@ a4011420c3
+    '<label class="f">Name or nickname (optional)</label><input class="inp" id="obName" maxlength="12" placeholder="e.g. Grace" value="' + esc(D.name) + '" oninput="obInput(\'name\',this)">' +
+@@ bdd2f17ab6
+    '<label class="f">Sex</label><div class="seg">' + [['F', 'Female'], ['M', 'Male']].map(o => '<button class="opt' + (D.profile.sex === o[0] ? ' sel' : '') + '" onclick="obPick(\'profile.sex\',\'' + o[0] + '\')">' + o[1] + '</button>').join('') + '</div>' +
+@@ c9df5536ce
+    '<label class="f">Age</label><div class="unit"><input class="inp" id="obAge" type="number" inputmode="numeric" min="10" max="100" placeholder="e.g. 30" value="' + esc(D.profile.age) + '" oninput="obInput(\'profile.age\',this)"><span>years</span></div><div id="ageNote"></div>',
+@@ 95057615c6
+  body: () => { const us = D.profile.units !== 'metric', p = D.profile, hv = us ? cm2ftin(+p.height) : null, n1 = x => x === '' || x == null ? '' : Math.round(kg2lb(+x) * 10) / 10;
+    return '<h2>Height and weight</h2><p class="lead">Tell us where you are now and the goal you hope for.</p>' +
+    '<div class="seg" id="unitSeg">' + [['us', 'lb · ft/in'], ['metric', 'kg · cm']].map(o => '<button class="opt' + ((us ? 'us' : 'metric') === o[0] ? ' sel' : '') + '" data-units="' + o[0] + '" onclick="obSetUnits(\'' + o[0] + '\')">' + o[1] + '</button>').join('') + '</div>' +
+@@ 7bda6c6aca
+    (us ? '<label class="f">Height</label><div class="row"><div class="unit grow"><input class="inp" id="obHft" type="number" inputmode="numeric" placeholder="e.g. 5" value="' + (hv ? hv[0] : '') + '" oninput="obUnitInput()"><span>ft</span></div><div class="unit grow"><input class="inp" id="obHin" type="number" inputmode="decimal" placeholder="e.g. 4" value="' + (hv ? hv[1] : '') + '" oninput="obUnitInput()"><span>in</span></div></div>'
+      : '<label class="f">Height</label><div class="unit"><input class="inp" id="obH" type="number" inputmode="decimal" placeholder="e.g. 163" value="' + esc(p.height === '' ? '' : Math.round(+p.height * 10) / 10) + '" oninput="obUnitInput()"><span>cm</span></div>') +
+@@ 53d8e11778
+    '<label class="f">Current weight</label><div class="unit"><input class="inp" id="obW" type="number" inputmode="decimal" step="0.1" placeholder="' + (us ? 'e.g. 165' : 'e.g. 75') + '" value="' + esc(us ? n1(p.weight) : (p.weight === '' ? '' : Math.round(+p.weight * 10) / 10)) + '" oninput="obUnitInput()"><span>' + (us ? 'lb' : 'kg') + '</span></div>' +
+@@ 23b9c45156
+    '<label class="f">Goal weight</label><div class="unit"><input class="inp" id="obG" type="number" inputmode="decimal" step="0.1" placeholder="' + (us ? 'e.g. 150' : 'e.g. 68') + '" value="' + esc(us ? n1(p.goal) : (p.goal === '' ? '' : Math.round(+p.goal * 10) / 10)) + '" oninput="obUnitInput()"><span>' + (us ? 'lb' : 'kg') + '</span></div><div id="bodyLive"></div>'; },
+@@ f4edbd22f6
+    const resp = { using:'Thank you for sharing. Keep taking your medication <b>exactly as your doctor prescribed</b>. Purify will walk alongside you as you build eating, exercise and heart habits that last — so that someday, when you and your doctor adjust your medication, you won’t be shaken.',
+@@ 71da871223
+      considering:'It’s natural to weigh this. Make the decision after talking it through with your doctor. In the meantime, you can begin renewing body and heart with <b>healthy self-control and fasting, rooted in Scripture</b>.',
+@@ b248f5d761
+      no:'Wonderful. Let’s walk together with <b>healthy self-control and fasting, rooted in Scripture</b>. Small acts of restraint add up, and body and heart are made new.' }[g];
+@@ ac985bc4eb
+    return '<h2>The path that fits you</h2><p class="lead">There are many ways to lose weight in a healthy way. Whichever path you choose, we respect it.</p>' +
+@@ ce78d650d7
+      '<div class="card"><h3>💊 Who are weight-loss medications for?</h3><p style="font-size:15px;">Under FDA labeling, GLP-1 medications for weight management such as Wegovy (semaglutide) and Zepbound (tirzepatide) may be prescribed by a doctor, together with diet and exercise, for adults with a <b>BMI of 30 or higher</b>, or a <b>BMI of 27 or higher with a weight-related condition</b> such as high blood pressure, high cholesterol or type 2 diabetes.</p>' +
+@@ 626b0eb598
+      '<p class="muted" style="margin-top:6px;">' + (b ? 'Your BMI: ' + b.toFixed(1) + ' · ' : '') + 'Whether to use one is a decision to make with your doctor. This app neither recommends nor discourages medication. Check the details with your doctor or pharmacist.</p></div>' +
+@@ 2a9a033e0e
+      '<h3 style="margin:16px 0 10px;">Are you currently using a weight-loss medication like Wegovy or Zepbound?</h3>' +
+@@ f283fc549c
+      [['using', '💊 Yes, I’m using one'], ['considering', '🤔 I’m considering it'], ['no', '🙅 No']].map(o => '<button class="opt' + (g === o[0] ? ' sel' : '') + '" onclick="obPick(\'profile.glp1\',\'' + o[0] + '\')">' + o[1] + '</button>').join('') +
+@@ 455900a14e
+      (g === 'using' ? '<p class="muted" style="margin-top:8px;">While you’re on medication, the water fast, one-day fast and Focused Weight Loss open only after your doctor’s OK, because of the risk of low blood sugar and dehydration.</p>' : '');
+@@ e82b7b267c
+  activity: () => '<h2>How active are you<br>day to day?</h2><p class="lead">We use this to estimate how much energy you need each day.</p>' +
+@@ a8e8140993
+  health: () => '<h2>Health check</h2><p class="lead">Select everything that applies. This is used only to keep your plan safe, and it’s stored only on this device.</p>' +
+@@ dcef8f934c
+    '<p class="muted" style="margin:-2px 0 14px;">If none apply, just leave these blank.</p>' +
+@@ d44ec6abca
+    '<div class="card hl"><h3>⚕ Please read</h3><p style="font-size:15px;">Purify is a <b>journaling app</b> to support healthy habits. It is <b>not medical advice</b>. Calories and reference values are general estimates.</p>' +
+@@ c2b9a67ad4
+    '<p style="font-size:15px; margin-top:8px;">If you’re pregnant or breastfeeding, have diabetes, take medication, are under 18, have a history of an eating disorder, or have heart or kidney disease, <b>always talk with your doctor</b> before changing your diet or fasting.</p>' +
+@@ 3d86593793
+    '<p style="font-size:15px; margin-top:8px;">If you experience dizziness, fainting, a racing heart, or blood sugar under 70, stop immediately and contact a medical provider.</p>' +
+@@ f6bfa334a0
+    '<label class="chk" style="margin-top:8px;"><input type="checkbox" id="discChk" ' + (D.discOk ? 'checked' : '') + ' onchange="D.discOk=this.checked">I understand and agree</label></div>',
+@@ cbc98de63d
+    let h = '<h2>Choose the plan<br>that fits you</h2><p class="lead">Look through each card with “Learn more,” then choose for yourself. You can change anytime.</p>';
+@@ 9e074cd3c0
+    h += '<div class="good">✨ Suggested: <b>' + PROGRAMS[rec].icon + ' ' + PROGRAMS[rec].name + '</b><br><small>' + recReason(p, rec) + '</small></div>';
+@@ 5c07798291
+    if (needDoc) h += '<div class="warn">' + (p.glp1 === 'using' ? 'If you’re on a weight-loss medication, or have ' : 'If you have ') + 'diabetes, take medication or have high blood pressure, fasting can be risky.<label class="chk" style="color:var(--t);"><input type="checkbox" id="docChk" ' + (p.doctorOk ? 'checked' : '') + ' onchange="D.profile.doctorOk=this.checked; if(!this.checked && D.progId && !canChoose(D.progId, D.profile)) D.progId=\'\'; renderOb()">I talked with my doctor and was told fasting is okay for me</label></div>';
+@@ 54021f7262
+      ['med', '🤝 Alongside medication', 'Medication as your doctor prescribes — and on top of that, habits that last.'],
+@@ 3dbf9e4e31
+      ['faith', '✝ Healthy self-control, rooted in Scripture', (enc ? 'Before leaning on medication, try walking the path of renewing body and heart with God’s Word first. You can do this. ' : '') + 'This isn’t a diet — it’s <b>practice in living out the Word</b>. Choose whether to hold back on when you eat, what you eat, or a habit.'],
+@@ 85a4c71e56
+      ['intensive', '🔥 Focused Weight Loss', 'Short and strong for 2–3 weeks. Opens only within a healthy range.']
+@@ eea97a8f2b
+    const p = D.profile, P = computePlan(p, D.progId), pr = PROGRAMS[D.progId], who = D.name ? esc(D.name) + '’s' : 'Your';
+@@ 53d88fbfbb
+    return '<h2>' + who + ' personal plan</h2><p class="lead">' + pr.icon + ' ' + progName(D.progId, len) + (pr.lens || pr.custom ? '' : ' · ' + len + (len === 1 ? ' day' : ' days')) + '</p>' +
+@@ 1bee50bdfe
+      '<div class="stats"><div class="stat"><b>' + comma(P.target) + '</b><span>Daily kcal goal</span></div><div class="stat"><b>' + volTxt(P.water) + '</b><span>Daily water</span></div><div class="stat"><b>' + P.bmi.toFixed(1) + '</b><span>BMI · ' + bmiLabel(P.bmi) + '</span></div></div>' +
+@@ fb5f8f7bc7
+      '<div class="card"><h3>🎯 Goal</h3>' + (P.goalDate ? '<p>' + wTxt(p.weight) + ' → <b>' + wTxt(p.goal) + '</b></p><p class="muted">About ' + wTxt(P.weekly, 2) + ' a week (' + (pr.intensive ? 'Focused: realistically up to ' + wTxt(1) + ' a week' : 'A safe pace: ' + wRate(0.25, 0.75) + ' a week') + ')' + (pr.intensive ? '<br>Expected loss over ' + len + ' days: about ' + wTxt(P.weekly * len / 7) + ' (plus early water changes)' : '') + '<br>Expected to reach your goal: <b style="color:var(--p)">' + fmtYMD(P.goalDate) + '</b> (about ' + P.weeks + ' weeks)</p>' : '<p>Maintain your current weight · build healthy habits</p>') +
+@@ d03de5b0f1
+      '<div class="card"><h3>🍽 Macros (approximate)</h3><p>Carbs ' + P.macros.c + 'g · Protein ' + P.macros.p + 'g · Fat ' + P.macros.f + 'g</p><p class="muted">' + P.macros.pct.c + ' : ' + P.macros.pct.p + ' : ' + P.macros.pct.f + (D.progId === 'daniel' ? ' · protein from beans, tofu and nuts' : '') + (pr.intensive ? ' · high protein (about 1.6 g per kg of goal weight ≈ 0.73 g per lb, max 160 g)' : '') + '</p></div>' +
+@@ 4f33d46f02
+      '<div class="card"><h3>💧 Water</h3><p>About ' + volTxt(P.water) + ' a day <span class="muted">(30–35 ml per kg of body weight ≈ ½ oz per lb · ' + volTxt(P.waterRange[0]) + '–' + volTxt(P.waterRange[1]) + ')</span></p></div>' +
+@@ eed4783ed9
+      '<div class="card"><h3>🏃 Exercise · ' + lv.n + '</h3><p>' + lv.plan + '</p></div>' +
+@@ 4cc540b553
+      '<details class="card"><summary>How we calculated this</summary><p class="muted">Basal metabolic rate (Mifflin-St Jeor) ' + comma(P.bmr) + ' kcal × activity factor = maintenance calories ' + comma(P.tdee) + ' kcal' + (P.deficit ? ' − ' + P.deficit + ' kcal' : '') + '. Never below ' + comma(P.floor) + ' kcal a day. All values are for reference only.</p></details>';
+@@ 11b9a3c8aa
+  el.innerHTML = a && a < 18 ? '<div class="good">While you’re still growing, we’ll guide you to the Basic program, which doesn’t cut calories.</div>' : '';
+@@ c39b5ad9a0
+  let s = '<div class="card" style="margin-top:16px;"><p>Current BMI <b style="color:var(--p)">' + b.toFixed(1) + '</b> · ' + bmiLabel(b) + '</p>';
+@@ c67203bc3b
+    s += '<p class="muted">Goal BMI ' + gb.toFixed(1) + '</p>';
+@@ 9f5804e425
+    if (gb < 18.5) s += '<div class="warn">Your goal weight is in the underweight range (BMI under 18.5). For your health we suggest <b>' + wTxt(hm) + ' or more</b>.<button class="btn sm sec" onclick="applyHealthyGoal()">Change to ' + wTxt(hm) + '</button></div>';
+@@ 18c319df11
+    if (b < 18.5 && g < w) s += '<div class="good">Right now we suggest staying healthy at your weight rather than losing.</div>';
+@@ 0dc1657395
+  if (rec === 'companion') return 'A companion plan for those walking alongside medical treatment.';
+@@ ea6c587dac
+  if (f.preg || f.minor || f.ed || f.diab || f.meds || f.t1d) return 'Considering your health, we suggest the safest plan.';
+@@ cb0e5932bb
+  return ({ slow:'You said you want to go slow and healthy.', normal:'You said you want a steady, balanced pace.', fast:'You said you want to focus and move quickly.', devotion:'You said prayer and self-control matter more than weight loss.' }[p.pace] || '') +
+@@ f8d04f0349
+    (p.motive === 'faith' ? ' We’re cheering on your decision of faith.' : p.motive === 'event' ? ' We’ll help you keep it up after the event, too.' : p.motive === 'prevent' ? ' Consistency is the best protection.' : '');
+@@ bebb1c6050
+    '<b>' + p.icon + ' ' + p.name + '</b>' + (id === rec ? '<span class="badge">Suggested</span>' : '') + (sel ? '<span class="badge" style="background:#a9c79a;">Selected</span>' : '') +
+@@ b8bf5a1e06
+    '<small>' + p.desc + '</small><span class="tag">' + (I.period || p.label) + '</span><span class="tag">Difficulty ' + (st ? stars(st) : stars(3) + ' ~ ' + stars(5)) + '</span>' + (p.water ? '<span class="tag">' + p.label + '</span>' : '') +
+@@ 2bfb3bb247
+  return '<div class="info">' + sec('What is it?', '<p>' + I.what + '</p>') +
+@@ 47ca64e971
+    (I.bg ? sec('📖 Biblical background', '<p>' + I.bg + '</p>' + okRefs(I.refs).map(r => '<p class="vline">“' + vt(r) + '” <span>— ' + r + '</span></p>').join('')) : '') +
+@@ edda5c861a
+    sec('Who is it for?', '<p>' + I.who + '</p>') + sec('Length', '<p>' + I.period + '</p>') +
+@@ a577d4f640
+    sec('What to eat · what to avoid', '<p>🍽 ' + I.eat + '</p><p>🚫 ' + I.avoid + '</p>') +
+@@ 89f8a0c53c
+    sec('A sample day', '<ul class="l">' + I.day.map(x => '<li>' + x + '</li>').join('') + '</ul>') +
+@@ 6927f128c0
+    (I.stars ? sec('Difficulty', '<p class="stars">' + stars(I.stars) + '</p>') : '') + sec('What to expect', '<p>' + I.effect + '</p>') + '</div>';
+@@ d3b07599e2
+    '<details class="more" data-more="' + id + '"' + (sel ? ' open' : '') + '><summary>Learn more</summary>' + infoBody(id) + '</details>' + progExtra(id) + '</div>';
+@@ cece537310
+  return '<details class="card cmpwrap" open><summary>📊 16:8 · Daniel · Lent — how are they different?</summary><table class="cmp">' +
+@@ 4868cf8fbb
+    '<p class="muted" style="margin-top:8px;">16:8 holds back on “when,” Daniel on “what,” and Lent on “which habit.”</p></details>';
+@@ 61437c8cab
+  const rf = dayTxt(refeedLen(t.b));
+@@ c5ece86d32
+  return '<div class="tier' + (len ? ' cur' : '') + '"><h4>' + (len ? dayTxt(len) + ' fast' + (t.n.indexOf(dayTxt(len)) === 0 ? '' : ' · ' + t.n) : t.n) + ' <span class="stars">' + stars(t.stars) + '</span></h4>' +
+@@ df5b866fa3
+    '<p><b>What happens in the body</b> ' + t.body + '</p><p><b>Common symptoms</b> ' + t.sym + '</p><p><b>Risks to watch</b> ' + t.risks.join(' · ') + '</p>' +
+@@ 598fce3b65
+    '<p><b>Who should not</b> Pregnant or breastfeeding, under 18, history of an eating disorder, type 1 diabetes or insulin use, underweight (BMI under 18.5) · ' + (t.a > 3 ? 'healthy weight (BMI under 25) · ' : '') + '' + t.not + '</p><p><b>Refeeding</b> ' + (len ? dayTxt(refeedLen(len)) : rf) + '</p></div>';
+@@ 0a86f894aa
+  return '<div class="devo"><h3>🕯 Water Fast of Prayer & Devotion</h3>' +
+@@ 5760edf4bb
+    '<p>This is not a diet program. It is <b>your own choice and commitment</b> to turn hunger into prayer and draw nearer to God. We don’t show weight-loss predictions here.</p>' +
+@@ aaa45c6021
+    '<p class="muted">Scripture records that Moses and Esther went without water, too — but a fast without water is life-threatening, so Purify only supports <b>fasts where you keep drinking water</b>.</p>' +
+@@ eeba40ffbf
+    '<details class="more"><summary>📜 Fasts in the Bible</summary>' + WF_FRAME.filter(f => vt(f[0])).map(f => '<div class="isec"><h4>' + f[1] + '</h4><p>' + f[2] + '</p><p class="vline">“' + vt(f[0]) + '” <span>— ' + f[0] + '</span></p></div>').join('') + '</details>' +
+@@ 1235235c9a
+  if (id === 'lent') return '<label class="f" style="margin-top:-4px;">What will you give up?</label><select class="inp" style="margin-bottom:12px;" onchange="D.opt=this.value">' + LENT_OPTS.map(o => '<option' + (o === D.opt ? ' selected' : '') + '>' + o + '</option>').join('') + '</select>';
+@@ bc8dc70e32
+  if (id === 'intensive') return '<div class="sub"><label class="f">Choose a length</label><div class="seg">' + PROGRAMS.intensive.lens.map(n => '<button class="opt' + (len === n ? ' sel' : '') + '" onclick="obSetLen(' + n + ')">' + n + ' days</button>').join('') + '</div>' +
+@@ 5ba141c01c
+    '<p class="muted">Afterward, we’ll suggest a 14-day maintenance season to prevent rebound.</p></div>';
+@@ ab5aa8e9a0
+    return '<div class="sub devo-sub" id="wfBox"><label class="f">Length of your fast (your choice)</label><div class="chips">' + WF_LENS.map(n => { const lock = n > wfMaxLen(D.profile); return '<button class="chip' + (len === n ? ' on' : '') + (lock ? ' lock' : '') + '" data-len="' + n + '" aria-disabled="' + lock + '" onclick="obSetLen(' + n + ')">' + (lock ? '🔒 ' : '') + dayTxt(n) + '</button>'; }).join('') + '</div>' +
+@@ 7aa6f4efe0
+      '<div class="warn" style="margin-top:10px;"><b>This is your own choice and commitment.</b> A water fast carries risks of low blood sugar, low blood pressure, electrolyte imbalance and fainting. When it ends, <b>' + dayTxt(refeedLen(len)) + ' of refeeding</b> follows automatically.</div>' +
+@@ f97be0b83a
+      '<details class="more"><summary>See risks and difficulty for every length</summary>' + WF_TIERS.map(t => tierCard(t)).join('') + '</details>' +
+@@ 77a64441de
+      (len > 3 ? '<div class="card" style="margin:10px 0;"><label class="chk"><input type="checkbox" id="wfAck" ' + (w.ack ? 'checked' : '') + ' onchange="D.wf.ack=this.checked">I will do a water fast longer than 3 days only after talking with a doctor</label>' +
+@@ 82e0f7f2c1
+        '<label class="f">To confirm, please type this sentence exactly: <b>“' + WF_PHRASE + '”</b></label><input class="inp" id="wfTyped" placeholder="' + WF_PHRASE + '" value="' + esc(w.typed) + '" oninput="D.wf.typed=this.value"></div>' : '') +
+@@ ec0843bc38
+      (len > 7 ? '<div class="warn" style="border-width:2px;">⚠ <b>Do a water fast longer than 7 days only under medical supervision.</b> Without regular exams and blood tests (electrolytes) by medical professionals, it can be life-threatening.<label class="chk" style="color:var(--t);"><input type="checkbox" id="wfSup" ' + (w.sup ? 'checked' : '') + ' onchange="D.wf.sup=this.checked">I am under medical supervision</label></div>' : '') + '</div>';
+@@ 3805f72b37
+  return '<div class="isec wfmean"><h4>📜 The meaning of ' + dayTxt(len) + '</h4><p>' + m.note + '</p>' + okRefs(m.refs).map(r => '<p class="vline">“' + vt(r) + '” <span>— ' + r + '</span></p>').join('') + '</div>';
+@@ ef0bdfe94c
+  if (a.needDoctor && !D.profile.doctorOk) return alert('🔒 ' + a.reason + '\n\nPlease check the confirmation box above first.');
+@@ 92594b9867
+    if (!p.sex) return 'Please select your sex.';
+@@ 76d160c66e
+    const a = +p.age; if (!(a >= 10 && a <= 100 && Math.floor(a) === a)) return 'Please enter your age as a whole number from 10 to 100.';
+@@ 81edab4e49
+    if (!(h >= 120 && h <= 220)) return D.profile.units !== 'metric' ? 'Please enter a height between 3′ 11″ and 7′ 2″.' : 'Please enter a height between 120 and 220 cm.';
+@@ 81f89ee546
+    if (!(w >= 30 && w <= 250)) return D.profile.units !== 'metric' ? 'Please enter a current weight between 66 and 551 lb.' : 'Please enter a current weight between 30 and 250 kg.';
+@@ 2fb8b3157b
+    if (!(g >= 30 && g <= 250)) return D.profile.units !== 'metric' ? 'Please enter a goal weight between 66 and 551 lb.' : 'Please enter a goal weight between 30 and 250 kg.';
+@@ e4f5d46d7c
+    if (bmiOf(g, h) < 18.5 && g < w) return 'Your goal weight is in the underweight range. For your health, please set it at ' + wTxt(healthyMin(h)) + ' or more.';
+@@ 8b5931eb55
+  if (step === 'goal' && !p.pace) return 'Please choose how you’d like to lose weight.';
+@@ 2f89aeeed9
+  if (step === 'goal' && !p.motive) return 'Please choose your reason for starting.';
+@@ 54da91cc46
+  if (step === 'path' && !p.glp1) return 'Please let us know whether you currently use a weight-loss medication.';
+@@ 1e1dd183e4
+  if (step === 'activity' && !p.activity) return 'Please choose your activity level.';
+@@ 1294726c13
+  if (step === 'health' && !D.discOk) return 'Please read the notice and check the box to agree.';
+@@ 12d6fbc659
+    if (!D.progId) return 'Please choose a plan yourself — tap a card to select it.';
+@@ 127cf1e3ed
+    if (!canChoose(D.progId, p)) return 'Please choose a program that’s available to you.';
+@@ 702b36a849
+      confirm('You’re on day ' + progDay() + ' of a water fast. Going straight back to regular meals can strain your body.\nStart refeeding (' + dayTxt(refeedLen(progDay())) + ') first?')) {
+@@ b70ecfb61b
+  toast(first ? 'Welcome! Let’s walk this together, starting today.' : 'Saved.');

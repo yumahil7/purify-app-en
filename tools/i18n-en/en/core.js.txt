@@ -1,0 +1,121 @@
+@@ 09dc5a8055
+const KEY = 'purifyV3';
+@@ bc5a290860
+const LEGACY = [];
+@@ 1c065b6245
+function comma(n) { return Math.round(n).toLocaleString('en-US'); }
+@@ 469c526df4
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+function fmtMD(s) { const p = s.split('-'); return MON[+p[1] - 1] + ' ' + (+p[2]); }
+@@ 77de4f4a52
+function fmtYMD(s) { const p = s.split('-'); return MON[+p[1] - 1] + ' ' + (+p[2]) + ', ' + p[0]; }
+@@ f124ed1c19
+  delete s.faith;
+@@ 4bec531be9
+    (st.mealLogs || []).forEach(m => { if (m && +m.s) day(ymd(m.t || now())).extras.push({ n:'Earlier meal log', k:+m.s, t:m.t || now() }); });
+@@ 87758cfeb7
+function bmiLabel(b) { return b < 18.5 ? 'Underweight' : b < 25 ? 'Healthy weight' : b < 30 ? 'Overweight' : b < 35 ? 'Obesity (class 1)' : 'Obesity (class 2+)'; }
+@@ c1b6c0749a
+  if (bmi < 18.5) notes.push('Your BMI is under 18.5, so we planned for maintenance calories instead of weight loss. Let’s build up your strength first with balanced meals.');
+@@ c9deaa1608
+  else if (f.preg) notes.push('During pregnancy or breastfeeding we don’t plan for weight loss — this is set to maintenance calories. Please talk through your diet with your doctor or midwife.');
+@@ 7ea0674c43
+  else if (f.minor) notes.push('While you’re still growing, we don’t cut calories — this is set to maintenance calories.');
+@@ 2df2827990
+  else if (f.ed) notes.push('Regular meals matter more than numbers. We planned for maintenance calories. Walking this with a professional is even better.');
+@@ 090b31ec58
+  else if (progId === 'maintain' || progId === 'refeed') notes.push('Maintenance season: planned at the calories that hold your new weight (maintenance calories).');
+@@ 76c6d063a5
+  else notes.push('Your goal is the same as or above your current weight, so we planned for maintenance calories.');
+@@ e871993c65
+  if (target < floor) { target = floor; if (deficit) notes.push('We never go below ' + comma(floor) + ' kcal a day. Instead, let’s add a little more movement.'); }
+@@ 748144b052
+  if (pr.intensive && deficit) notes.push('In the first few days, stored water (held with glycogen) can make the scale drop faster. Real fat loss of about ' + wRate(1) + ' a week at most is realistic.');
+@@ 8064a2a0b9
+  if (!pr) return { ok:false, reason:'That program doesn’t exist.' };
+@@ 4275c36222
+  if (pr.system) return { ok:false, system:true, reason:'This stage begins automatically after you finish another program.' };
+@@ 65764fd155
+  if (id === 'companion' && p.glp1 !== 'using') return { ok:false, hidden:true, reason:'This companion program is for people using a weight-loss medication.' };
+@@ 88967954a8
+  if (flags.preg || flags.minor || flags.ed) return { ok:false, reason:'If you’re pregnant or breastfeeding, under 18, or have a history of an eating disorder, only the Basic program is available, for your safety.' };
+@@ 1a9e11d5d9
+  if (id === 'intensive' && !(bmi >= 23)) return { ok:false, reason:'Focused Weight Loss opens only at a BMI of 23 or higher' + (bmi ? ' (yours is ' + bmi.toFixed(1) + ')' : '') + '. Basic or 16:8 is plenty to grow healthier right now.' };
+@@ d1b4f0e070
+    if (flags.t1d) return { ok:false, reason:'With type 1 diabetes or insulin use, a water fast can be life-threatening, so it can’t be selected.' };
+@@ 3f55631559
+    if (!(bmi >= 18.5)) return { ok:false, reason:'When you’re underweight (BMI under 18.5), a water fast is dangerous for your body, so it can’t be selected' + (bmi ? ' (yours is ' + bmi.toFixed(1) + ')' : '') + '. We’d suggest the Lenten 40-day fast, focused on prayer.' };
+@@ b048b7abbb
+    return { ok:true, needDoctor:true, reason:'Combining fasting or focused weight loss with a weight-loss medication can raise the risk of low blood sugar, dehydration and muscle loss. Choose this only after talking with your doctor.' };
+@@ c467919d57
+    return { ok:true, needDoctor:true, reason:'With diabetes, regular medication or high blood pressure, fasting can be risky (low blood sugar, blood-pressure swings). Choose this only after talking with your doctor.' };
+@@ 6ea8364bcf
+  if (pr.fasting && flags.htn) return { ok:true, caution:'If you have high blood pressure, check it often and stop right away if anything feels off.' };
+@@ 5de5f31b2c
+const WF_NORMAL_MSG = 'At a healthy weight, longer fasts can put real strain on your body, so you can choose up to 3 days';
+@@ 6c017c0154
+  if (!WF_LENS.includes(len)) return 'Please choose a fast length of 1, 3, 7, 14, 21 or 40 days.';
+@@ 2fef4299ee
+  if (len > 3 && !wf.ack) return 'For a water fast longer than 3 days, please check the box confirming you’ve talked with a doctor.';
+@@ d2bd5d036f
+  if (len > 3 && String(wf.typed || '').replace(/\s+/g, ' ').trim().toLowerCase().replace(/[.!]$/, '') !== WF_PHRASE.toLowerCase().replace(/[.!]$/, '')) return 'To confirm, please type “' + WF_PHRASE + '” exactly.';
+@@ 921672db93
+  if (len > 7 && !wf.sup) return 'A water fast longer than 7 days can only begin while you’re under medical supervision.';
+@@ 167ad97f97
+  return pr.name + (pr.lens ? ' · ' + len + ' days' : pr.custom ? ' · ' + len + (len === 1 ? ' day' : ' days') : '');
+@@ 97fe55e292
+function progItems() { const p = PROGRAMS[progId()]; return p.items.map((it, i) => (p.hasOpt && i === 2) ? 'Keep my chosen fast: ' + S.program.opt : it); }
+@@ 2615b49093
+  let amt = f.u === ' pc' ? Math.round(kcal / f.k) : Math.round(kcal / f.k / 10) * 10;
+@@ 86ac04e4ec
+const MEAL_META = { B:{n:'Breakfast',time:'7–9 am'}, L:{n:'Lunch',time:'12–1 pm'}, D:{n:'Dinner',time:'6–7 pm'}, S:{n:'Snack',time:'3–4 pm'} };
+@@ 69bf115203
+  if (id === 'waterfast') return { meals:[{ key:'W', n:'Water fast', time:'All day', fast:true, items:[{ n:'Water and unsweetened tea only (ask your doctor about electrolytes)', amt:'', k:0 }], k:0 }], total:0, target:0, id, water:true };
+@@ 76290732ca
+  const plant = id === 'daniel' || (id === 'lent' && S.program.opt === 'Meat');
+@@ 42c2870c5b
+  const noSnack = id === 'lent' && S.program.opt === 'Snacks';
+@@ be33f2eb1b
+    meals.push({ key:'B', n:'Breakfast', time:'', fast:true, items:[{ n:'Fasting · water and unsweetened tea', amt:'', k:0 }] });
+@@ bc6b5714fd
+    meals.push({ key:'L', n:'Lunch', time:'', fast:true, items:[{ n:'Fasting · plenty of water, a time of prayer', amt:'', k:0 }] });
+@@ 16eb9c0271
+    meals.push({ key:'D', n:'Breaking the fast', time:'6–7 pm', items:[{ n:'Vegetable rice porridge', amt:'1 bowl', k:250 }, { n:'Light veggie broth', amt:'', k:15 }, { n:'Banana', amt:'1', k:90 }] });
+@@ 4c3d06cede
+    meals.push({ key:'B', n:'Breakfast', time:'Fasting window', fast:true, items:[{ n:'Water · unsweetened tea · black coffee', amt:'', k:0 }] });
+@@ a389fee0ab
+    meals.push(mk('L', .45, { n:'First meal', time:'12 pm' }));
+@@ 6cffed8912
+    meals.push(mk('S', .15, { time:'4 pm' }));
+@@ 063bbec11e
+    meals.push(mk('D', .40, { n:'Last meal', time:'Before 8 pm' }));
+@@ 953460aea0
+  if (L <= 1) return a;
+@@ 1c5d796008
+const REFEED_SLOTS = [['B', 'Breakfast', '8 am', .2], ['S1', 'Mid-morning', '10:30 am', .15], ['L', 'Lunch', '1 pm', .25], ['S2', 'Afternoon', '4 pm', .15], ['D', 'Dinner', '7 pm', .25]];
+@@ c185827ca6
+  if (stage === 0) return [scaleFood('mieum', T - 15), { n:'Clear vegetable broth, 1 cup', amt:'', k:15 }];
+@@ c981992b58
+  if (stage === 2) { const pr = scaleFood(pick(['sundubu', 'eggjjim', 'wfish'], seed), (T - 30) * 0.45); return [scaleFood('jinbap', T - 30 - pr.k), pr, { n:'Well-cooked zucchini & carrots', amt:'', k:30 }]; }
+@@ c067ff9b10
+function bodyChange(n) { const b = BODY_CHANGES.find(x => n <= x[0]) || BODY_CHANGES[BODY_CHANGES.length - 1]; return b[1] + ' (These are commonly reported changes; everyone is different.)'; }
+@@ ad4758948e
+  if (bp && bp >= 140) w.push('Systolic BP ' + bp + ': in the high range (140 or above). If you’re fasting, stop, rest, and measure again. If it stays high, talk with your healthcare provider.');
+@@ 70ca210ea8
+  if (bp && bp <= 90) w.push('Systolic BP ' + bp + ': in the low range (90 or below). There’s a risk of dizziness or fainting — stop fasting and have fluids and food.');
+@@ 068b98ab9f
+  if (bs && bs < 70) w.push('Blood sugar ' + bs + ': this is low (under 70)! Stop fasting right away and take some sugar. If symptoms continue, contact a medical provider.');
+@@ 5661e1d678
+  if (bs && bs >= 126) w.push('Fasting blood sugar ' + bs + ': 126 or above may be in the diabetes range. Talk with your healthcare provider before fasting.');
+@@ 738c0a276b
+  if (id === 'waterfast') { const w = wfDay(progDay(d)); return { r:w.r, t:w.t, e:w.msg, a:'Today’s prayer · ' + w.pray, wf:true }; }
+@@ dbe40aa856
+  if (id === 'refeed') { const w = refeedDay(progDay(d)); return { r:w.r, t:w.t, e:w.msg, a:'Slowly, gratefully — one spoonful at a time', rf:true }; }
+@@ ed19bb068a
+  if (t.running) { t.acc = timerSec(); t.running = false; t.start = 0; toast('Timer paused.'); }
+@@ 3bed2cad33
+  else { t.running = true; t.start = now(); if (!t.sid) t.sid = now(); toast('Fasting timer started.'); }
+@@ d9881ed175
+  if (!confirm('Reset the timer to zero?')) return;
+@@ 54bc1531f4
+    profile:{ sex:'', age:'', height:'', weight:'', goal:'', activity:'', flags:{}, doctorOk:false, glp1:'', pace:'', motive:'', units:'us' },

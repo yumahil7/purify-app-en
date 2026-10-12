@@ -1,0 +1,298 @@
+@@ fe29ba86c7
+const EVI = { h:'Human study', ho:'Human study (observational)', a:'Animal study', c:'Cell study', y:'Yeast study', g:'Official source', r:'Review', n:'Historical record', x:'Limited evidence' };
+@@ 2366c1c53f
+  nobel:{ t:'Nobel Prize in Physiology or Medicine 2016 press release (Yoshinori Ohsumi)', u:'https://www.nobelprize.org/prizes/medicine/2016/press-release/' },
+@@ 5248de48dd
+  miz04:{ t:'Mizushima N et al. (2004) Mol Biol Cell 15:1101-1111 — GFP-LC3 mice: autophagy by tissue during starvation', d:'10.1091/mbc.e03-09-0704' },
+@@ ab6e55f2ff
+  alir:{ t:'Alirezaei M et al. (2010) Autophagy 6:702-710 — Short-term fasting and neuronal autophagy (mice)', d:'10.4161/auto.6.6.12376' },
+@@ b00ab3ee7b
+  bagh:{ t:'Bagherniya M et al. (2018) Ageing Res Rev 47:183-197 — Fasting, calorie restriction and autophagy (review)', d:'10.1016/j.arr.2018.08.004' },
+@@ 1fa693e389
+  jam:{ t:'Jamshed H et al. (2019) Nutrients 11:1234 — Early time-restricted eating (18-hour fast) and LC3A gene expression (humans)', d:'10.3390/nu11061234' },
+@@ acb05fcf46
+  kim11:{ t:'Kim J et al. (2011) Nat Cell Biol 13:132-141 — AMPK, mTOR and ULK1', d:'10.1038/ncb2152' },
+@@ 93064696b8
+  naka:{ t:'Nakagawa I et al. (2004) Science 306:1037-1040 — Autophagy defends against group A Streptococcus', d:'10.1126/science.1103966' },
+@@ e22e312dc5
+  gut:{ t:'Gutierrez MG et al. (2004) Cell 119:753-766 — Autophagy and Mycobacterium tuberculosis', d:'10.1016/j.cell.2004.11.038' },
+@@ 1eab6903ab
+  hara:{ t:'Hara T et al. (2006) Nature 441:885-889 — Loss of basal neuronal autophagy causes neurodegeneration (mice)', d:'10.1038/nature04724' },
+@@ a87abb8e22
+  komatsu:{ t:'Komatsu M et al. (2006) Nature 441:880-884 — Loss of CNS autophagy causes neurodegeneration (mice)', d:'10.1038/nature04723' },
+@@ 689c53990f
+  vion:{ t:'Vion AC et al. (2017) PNAS 114:E8675-E8684 — Endothelial autophagy protects arteries (mice)', d:'10.1073/pnas.1702223114' },
+@@ caac1091ec
+  razani:{ t:'Razani B et al. (2012) Cell Metab 15:534-544 — Macrophage autophagy and atherosclerosis (mice)', d:'10.1016/j.cmet.2012.02.011' },
+@@ 906b7a8504
+  liao:{ t:'Liao X et al. (2012) Cell Metab 15:545-553 — The protective role of macrophage autophagy (mice)', d:'10.1016/j.cmet.2012.01.022' },
+@@ 9382562dc9
+  kdri:{ t:'NIH ODS — Nutrient Recommendations: Dietary Reference Intakes', u:'https://ods.od.nih.gov/HealthInformation/nutrientrecommendations.aspx' },
+@@ 3d4f14a757
+  kfcdb:{ t:'USDA FoodData Central', u:'https://fdc.nal.usda.gov/' },
+@@ 4ccff036fe
+  who_diet:{ t:'WHO Healthy diet fact sheet (at least 400 g of fruit & vegetables a day, free sugars under 10%)', u:'https://www.who.int/news-room/fact-sheets/detail/healthy-diet' },
+@@ f4df64b7da
+  ods_k:{ t:'NIH ODS — Vitamin K Fact Sheet (warfarin interaction)', u:'https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/' },
+@@ 284a848835
+  fda_gf:{ t:'U.S. FDA — Grapefruit Juice and Some Drugs Don’t Mix', u:'https://www.fda.gov/consumers/consumer-updates/grapefruit-juice-and-some-drugs-dont-mix' },
+@@ 9833de1712
+  fda_fish:{ t:'U.S. FDA/EPA — Advice about Eating Fish', u:'https://www.fda.gov/food/consumers/advice-about-eating-fish' },
+@@ 8754cff295
+  efsa_tea:{ t:'EFSA (2018) Scientific opinion on the safety of green tea catechins', d:'10.2903/j.efsa.2018.5239' },
+@@ 5732115716
+  gartner:{ t:'Gärtner C et al. (1997) Am J Clin Nutr 66:116-122 — Lycopene absorption from tomato paste', d:'10.1093/ajcn/66.1.116' },
+@@ 126d9f8e10
+  song:{ t:'Song K, Milner JA (2001) J Nutr 131:1054S-1057S — Letting crushed garlic stand 10 minutes before heating', d:'10.1093/jn/131.3.1054S' },
+@@ 0eb2cdfcb8
+  okun:{ t:'Okunade O et al. (2018) Mol Nutr Food Res 62:1700980 — Mustard seed (myrosinase) and sulforaphane absorption', d:'10.1002/mnfr.201700980' },
+@@ f20238aaef
+  shoba:{ t:'Shoba G et al. (1998) Planta Med 64:353-356 — Piperine and curcumin absorption', d:'10.1055/s-2006-957450' },
+@@ feee029eec
+  aune:{ t:'Aune D et al. (2016) BMJ 353:i2716 — Whole grains, cardiovascular disease and mortality (meta-analysis)', d:'10.1136/bmj.i2716' },
+@@ ce20576d0d
+  estruch:{ t:'Estruch R et al. (2018) N Engl J Med 378:e34 — Mediterranean diet (olive oil, nuts) and cardiovascular prevention', d:'10.1056/NEJMoa1800389' },
+@@ 377237c463
+  siervo:{ t:'Siervo M et al. (2013) J Nutr 143:818-826 — Nitrate, beetroot juice and blood pressure (meta-analysis)', d:'10.3945/jn.112.170233' },
+@@ f195540820
+  thomas:{ t:'Thomas LDK et al. (2013) JAMA Intern Med 173:386-388 — Vitamin C supplements and kidney stones', d:'10.1001/jamainternmed.2013.2296' },
+@@ 8c4b32b154
+  hemila_c:{ t:'Hemilä H, Chalker E (2013) Cochrane — Vitamin C and the common cold', d:'10.1002/14651858.CD000980.pub4' },
+@@ c1c5a13f87
+  vital_d:{ t:'Manson JE et al. (2019) N Engl J Med 380:33-44 — VITAL: vitamin D', d:'10.1056/NEJMoa1809944' },
+@@ 18c1d98259
+  vital_o3:{ t:'Manson JE et al. (2019) N Engl J Med 380:23-32 — VITAL: omega-3', d:'10.1056/NEJMoa1811403' },
+@@ 41357d52d0
+  gencer:{ t:'Gencer B et al. (2021) Circulation 144:1981-1990 — Omega-3 and atrial fibrillation (meta-analysis)', d:'10.1161/CIRCULATIONAHA.121.055654' },
+@@ 01562f2c37
+  hemila_zn:{ t:'Hemilä H (2017) JRSM Open 8:2054270417694291 — Zinc lozenges and the common cold', d:'10.1177/2054270417694291' },
+@@ dedc7f19c9
+  guo:{ t:'Guo Q et al. (2019) Cochrane — Probiotics for preventing antibiotic-associated diarrhea in children', d:'10.1002/14651858.CD004827.pub5' },
+@@ d1abfd1618
+  mfds_fen:{ t:'Korea MFDS & Korean Cancer Association (2019) — advisory against cancer patients taking the animal dewormer fenbendazole (Korean)', u:'https://www.cancer.go.kr/lay1/bbs/S1T610C611/A/31/view.do?article_seq=21352' },
+@@ c793e8a044
+  jkma_worm:{ t:'Chai JY et al. (2018) J Korean Med Assoc — Should dewormers be taken every year? (Korean)', u:'https://jkma.org/journal/view.php?number=184' },
+@@ 54ba0395b0
+  brief_worm:{ t:'CDC — Pinworm: Treatment', u:'https://www.cdc.gov/pinworm/treatment/index.html' },
+@@ da1a4bd75f
+  kdca_worm:{ t:'CDC — Clonorchis (liver fluke): About', u:'https://www.cdc.gov/liver-flukes/about/index.html' }
+@@ 9fd660b071
+function srcLine(keys) { return '<p class="srcl">Sources: ' + keys.filter(k => CITE[k]).map(k => '<a href="' + citeUrl(k) + '" target="_blank" rel="noopener">' + esc(CITE[k].t) + '</a>').join(' · ') + '</p>'; }
+@@ ac0c961b4d
+  { h:0, icon:'🍽', t:'Digesting & absorbing', m:'Your body is using glucose from the food you just ate. Insulin is high, so autophagy is still quiet.', e:'r', c:['anton'] },
+@@ b415b2180c
+  { h:12, icon:'🔥', t:'Starting to burn fat', m:'As liver glycogen runs low, the body begins a “metabolic switch,” drawing on fat and ketones (usually after about 12 hours).', e:'h', c:['anton'] },
+@@ 38b71b3471
+  { h:16, icon:'🔆', t:'Autophagy switch ON', m:'Research suggests autophagy may begin to pick up around this time. One study found increased expression of an autophagy gene (LC3A) in the blood cells of people who kept an 18-hour fast.', e:'h', c:['jam', 'bagh'] },
+@@ 87e4ad27e7
+  { h:24, icon:'✨', t:'Autophagy active', m:'In mouse studies, after 24 hours without food, autophagy clearly increased in many tissues, including the liver, muscle and heart.', e:'a', c:['miz04', 'alir'] },
+@@ 39a6c3abec
+  { h:48, icon:'🌟', t:'Autophagy more active', m:'In mouse studies, by 48 hours autophagy increased further, including in brain neurons. For people, a fast this long carries greater risk and should be discussed with medical professionals.', e:'a', c:['alir', 'miz04'] }
+@@ 69cdea80f0
+  return '<div class="afsw' + (on ? ' on' : '') + '" id="afsw"><div class="row" style="align-items:flex-start;"><div class="knob" role="img" aria-label="Autophagy switch ' + (on ? 'on' : 'off') + '"><i></i><b>' + (on ? 'ON' : 'OFF') + '</b></div>' +
+@@ 9a1a515c2f
+    (nx ? '<div class="bar thin"><i id="afbar" style="width:' + pct.toFixed(1) + '%"></i></div><p class="muted" style="font-size:12px;margin:4px 0 0;">' + fmtLeft(nx.h - h) + ' until the next stage, <b>' + nx.icon + ' ' + nx.t + '</b></p>' : '') +
+@@ 5ccc96783c
+    '<p class="muted" style="font-size:12px;margin:6px 0 0;">※ The exact timing in humans is not yet known. The Nobel-winning research was done in yeast. <a href="javascript:void 0" onclick="openHealth(\'auto\')">What is autophagy? →</a></p></div>';
+@@ f2fa064042
+function fmtLeft(hrs) { const m = Math.max(0, Math.round(hrs * 60)); return (m >= 60 ? Math.floor(m / 60) + ' hr ' : '') + (m % 60) + ' min'; }
+@@ 8c84ef69c0
+  return '<div class="card afnote" id="afNote"><div class="row" style="align-items:flex-start;"><div class="grow"><p style="margin:0;"><b>🔔 ' + (s.h === AF_ON ? 'Your autophagy switch may be starting to turn on' : s.t) + '</b></p><p class="muted" style="margin:4px 0 0;">' + s.m + '</p>' +
+@@ babeaaf350
+    (s.h === AF_ON ? '<p class="vline">“' + vt('2 Corinthians 4:16') + '” <span>— 2 Corinthians 4:16</span></p>' : '') + '</div><button class="btn sm sec" style="width:auto;" onclick="S.afNote=null;save();rerender()">Close</button></div></div>';
+@@ e32c53aeb0
+  const msg = fresh.h === AF_ON ? '🔆 Your autophagy switch may be starting to turn on' : fresh.icon + ' ' + fresh.t;
+@@ 74a7aa0340
+  intro:'Autophagy comes from the Greek auto (“self”) + phagein (“to eat”) — literally “self-eating.” It is the cell’s own cleanup and recycling process: worn-out or damaged parts are wrapped in a membrane (an autophagosome), sent to the lysosome to be broken down, and the materials are reused.',
+@@ 120dfa432d
+    ['In the 1960s Christian de Duve coined the word “autophagy,” but almost nothing was known about how it worked.', 'n', ['nobel']],
+@@ e84233feaa
+    ['In 1992 Yoshinori Ohsumi starved yeast lacking breakdown enzymes and, for the first time, showed under the microscope autophagosomes piling up inside the vacuole.', 'y', ['takeshige', 'nobel']],
+@@ 9836cf0312
+    ['In 1993 he identified the genes essential for autophagy, and similar machinery was found in human cells. For this work he received the 2016 Nobel Prize in Physiology or Medicine.', 'y', ['tsukada', 'nobel']]
+@@ a82248fc45
+    ['When no nutrients come in, mTOR (the growth signal) switches off and AMPK (the low-energy alarm) switches on, activating ULK1, the protein that starts autophagy.', 'c', ['kim11']],
+@@ 3c07836c3f
+    ['As fasting lengthens, insulin falls and a “metabolic switch” happens toward using ketones made from fat (usually after about 12 hours).', 'h', ['anton']],
+@@ 4e44ee524a
+    ['When mice went 24–48 hours without food, autophagy increased in most tissues, including the liver, muscle and heart. Each tissue responded differently.', 'a', ['miz04']],
+@@ 1ef3f0a26d
+    ['In humans, tissues are hard to observe directly, so research relies on indirect markers such as gene expression in blood cells. Exactly how many hours it takes to switch on is not yet known.', 'h', ['jam', 'bagh']]
+@@ c76380e12c
+    ['🔋 Damaged mitochondria', 'When mitochondria, the cell’s power plants, break down, they are selectively removed (mitophagy). Proteins called PINK1 and Parkin tag them.', 'c', ['youle']],
+@@ 7e59413d2e
+    ['🧩 Misfolded or clumped proteins', 'Autophagy clears protein clumps that would harm the cell. In mice lacking autophagy genes, protein clumps built up in neurons and neurodegeneration appeared.', 'a', ['hara', 'komatsu']],
+@@ 040cce7b45
+    ['🧱 Old organelles', 'It breaks down and recycles whole parts of the cell, such as aging endoplasmic reticulum and peroxisomes.', 'c', ['mizlev']],
+@@ 05a86b6bb5
+    ['🦠 Pathogens inside cells', 'It plays a defensive role, wrapping up and removing some bacteria that invade cells (Streptococcus, tuberculosis) — called xenophagy.', 'c', ['naka', 'gut']],
+@@ f6797bf4ba
+    ['💧 Fat droplets', 'It breaks down fat droplets inside liver cells to use for energy (lipophagy). This was first shown in mouse liver.', 'a', ['singh']]
+@@ 04699b9028
+    ['The endothelial cells lining blood vessels need autophagy to align with blood flow. Mice lacking endothelial autophagy developed more atherosclerotic lesions.', 'a', ['vion']],
+@@ 9f78578fa6
+    ['Mice lacking autophagy in the macrophages inside arterial plaque had more inflammation and worse plaque. So autophagy appears to play a protective role, slowing plaque growth.', 'a', ['razani', 'liao']],
+@@ 44d7d31bad
+    ['However, there is not yet direct evidence that fasting shrinks plaque in human arteries.', 'r', ['mizlev']]
+@@ 0ccb00f6b7
+    ['🧠 Brain & nerves', 'When mice went 24–48 hours without food, autophagy in brain neurons rose sharply. This hasn’t been confirmed in humans.', 'a', ['alir']],
+@@ 1f0c1c5eb6
+    ['🛡 Immunity & inflammation', 'Autophagy is involved throughout in clearing pathogens, regulating inflammation and the function of immune cells.', 'c', ['levine11']],
+@@ c8d0ceff92
+    ['⏳ Aging', 'In many animals, boosting autophagy extended lifespan and blocking it sped up aging. Some of the effects of calorie restriction are also linked to autophagy.', 'a', ['rubin', 'bagh']],
+@@ 272caf287f
+    ['🏥 Human disease', 'Defects in autophagy genes are linked to some neurological disorders, inflammatory bowel disease and more. Treatments targeting autophagy are still being researched.', 'h', ['mizlev']]
+@@ 37593030b6
+  caution:'Autophagy is an essential process, but that doesn’t mean “the more, the better.” There is no evidence that fasting cures disease, and long fasts carry risks like low blood sugar and electrolyte imbalance. If you have a medical condition or take medication, talk with your doctor first.'
+@@ 6fe352b4f3
+const HF_TAGS = ['All', 'Antioxidant', 'Heart & vessels', 'Gut health', 'Bones & muscle', 'Brain', 'Blood sugar'];
+@@ 6b247e7bbc
+  { id:'sweetpotato', n:'Sweet potato', kw:['sweet potato'], tags:['Antioxidant', 'Gut health', 'Blood sugar'], comp:'Beta-carotene (orange flesh), fiber, potassium, anthocyanins (purple varieties)', ben:[['Beta-carotene is converted to vitamin A in the body and used for eyes, skin and immunity.', 'g'], ['It’s high in fiber, so you stay full longer.', 'g']], how:'Steam or roast with the skin on. Beta-carotene is fat-soluble, so eating it with a little oil or nuts improves absorption. Steamed raises blood sugar less than roasted.', care:'If you have diabetes, keep it to half to one medium potato at a time. If you’re limiting potassium for kidney disease, ask your doctor about portions.', src:['kfcdb', 'hsph_fv'] },
+@@ 77abf9853f
+  { id:'carrot', n:'Carrot', kw:['carrot'], tags:['Antioxidant'], comp:'Beta-carotene, alpha-carotene, fiber', ben:[['Carotenoids are a good source of vitamin A.', 'g']], how:'Cooking carrots with a little oil makes beta-carotene easier to absorb than eating them raw (sautéed carrots, dressed with oil).', care:'Eating a lot can tint your palms yellow (carotenemia), but it’s harmless and fades when you cut back.', src:['kfcdb', 'hsph_fv'] },
+@@ fa8c66520c
+  { id:'garlic', n:'Garlic', kw:['garlic'], tags:['Antioxidant', 'Heart & vessels'], comp:'Alliin → allicin (formed by enzymes when chopped or crushed), sulfur compounds', ben:[['Experiments show that letting chopped garlic stand 10 minutes before heating preserves more of its beneficial compounds.', 'a', ['song']], ['Some reports show it slightly lowers blood pressure and cholesterol, but the effect is small.', 'h']], how:'Chop or crush, wait 10 minutes, then cook.', care:'If you take a blood thinner (like warfarin), talk with your doctor before taking garlic supplements. Lots of raw garlic can upset your stomach.', src:['song', 'kfcdb'] },
+@@ 692405bbf4
+  { id:'greenonion', n:'Green onion & leek', kw:['green onion', 'scallion', 'leek'], tags:['Antioxidant'], comp:'Quercetin, vitamin K, sulfur compounds', ben:[['Allium vegetables like green onions and onions are rich in flavonoids and sulfur compounds.', 'g']], how:'Use generously in soups and stir-fries — both the white and green parts.', care:'If you take warfarin, eat vitamin K–rich greens in “about the same amount every day.”', src:['kfcdb', 'ods_k'] },
+@@ c6c90e3314
+  { id:'onion', n:'Onion', kw:['onion'], tags:['Antioxidant', 'Heart & vessels'], comp:'Quercetin (especially near the outer skin and in red onions), fructans (prebiotic)', ben:[['Quercetin is a well-known antioxidant flavonoid. Its disease-prevention effects in people are not yet clear.', 'c']], how:'Don’t throw away the layer just inside the outer skin. A good amount of quercetin survives sautéing or cooking.', care:'If you have IBS (low-FODMAP diet), onions may upset your stomach.', src:['kfcdb'] },
+@@ 500e775db8
+  { id:'broccoli', n:'Broccoli', kw:['broccoli'], tags:['Antioxidant', 'Bones & muscle'], comp:'Sulforaphane (made from glucoraphanin by the enzyme myrosinase), vitamins C & K, folate', ben:[['A human study found that adding a little mustard-seed powder to cooked broccoli increased sulforaphane absorption.', 'h', ['okun']]], how:'Steam lightly (3–4 minutes) or blanch. Long boiling destroys the enzyme. Pairing it with raw crucifers like mustard or radish sprouts helps.', care:'Normal amounts are fine even with thyroid conditions. If you take warfarin, keep your intake steady.', src:['okun', 'kfcdb', 'ods_k'] },
+@@ 8093b57e9d
+  { id:'tomato', n:'Tomato', kw:['tomato'], tags:['Antioxidant', 'Heart & vessels'], comp:'Lycopene, vitamin C, potassium', ben:[['Lycopene was absorbed far better from cooked tomatoes or tomato paste than from raw tomatoes.', 'h', ['gartner']]], how:'Cook gently in olive oil (e.g. tomatoes scrambled with eggs). Cherry tomatoes make a great snack.', care:'If you have acid reflux, the acidity may bother you.', src:['gartner', 'kfcdb'] },
+@@ 3cf5b092f5
+  { id:'blueberry', n:'Blueberries', kw:['blueberr'], tags:['Antioxidant', 'Brain'], comp:'Anthocyanins, fiber, vitamin C', ben:[['Observational studies found lower cardiovascular and diabetes risk in people who eat berries often.', 'ho']], how:'A handful, fresh or frozen, on yogurt or oatmeal. Frozen keeps its nutrients well.', care:'Jams and juices are high in sugar.', src:['hsph_fv'] },
+@@ eb2c5547af
+  { id:'spinach', n:'Spinach', kw:['spinach'], tags:['Bones & muscle', 'Brain'], comp:'Folate, vitamin K, lutein, magnesium, nitrate', ben:[['Lutein is a pigment that concentrates in the macula of the eye.', 'g'], ['Studies suggest nitrate-rich vegetables slightly lower blood pressure.', 'h', ['siervo']]], how:'Blanching lightly and dressing with a little oil reduces oxalate and improves lutein absorption.', care:'With a history of (calcium oxalate) kidney stones, blanch it and eat in moderation. If you take warfarin, keep your intake steady.', src:['kfcdb', 'ods_k', 'siervo'] },
+@@ 029b5135a7
+  { id:'perilla', n:'Flax, chia & perilla seeds', kw:['flax', 'chia', 'perilla'], tags:['Heart & vessels', 'Brain'], comp:'Alpha-linolenic acid (plant omega-3; about half to 60% of the fat in flax and perilla oil), vitamin E', ben:[['A good source of plant omega-3. The body converts only a small share of it into EPA and DHA.', 'g', ['ods_o3']]], how:'These oils oxidize easily when heated, so drizzle them on at the end rather than cooking with them. Refrigerate after opening and use quickly. Ground seeds are easier to absorb.', care:'It’s an oil — about 120 kcal per tablespoon.', src:['kfcdb', 'ods_o3'] },
+@@ 26524c6aab
+  { id:'greentea', n:'Green tea', kw:['green tea'], tags:['Antioxidant', 'Heart & vessels'], comp:'Catechins (EGCG), caffeine, theanine', ben:[['Observational studies found lower cardiovascular disease risk in people who drink tea often.', 'ho', ['hsph_tea']]], how:'Steep 2–3 minutes in water around 175 °F (80 °C). Drink between meals rather than right after eating (it hinders iron absorption).', care:'High-dose green tea extract supplements have been linked to liver damage (drinking it as tea is generally safe). If you’re anemic, keep it an hour away from meals.', src:['hsph_tea', 'efsa_tea'] },
+@@ 7ee821d55b
+  { id:'turmeric', n:'Turmeric', kw:['turmeric', 'curry'], tags:['Antioxidant'], comp:'Curcumin', ben:[['Curcumin is very poorly absorbed. Taken with piperine from black pepper, absorption rose sharply in humans.', 'h', ['shoba']], ['Results on inflammation and joint effects are mixed across studies.', 'h', ['nccih_tur']]], how:'Use in curries and stir-fries with black pepper and a little oil.', care:'With gallstones or bile-duct disease, or if you take a blood thinner, avoid supplements or ask your doctor. High-dose supplements have been linked to liver damage.', src:['shoba', 'nccih_tur'] },
+@@ 843db31739
+  { id:'ginger', n:'Ginger', kw:['ginger'], tags:['Gut health'], comp:'Gingerols, shogaols', ben:[['It may help ease nausea from morning sickness in pregnancy or motion sickness.', 'h', ['nccih_gin']]], how:'Ginger tea (simmer thin slices) or a little in cooking.', care:'If you take a blood thinner, avoid large amounts. It can cause heartburn.', src:['nccih_gin'] },
+@@ 7f379c4910
+  { id:'soy', n:'Beans & tofu', kw:['tofu', 'soy', 'bean', 'chickpea', 'lentil', 'miso'], tags:['Heart & vessels', 'Bones & muscle'], comp:'Plant protein, isoflavones, fiber, calcium (tofu)', ben:[['Eating soy protein in place of meat may lower LDL cholesterol slightly.', 'h']], how:'Once a day as tofu, miso, tempeh or unsweetened soy milk. A great protein source for the Daniel Fast.', care:'With gout or high uric acid, watch portions (tofu is relatively fine). Watch for soy allergy.', src:['kfcdb', 'hsph_fv'] },
+@@ a83294680f
+  { id:'seaweed', n:'Seaweed (kelp, wakame, nori)', kw:['seaweed', 'kelp', 'nori'], tags:['Gut health'], comp:'Iodine, alginate (soluble fiber), calcium, fucoidan', ben:[['Iodine is essential for thyroid hormones. Most people in the U.S. get enough from iodized salt and dairy.', 'g', ['ods_i']]], how:'Enjoy in moderation, e.g. in soup or as nori snacks. One piece of kelp is plenty for making broth.', care:'With thyroid disease, or if you take kelp tablets or seaweed powder in large amounts every day, you can get too much iodine.', src:['ods_i', 'kfcdb'] },
+@@ a300910a0c
+  { id:'mushroom', n:'Mushrooms', kw:['mushroom'], tags:['Gut health', 'Bones & muscle'], comp:'Beta-glucans, ergothioneine, vitamin D (sun-dried mushrooms)', ben:[['Mushrooms exposed to sunlight or UV light gain vitamin D.', 'g', ['ods_d']]], how:'Leave them gill-side up in the sun for about 30 minutes before cooking to boost vitamin D. Great sautéed or in soup.', care:'Don’t forage wild mushrooms — some are poisonous.', src:['ods_d', 'kfcdb'] },
+@@ 4f70f38830
+  { id:'brownrice', n:'Brown rice & whole grains', kw:['brown rice', 'grain', 'whole-wheat', 'oatmeal', 'buckwheat', 'soba'], tags:['Gut health', 'Blood sugar', 'Heart & vessels'], comp:'Fiber, magnesium, B vitamins', ben:[['People eating 90 g of whole grains a day had lower risk of cardiovascular disease and death (meta-analysis).', 'ho', ['aune']]], how:'Start by mixing in one-third brown rice or whole grains with white rice. Soaking well before cooking makes it easier to digest.', care:'If digestion is weak or you have kidney disease (phosphorus/potassium limits), adjust portions.', src:['aune', 'kfcdb'] },
+@@ 7a01b61318
+  { id:'nuts', n:'Nuts', kw:['nut', 'walnut', 'almond'], tags:['Heart & vessels', 'Brain'], comp:'Unsaturated fats, vitamin E, magnesium, polyphenols', ben:[['A Mediterranean diet with added nuts reduced cardiovascular events (randomized trial).', 'h', ['estruch', 'hsph_nuts']]], how:'A handful a day (about 1 oz / 25–30 g), unsalted and unsweetened.', care:'High in calories (about 170 kcal a handful). Watch for nut allergies.', src:['estruch', 'hsph_nuts'] },
+@@ 25526f7cb2
+  { id:'fish', n:'Oily fish', kw:['mackerel', 'salmon', 'sardine', 'fish'], tags:['Heart & vessels', 'Brain'], comp:'EPA & DHA (omega-3), vitamin D, protein', ben:[['People who eat fish about twice a week had fewer deaths from heart disease.', 'ho', ['ods_o3']]], how:'Grilled or braised, twice a week. Bake or steam rather than fry.', care:'If you’re pregnant or breastfeeding, and for children, limit large high-mercury fish (swordfish, big tuna). With gout, watch portions.', src:['ods_o3', 'fda_fish'] },
+@@ 180634eb81
+  { id:'natto', n:'Natto & fermented soybeans', kw:['natto'], tags:['Gut health', 'Bones & muscle'], comp:'Vitamin K2 (menaquinone-7), nattokinase, fermenting bacteria', ben:[['Vitamin K is needed for blood clotting and bone proteins.', 'g', ['ods_k']]], how:'One pack in the morning with rice. Don’t heat it too hot.', care:'If you take warfarin, natto’s very high vitamin K can weaken the drug. Always talk with your doctor.', src:['ods_k', 'kfcdb'] },
+@@ ccf576038a
+  { id:'berries', n:'Berries (strawberry, aronia, mulberry)', kw:['strawberr', 'aronia', 'berry'], tags:['Antioxidant'], comp:'Anthocyanins, vitamin C, ellagic acid', ben:[['The deeper the color of a fruit, the more polyphenols it tends to have.', 'g', ['hsph_fv']]], how:'Fresh, in season. Aronia is astringent, so add a little to yogurt.', care:'Avoid syrups, jams and sweetened juices.', src:['hsph_fv'] },
+@@ 0d7317b7c8
+  { id:'apple', n:'Apple', kw:['apple'], tags:['Gut health', 'Heart & vessels'], comp:'Pectin (soluble fiber), quercetin (skin)', ben:[['Eating more whole fruit was linked to lower type 2 diabetes risk, but fruit juice showed the opposite.', 'ho', ['hsph_fv']]], how:'Wash well and eat with the skin. Chew it whole instead of juicing.', care:'If your blood sugar is high, half to one apple at a time.', src:['hsph_fv', 'kfcdb'] },
+@@ daf587b640
+  { id:'citrus', n:'Lemon, grapefruit & clementine', kw:['lemon', 'grapefruit', 'clementine', 'orange'], tags:['Antioxidant'], comp:'Vitamin C, hesperidin, naringin (grapefruit)', ben:[['Vitamin C helps you absorb iron from plants.', 'g', ['ods_c']]], how:'A squeeze of lemon on spinach or bean dishes helps iron absorption. Eat clementines with the white pith.', care:'⚠ Grapefruit (and its juice) raises blood levels of some cholesterol drugs (e.g. simvastatin), blood-pressure drugs and immunosuppressants. If you take medication, check with your pharmacist.', src:['fda_gf', 'ods_c'] },
+@@ ed974b8489
+  { id:'potato', n:'Potato', kw:['potato'], tags:['Blood sugar'], comp:'Potassium, vitamin C, resistant starch (cooled potatoes)', ben:[['Boiled-then-cooled potatoes have more resistant starch and raise blood sugar less.', 'h']], how:'Steam or boil with the skin instead of frying. Eat it in place of rice or bread, not on top of it.', care:'Cut deeply around sprouts or green skin (solanine). With kidney disease, watch potassium.', src:['hsph_potato', 'kfcdb', 'ods_pot'] }
+@@ 46386d402a
+    ['Your body is always detoxing — through the liver, kidneys, gut, lungs and skin. There is almost no research evidence that “detox juices” flush out toxins.', 'g', ['nccih_detox']],
+@@ 01faa84a54
+    ['Blending gives you vitamins and polyphenols, but fiber drops (especially when juiced) and sugar is absorbed quickly. The WHO counts the sugar in fruit juice as “free sugar” and recommends cutting back.', 'g', ['who_diet', 'hsph_fv']],
+@@ 7d4d2597db
+    ['Eating more whole fruit was linked to lower diabetes risk, but drinking more fruit juice was linked to higher risk.', 'ho', ['hsph_fv']],
+@@ 5030413cf9
+    ['A meta-analysis of clinical studies found that beet juice (nitrate) slightly lowers blood pressure.', 'h', ['siervo']]
+@@ 7d5379dab7
+    ['🍍 Pineapple — bromelain', 'A protein-digesting enzyme that tenderizes meat. As a supplement, evidence for anti-inflammatory or digestive effects is limited. Combined with blood thinners it may raise bleeding risk.', 'h', ['nccih_brom']],
+@@ 9b753dd163
+    ['🥝 Kiwi — actinidin', 'A protein-digesting enzyme used to marinate meat. Studies suggest eating kiwi helps with constipation, but it’s unclear whether the enzyme itself is the reason.', 'x', []],
+@@ 9c2fbf922c
+    ['🥢 Radish — amylase', 'Raw radish contains a starch-digesting enzyme. Most of it is inactivated by stomach acid, so the effect of “eating enzymes to aid digestion” is thought to be small.', 'x', []],
+@@ 44b957cf58
+    ['💊 Enzyme products', 'Evidence is lacking that commercial “enzyme” foods aid weight loss or detox. Some are high in sugar, so check the label.', 'x', ['nccih_detox']]
+@@ 90e467fd9d
+    { n:'ABC juice (apple, beet, carrot)', r:'Blend ½ apple, ¼ beet, ½ carrot and ⅔ cup (150 ml) of water, skins on, and drink it with the pulp (a blender rather than a juicer).', tip:'The carrot’s beta-carotene absorbs better with a few nuts. Beets can turn your urine red (harmless).', care:'If you have diabetes, leave out the apple and add more vegetables. With kidney disease, be careful with beets (potassium, oxalate).' },
+@@ b25c1675c9
+    { n:'Cabbage juice', r:'Lightly blanch 2 cabbage leaves and blend with ¼ apple and ⅔ cup (150 ml) of water.', tip:'Cabbage is rich in vitamins C and K and fiber. Blanching reduces the grassy taste and gas.', care:'If you take warfarin, keep the amount steady each day. If you take thyroid medication, space it apart from your dose.' },
+@@ 6deda4dfa1
+    { n:'Green smoothie', r:'A handful of spinach, ½ banana, ¾ cup (200 ml) unsweetened soy milk, 1 tsp ground flaxseed.', tip:'With protein (soy milk) and fat (flax), it makes a satisfying snack.', care:'If your blood sugar is high, swap the banana for 1 kiwi.' }
+@@ 0b8e799021
+  daily:'The WHO recommends at least 400 g of fruit and vegetables a day (not counting potatoes and other starchy roots) — roughly five servings. Simply: two or more vegetable sides at every meal and fruit once or twice a day (about a fist-sized portion). Fill half your plate with vegetables and fruit (Harvard Healthy Eating Plate).',
+@@ 616c40c8eb
+  { id:'vitc', n:'Vitamin C', ben:[['Prevents deficiency (scurvy) and helps iron absorption.', 'g'], ['Taking it regularly shortens colds slightly (about 8% in adults) but did not prevent them.', 'h', ['hemila_c']], ['Evidence is lacking that high doses (megadoses) prevent cancer or chronic disease.', 'h', ['ods_c']]], dose:'RDA for adults: 90 mg/day (men), 75 mg/day (women) · upper limit 2,000 mg/day (NIH). Fruits and vegetables easily cover it (2 clementines ≈ 60 mg, 1 kiwi ≈ 70 mg).', tip:'It’s water-soluble, so splitting doses works best.', care:'One study found men taking vitamin C supplements had about twice the risk of kidney stones. Avoid high doses with kidney stones, kidney disease or hemochromatosis. High doses can cause diarrhea.', src:['kdri', 'ods_c', 'thomas', 'hemila_c'] },
+@@ a1bcd0112f
+  { id:'worm', n:'Dewormers (pyrantel, albendazole, mebendazole)', ben:[['Dewormers treat intestinal worms such as pinworm and roundworm. They don’t prevent infection (they don’t stay in the body long).', 'g', ['jkma_worm']], ['Where these infections are rare, routine “whole-family deworming every spring and fall” is no longer recommended. In the U.S., pyrantel pamoate for pinworm is sold over the counter; albendazole and mebendazole need a prescription. If you have symptoms or risk factors, get tested first.', 'g', ['jkma_worm', 'brief_worm']], ['Liver flukes are not treated by ordinary dewormers. If you have eaten raw freshwater fish, ask your doctor about testing.', 'g', ['kdca_worm']]], dose:'Follow the package or your doctor’s directions. For pinworm, a second dose is often taken 2 weeks later to prevent reinfection.', tip:'Consider asking about treatment if you have anal itching (pinworm), after eating raw food or raw freshwater fish, with pets, or after travel to areas with poor sanitation. Pinworm is treated as a whole household.', care:'Don’t take one if you’re pregnant (or might be), breastfeeding, or for children under 2 without a doctor. With liver disease, ask your doctor. ⚠ Claims that the animal dewormer fenbendazole cures cancer have no human evidence; Korean health authorities and cancer specialists have advised against taking it.', src:['jkma_worm', 'brief_worm', 'kdca_worm', 'mfds_fen'] },
+@@ e1ed4d45b0
+  { id:'vitd', n:'Vitamin D', ben:[['Needed for bone health and calcium absorption. Deficiency is common (indoor living).', 'g'], ['In adults without deficiency, high doses did not prevent cancer or cardiovascular disease (VITAL trial).', 'h', ['vital_d']]], dose:'RDA for adults: 15 μg (600 IU)/day, 20 μg (800 IU) over 70 · upper limit 100 μg (4,000 IU)/day (NIH).', tip:'It’s fat-soluble, so take it with a meal. 15–30 minutes of sun on your arms and legs, oily fish and sun-dried mushrooms help too.', care:'Long-term high doses can cause high blood calcium. With kidney stones or parathyroid disease, talk with your doctor.', src:['kdri', 'ods_d', 'vital_d'] },
+@@ d39e00938b
+  { id:'omega3', n:'Omega-3 (EPA & DHA)', ben:[['Lowers triglycerides in people with high levels.', 'h', ['ods_o3']], ['In healthy people it did not clearly prevent cardiovascular events or cancer (VITAL).', 'h', ['vital_o3']]], dose:'There’s no official recommended supplement dose. Supplements commonly provide 0.5–2 g of EPA+DHA a day. Eating fish twice a week is an alternative.', tip:'Taking it with meals reduces fishy burps. Throw out rancid products (strong, unpleasant smell).', care:'A meta-analysis found slightly higher atrial fibrillation risk above 1 g a day. If you take blood thinners or antiplatelet drugs, or before surgery, talk with your doctor.', src:['ods_o3', 'vital_o3', 'gencer'] },
+@@ 918608232e
+  { id:'mg', n:'Magnesium', ben:[['A mineral needed for muscles, nerves and blood-sugar control. Low levels can cause muscle cramps.', 'g']], dose:'RDA for adults: 400–420 mg/day (men), 310–320 mg/day (women), including food · upper limit from supplements 350 mg/day (NIH).', tip:'Rich sources are nuts, whole grains, spinach and tofu. Many people take it before bed.', care:'Supplements can cause diarrhea. With kidney disease it can build up — talk with your doctor. Keep it at least 2 hours apart from some antibiotics (tetracyclines, quinolones) and osteoporosis drugs.', src:['kdri', 'ods_mg'] },
+@@ 63d7ccef8f
+  { id:'probiotic', n:'Probiotics', ben:[['There’s evidence they help reduce diarrhea that occurs while taking antibiotics (especially in children).', 'h', ['guo']], ['Effects differ by strain, so it’s hard to say “all probiotics are good for your gut.”', 'g', ['nccih_pro']]], dose:'Doses vary by product (often 1–10 billion CFU a day — check the label).', tip:'Fermented foods like kimchi, sauerkraut, yogurt and kefir are good too. Keep them at least 2 hours apart from antibiotics.', care:'People with severely weakened immunity (on chemotherapy, critically ill, with a central line) face infection risk — talk with your doctor.', src:['ods_pro', 'nccih_pro', 'guo'] },
+@@ 666bece49c
+  { id:'zinc', n:'Zinc', ben:[['Needed for immunity, wound healing and taste.', 'g'], ['A meta-analysis found zinc lozenges taken early in a cold shortened it.', 'h', ['hemila_zn']]], dose:'RDA for adults: 11 mg/day (men), 8 mg/day (women) · upper limit 40 mg/day (NIH).', tip:'Rich sources are oysters, beef, beans and nuts.', care:'Long-term high doses can cause copper deficiency (anemia, nerve problems). Keep it 2+ hours apart from some antibiotics. Avoid zinc nasal sprays — loss of smell has been reported.', src:['kdri', 'ods_zn', 'hemila_zn'] },
+@@ 40c38babdd
+  { id:'iron', n:'Iron', ben:[['Clearly effective for treating and preventing iron-deficiency anemia. Often needed by women of childbearing age and pregnant women.', 'h', ['ods_fe']]], dose:'RDA for adults: 8 mg/day (men), 18 mg/day (women 19–50) · upper limit 45 mg/day (NIH).', tip:'Take it when a blood test shows you need it. It absorbs better with vitamin C; keep it 2 hours apart from tea, coffee, calcium and antacids.', care:'Constipation and heartburn are common. Men and post-menopausal women without anemia can get iron overload from long-term use. An overdose is dangerous for children, so keep it out of reach.', src:['kdri', 'ods_fe'] }
+@@ 01add2a589
+const SUPP_FAST = 'During and after a fast: while water fasting, it’s best to pause supplements other than any electrolytes your doctor recommends. Fat-soluble vitamins (D, omega-3) need food to be absorbed, and iron, zinc or magnesium on an empty stomach can cause nausea or diarrhea. During refeeding, restart them one at a time once eating is steady.';
+@@ 963def97a4
+const HEALTH_VERSES = ['Genesis 1:29', 'Daniel 1:12', 'Daniel 1:15', '2 Corinthians 4:16', '1 Corinthians 6:19'];
+@@ dbc41c98ee
+const HV = { sec:'auto', q:'', tag:'All', open:'' };
+@@ 30b2edeeb8
+function openHealth(sec, id) { HV.sec = sec || 'auto'; HV.open = id || ''; HV.q = ''; HV.tag = 'All'; showTab('health'); if (id) setTimeout(() => { const el = document.getElementById('hf-' + id); if (el) el.scrollIntoView({ block:'start' }); }, 30); }
+@@ e5cf4988e9
+    '<p><b>Key compounds</b> ' + f.comp + '</p><p><b>What the evidence shows</b></p><ul class="claims">' + claimList(f.ben) + '</ul>' +
+@@ aa22372a04
+    '<p><b>How to eat it</b> ' + f.how + '</p><p class="care"><b>Caution</b> ' + f.care + '</p>' + srcLine(f.src) + '</details>';
+@@ 692e3249ad
+  const list = HFOODS.filter(f => (HV.tag === 'All' || f.tags.includes(HV.tag)) && hfMatch(f, HV.q));
+@@ f1e61a13ad
+  return '<div class="card"><h3>🥕 Antioxidant & Healthy Foods</h3><input class="inp" id="hfQ" type="search" placeholder="Search foods or compounds (e.g. lycopene, garlic)" value="' + esc(HV.q) + '" oninput="HV.q=this.value;hfRefresh()">' +
+@@ 2e33e19e36
+    '<p class="muted" id="hfCount">' + list.length + ' foods</p><div id="hfList">' + (list.length ? list.map(hfCard).join('') : '<p class="muted">No matching foods. Try searching another name.</p>') + '</div>' + hvl('Genesis 1:29') + '</div>';
+@@ 692e3249ad
+  const list = HFOODS.filter(f => (HV.tag === 'All' || f.tags.includes(HV.tag)) && hfMatch(f, HV.q));
+@@ 066959018c
+  L.innerHTML = list.length ? list.map(hfCard).join('') : '<p class="muted">No matching foods. Try searching another name.</p>';
+@@ 31aee91976
+  document.getElementById('hfCount').textContent = list.length + ' foods';
+@@ 82d125dfe1
+  return '<div class="card"><h3>🔆 Autophagy</h3><p>' + AUTO.intro + '</p>' + hvl('2 Corinthians 4:16') +
+@@ 9755ac2df0
+    s('🏅 Yoshinori Ohsumi’s discovery', AUTO.story) + s('⏱ How fasting switches on autophagy', AUTO.how) +
+@@ 136768e631
+    '<div class="isec"><h4>⏱ Stages by fasting hours (the app’s switch)</h4><ul class="claims">' + AF_STAGES.slice(1).map(x => '<li><b>' + x.h + ' hours ' + x.icon + ' ' + x.t + '</b> — ' + x.m + ' ' + eviTag(x.e) + '</li>').join('') + '</ul><p class="muted" style="font-size:13px;">The exact timing in humans is not yet known. 16 hours is a rough “around when it may begin” marker, based on a human study (18-hour fast) and animal studies.</p></div>' +
+@@ 9e1dfd1672
+    '<div class="isec"><h4>🧹 What does it clean up?</h4><ul class="claims">' + AUTO.clean.map(c => '<li><b>' + c[0] + '</b> — ' + c[1] + ' ' + eviTag(c[2]) + ' <span class="cite">[' + c[3].map(k => '<a href="' + citeUrl(k) + '" target="_blank" rel="noopener">' + CITE[k].t.split(' (')[0] + '</a>').join(', ') + ']</span></li>').join('') + '</ul></div>' +
+@@ f9de91c33d
+    s('🫀 Blood vessels and autophagy', AUTO.vessel) +
+@@ ac9bf67249
+    '<div class="isec"><h4>🧠 Brain · immunity · aging</h4><ul class="claims">' + AUTO.more.map(c => '<li><b>' + c[0] + '</b> — ' + c[1] + ' ' + eviTag(c[2]) + '</li>').join('') + '</ul></div>' +
+@@ e53f2d1329
+    '<details class="more"><summary>See all references</summary><ol class="refs">' + ['nobel', 'takeshige', 'tsukada', 'miz04', 'alir', 'bagh', 'mizlev', 'jam', 'anton', 'kim11', 'youle', 'singh', 'naka', 'gut', 'hara', 'komatsu', 'vion', 'razani', 'liao', 'rubin', 'levine11'].map(k => '<li>' + esc(CITE[k].t) + ' — <a href="' + citeUrl(k) + '" target="_blank" rel="noopener">' + (CITE[k].d ? 'doi:' + CITE[k].d : CITE[k].u) + '</a></li>').join('') + '</ol></details></div>';
+@@ 361a949262
+  return '<div class="card"><h3>🥤 Detox Juices · Enzymes · Fruits & Vegetables</h3><div class="isec"><h4>Honest science</h4><ul class="claims">' + claimList(JUICE.science) + '</ul></div>' +
+@@ 35245511f9
+    '<div class="isec"><h4>🥗 How much a day?</h4><p>' + JUICE.daily + '</p>' + srcLine(JUICE.dailySrc) + '</div>' +
+@@ aef539cc0f
+    '<div class="isec"><h4>🍹 Recipes</h4>' + JUICE.recipes.map(r => '<details class="hcard"><summary><b>' + r.n + '</b></summary><p>' + r.r + '</p><p><b>Tip</b> ' + r.tip + '</p><p class="care"><b>Caution</b> ' + r.care + '</p></details>').join('') +
+@@ f6ffcad2e3
+    '<div class="warn" style="margin-top:8px;">If you have diabetes, choose mostly-vegetable juices over fruit juice, keep it to one cup (5–7 oz / 150–200 ml) or less, and have it with a meal. Don’t replace meals with juice.</div>' + srcLine(['who_diet', 'hsph_fv']) + '</div>' +
+@@ bf9a0f5c0c
+    '<div class="isec"><h4>🧪 Enzymes in raw food — do they really work?</h4><ul class="claims">' + JUICE.enzymes.map(e => '<li><b>' + e[0] + '</b> — ' + e[1] + ' ' + eviTag(e[2]) + '</li>').join('') + '</ul>' + srcLine(['nccih_brom', 'nccih_detox']) + '</div>' + hvl('Daniel 1:12') + hvl('Daniel 1:15') + '</div>';
+@@ 78bd2d138e
+  return '<div class="card"><h3>💊 Everyday Medicines & Supplements</h3><p class="muted">We don’t recommend any specific product. Before taking anything, <b>talk with your doctor or pharmacist</b> — especially if you take other medications or are pregnant or breastfeeding.</p>' +
+@@ 16e600c24c
+    SUPPS.map(s => '<details class="hcard" id="hf-' + s.id + '"' + (HV.open === s.id ? ' open' : '') + '><summary><b>' + s.n + '</b></summary><p><b>Benefits (level of evidence)</b></p><ul class="claims">' + claimList(s.ben) + '</ul><p><b>Recommended amount · upper limit</b> ' + s.dose + '</p><p><b>Tips</b> ' + s.tip + '</p><p class="care"><b>Cautions · interactions</b> ' + s.care + '</p><p class="muted" style="font-size:13px;">💬 Talk with your doctor or pharmacist before taking.</p>' + srcLine(s.src) + '</details>').join('') +
+@@ a86fd27baa
+    '<div class="warn" style="margin-top:10px;">' + SUPP_FAST + '</div>' + hvl('1 Corinthians 6:19') + '</div>';
+@@ e18f58a1b6
+  const tabs = [['auto', '🔆 Autophagy'], ['food', '🥕 Foods'], ['juice', '🥤 Juices'], ['supp', '💊 Supplements']];
+@@ 98334f0a52
+  let h = '<h2 class="ttl">Health Info</h2><p class="muted" style="margin-top:-6px;">We share only what research has confirmed, with sources. This does not replace medical diagnosis or treatment.</p>' +
+@@ 30d2491371
+function hfFor(name) { name = String(name).toLowerCase(); return HFOODS.find(f => f.kw.some(k => name.includes(k.toLowerCase()))); }
+@@ e5b5edfa8b
+  return fs.length ? '<p class="hlinks">🌿 ' + fs.map(f => '<a href="javascript:void 0" onclick="openHealth(\'food\',\'' + f.id + '\')">' + f.n.split(' (')[0] + '</a>').join(' · ') + '</p>' : '';

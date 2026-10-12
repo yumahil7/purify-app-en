@@ -1,0 +1,74 @@
+@@ b74fe67b1c
+  return '<div class="card"><h3>👥 Small Group <span class="tag">Saved on this device only</span></h3>' +
+@@ 305a766359
+    '<p style="font-size:14px; color:#efcdbf; margin:4px 0 8px;">There’s no server, so nothing syncs with other people. Use the share button to send them a summary.</p>' +
+@@ b9fa3ec1bb
+    '<div class="row"><input class="inp grow" id="grpName" placeholder="Group name" value="' + esc(g.name) + '"><button class="btn sec" style="width:80px;" onclick="saveGroupName()">Save</button></div>' +
+@@ 3e220f7eb1
+    '<div class="row" style="margin-top:8px;"><input class="inp grow" id="memName" placeholder="Member name"><button class="btn sec" style="width:80px;" onclick="addMember()">Add</button></div>' +
+@@ decd8a80a5
+    (g.members.length ? '<p class="muted" style="margin-top:10px;">Encouragement & prayer requests for today (' + fmtMD(T) + ')</p>' : '') +
+@@ 930a99bedc
+    g.members.map(m => { const n = t[m.id] || {}; return '<div class="member"><div class="row"><b class="grow">' + esc(m.name) + '</b><button class="link" onclick="removeMember(\'' + m.id + '\')">Remove</button></div>' +
+@@ 8111777f29
+      '<input class="inp" placeholder="Word of encouragement" value="' + esc(n.cheer || '') + '" onchange="setMemberNote(\'' + m.id + '\',\'cheer\',this.value)">' +
+@@ 08428ff49c
+      '<input class="inp" placeholder="Prayer request" value="' + esc(n.prayer || '') + '" onchange="setMemberNote(\'' + m.id + '\',\'prayer\',this.value)"></div>'; }).join('') + '</div>';
+@@ 4573d55b37
+function saveGroupName() { S.group.name = document.getElementById('grpName').value.trim(); save(); toast('Group name saved.'); rerender(); }
+@@ b52004ac85
+  if (!n) return alert('Please enter a member name.');
+@@ c487be0304
+  const m = S.group.members.find(x => x.id === id); if (!m || !confirm('Remove ' + m.name + '?')) return;
+@@ ea0d60d412
+  const L = ['✦ Purify · The Path of Cleansing · ' + fmtMD(T)];
+@@ b04ea27c4f
+  L.push('', (S.name ? S.name + '’s day: ' : 'Today: ') + progName() + ' ' + (progActive(T) ? '· day ' + progDay(T) + ' of ' + progLen() : '· finished') + (S.program.done ? ' 🏅' : ''));
+@@ 8f473d5f05
+  L.push('', '📖 Today’s Verse', '“' + v.t + '”', '— ' + v.r + ' (KJV)', '', '💡 In plain words: ' + v.e, '✔ Today’s step: ' + v.a);
+@@ 36d9efd0d9
+  const lines = S.group.members.map(m => { const n = t[m.id] || {}, ps = []; if (n.cheer) ps.push('Encouragement: ' + n.cheer); if (n.prayer) ps.push('Prayer: ' + n.prayer); return ps.length ? '- ' + m.name + ' · ' + ps.join(' / ') : ''; }).filter(Boolean);
+@@ 007ee0b573
+  if (lines.length) L.push('', '👥 Walking together', ...lines);
+@@ 0f25a22471
+  L.push('', '— A healthy body and a renewed heart, with God’s Word. Purify');
+@@ 1b742030fd
+  const done = ok => { if (ok) toast('Copied. Paste it into a text or chat.'); else prompt('Please copy the text below', txt); };
+@@ 54e5ce4fd1
+function shareToday() { return shareText(buildShareText(), 'Purify · Today'); }
+@@ 0f77cfe470
+function askFriend() { return shareText('Hey — I’ve been building healthy habits with an app called Purify, and I’ve gotten curious about the Bible verses in it. Could we talk about it sometime? 🙂', 'Purify'); }
+@@ af22d221fa
+    setTimeout(() => URL.revokeObjectURL(url), 1500); toast('Backup file saved.');
+@@ 5e2abb9a05
+  } catch(e) { alert('Export error: ' + e.message); }
+@@ 372b28be69
+  if (!isObj(o) || o.app !== 'purify') return 'This isn’t a Purify backup file.';
+@@ 25db0070f2
+  if (!isObj(o.data)) return 'There’s no backup data.';
+@@ 0a44dedaca
+    if (!isObj(v) || v.version !== 3) return 'The v3 data format isn’t valid.';
+@@ d11cf10ae3
+    if (v.profile != null && !isObj(v.profile)) return 'The profile format isn’t valid.';
+@@ 828a0892b3
+    if (v.days != null && !isObj(v.days)) return 'The daily records format isn’t valid.';
+@@ af0aeab5db
+    if (v.weights != null && (!Array.isArray(v.weights) || v.weights.some(w => !w || typeof w.d !== 'string' || typeof w.kg !== 'number'))) return 'The weight records format isn’t valid.';
+@@ 56a1a36c98
+  if (d.purifyState != null && !isObj(d.purifyState)) return 'The purifyState format isn’t valid.';
+@@ 847adcdb81
+  if (d.purifyWater != null && (!Array.isArray(d.purifyWater) || d.purifyWater.some(l => !l || typeof l.a !== 'number'))) return 'The water records format isn’t valid.';
+@@ e21cb95608
+  if (d.purifyV2 != null && !isObj(d.purifyV2)) return 'The purifyV2 format isn’t valid.';
+@@ f39d2a7030
+  if (d.purifyV3 == null && d.purifyState == null && d.purifyWater == null && d.purifyV2 == null) return 'There are no records to import.';
+@@ 20c6dfc8fc
+  if (err) { alert('Import failed: ' + err); return false; }
+@@ 30ffda4324
+  if (!skipConfirm && !confirm('Restore the backup (' + (o.exportedAt ? o.exportedAt.slice(0, 10) : 'no date') + ')?\nAll records on this device will be overwritten.')) return false;
+@@ f615683e79
+  } catch(e) { alert('Save error: ' + e.message); return false; }
+@@ fba6db52c6
+  r.onload = () => { let o; try { o = JSON.parse(r.result); } catch(e) { input.value = ''; return alert('Import failed: the JSON file could not be read.'); } applyBackup(o); input.value = ''; };
+@@ fd593e92e1
+  if (!confirm('Erase all records (profile, meals, weight, programs, group, etc.)? This can’t be undone.')) return;

@@ -1,0 +1,78 @@
+@@ f067514c02
+  piano:{ name:'Gentle Piano', sub:'A Purify original (piano & pad in D major)', file:'purify-bgm', len:80 },
+@@ cc55fd1ba2
+  ave:{ name:'Ave Maria', sub:'Schubert, “Ellens dritter Gesang” D.839 (1825) · melody arrangement', file:'ave-maria', len:4831826 / 44100 },
+@@ 648a7943ba
+  salve:{ name:'Salve Regina', ko:'Hail, Holy Queen (simple tone, mode 5)', file:'chant-salve', len:3883136 / 32000, lyr:[
+@@ 762b86d4dc
+    ['Salve, Regína, mater misericórdiæ; vita, dulcédo, et spes nostra, salve.', 'Hail, O Queen, mother of mercy; our life, our sweetness and our hope, hail.'],
+@@ be214b44f7
+    ['Ad te clamámus, éxsules fílii Hevæ.', 'To you we cry, the exiled children of Eve.'],
+@@ cc8f323253
+    ['Ad te suspirámus, geméntes et flentes in hac lacrimárum valle.', 'To you we sigh, mourning and weeping in this valley of tears.'],
+@@ 241afb65d1
+    ['Eia ergo, advocáta nostra, illos tuos misericórdes óculos ad nos convérte.', 'Turn then, our advocate, those merciful eyes of yours toward us.'],
+@@ 6ebf5e1db4
+    ['Et Jesum, benedíctum fructum ventris tui, nobis post hoc exsílium osténde.', 'And after this our exile, show us Jesus, the blessed fruit of your womb.'],
+@@ 9d02a6612c
+    ['O clemens, O pia, O dulcis Virgo María.', 'O clement, O loving, O sweet Virgin Mary.']] },
+@@ e81fdea3b6
+  veni:{ name:'Veni Creator Spiritus', ko:'Come, Creator Spirit (mode 8 hymn · verses 1–2)', file:'chant-veni', len:2244224 / 32000, lyr:[
+@@ 1952816124
+    ['Veni, Creátor Spíritus, mentes tuórum vísita, imple supérna grátia, quæ tu creásti péctora.', 'Come, Creator Spirit, visit the minds of Your own; fill with heavenly grace the hearts that You have made.'],
+@@ d879a0ea13
+    ['Qui díceris Paráclitus, altíssimi donum Dei, fons vivus, ignis, cáritas, et spiritális únctio.', 'You who are called the Comforter, gift of God Most High, living spring, fire, love, and anointing of the Spirit.']] },
+@@ 6ab98a6031
+  avemaris:{ name:'Ave maris stella', ko:'Hail, Star of the Sea (mode 1 hymn · verses 1–2)', file:'chant-avemaris', len:1877581 / 32000, lyr:[
+@@ 1c0c193d98
+    ['Ave maris stella, Dei Mater alma, atque semper Virgo, felix cæli porta.', 'Hail, star of the sea, loving Mother of God, ever Virgin, happy gate of heaven.'],
+@@ 7e2dc27351
+    ['Sumens illud Ave Gabriélis ore, funda nos in pace, mutans Evæ nomen.', 'Receiving that “Ave” from Gabriel’s lips, establish us in peace, reversing the name of Eve.']] },
+@@ 649882b65a
+  pange:{ name:'Pange lingua', ko:'Sing, My Tongue (mode 3 hymn · verse 1, verse 5 Tantum ergo)', file:'chant-pange', len:2754061 / 32000, lyr:[
+@@ 4730d8743f
+    ['Pange, lingua, gloriósi córporis mystérium, sanguinísque pretiósi, quem in mundi prétium fructus ventris generósi Rex effúdit géntium.', 'Sing, my tongue, the mystery of the glorious Body, and of the precious Blood that the King of the nations, fruit of a noble womb, poured out as the price of the world.'],
+@@ 1a12170083
+    ['Tantum ergo sacraméntum venerémur cérnui: et antíquum documéntum novo cedat rítui: præstet fides suppleméntum sénsuum deféctui.', 'So great a sacrament let us bow down and worship; let the old teaching give way to the new rite; let faith supply what the senses cannot.']] },
+@@ 33d9b064c4
+  ubi:{ name:'Ubi caritas', ko:'Where Charity Is (mode 6 antiphon)', file:'chant-ubi', len:1779584 / 32000, lyr:[
+@@ b7c5051692
+    ['Ubi cáritas et amor, Deus ibi est.', 'Where charity and love are, God is there.'],
+@@ 106de5a509
+    ['Congregávit nos in unum Christi amor.', 'The love of Christ has gathered us into one.'],
+@@ 815c085a35
+    ['Exsultémus, et in ipso jucundémur.', 'Let us rejoice and be glad in Him.'],
+@@ 2d0154cd9d
+    ['Ubi cáritas et amor, Deus ibi est.', 'Where charity and love are, God is there.']] }
+@@ de3daff59e
+  hymn:{ name:'Instrumental Hymns', desc:'Gentle piano and the Ave Maria melody', tracks:['piano', 'ave'] },
+@@ cf8939d7f5
+  chant:{ name:'Gregorian Chant', desc:'Latin chant melodies of the medieval church, on instruments only', tracks:['salve', 'veni', 'avemaris', 'pange', 'ubi'] }
+@@ 4f03e8d62a
+  if (b) { b.classList.toggle('off', !on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); b.setAttribute('aria-label', on ? 'Turn background music off' : 'Turn background music on'); b.title = on ? 'Turn background music off' : 'Turn background music on'; }
+@@ d807d9f463
+  const s = document.getElementById('musicSet'); if (s) s.textContent = on ? 'Turn music off' : 'Turn music on';
+@@ 44a65e00a7
+  const st = document.getElementById('musicState'); if (st) st.textContent = on ? 'On' : 'Off';
+@@ 204cfcf39a
+  return '<details class="lyr"' + (open ? ' open' : '') + '><summary>Show lyrics (Latin · English)</summary>' + t.lyr.map(l => '<p class="la">' + l[0] + '</p><p class="ko">' + l[1] + '</p>').join('') +
+@@ 893eed9afb
+    '<p class="muted" style="font-size:12px;">Instrumental only. The Latin is the church’s shared liturgical text; the English is Purify’s own translation.</p></details>';
+@@ 4329e7fc7f
+  return '<div id="musicNowCard" class="nowplay"><p><b>' + (playing ? '▶ Now playing' : '⏸ Selected') + '</b> · ' + esc(t.name) + '</p><p class="muted" style="margin:2px 0 0;">' + esc(t.ko || t.sub) + '</p>' + lyricsHtml(id) + '</div>';
+@@ 35fa7463dc
+  return '<div class="card" id="musicCard"><div class="sec-title"><h3>🎵 Background Music</h3><span class="muted" id="musicState">' + (on ? 'On' : 'Off') + '</span></div>' +
+@@ ec1341d2a6
+    '<p class="muted">Every piece was synthesized directly from the notes of the score (no recordings or outside arrangements — no copyright worries). Music stops automatically when you leave the app.</p>' +
+@@ 6e1b793cc4
+    '<label class="f">Playlist</label><div class="seg" id="musicLists">' + Object.keys(PLAYLISTS).map(k => '<button class="opt' + (k === L ? ' sel' : '') + '" data-list="' + k + '" onclick="musicPick(\'list\',\'' + k + '\')">' + PLAYLISTS[k].name + '</button>').join('') + '</div>' +
+@@ 804c5dea0b
+    '<label class="f">Choose a track</label><div id="musicTracks">' + PLAYLISTS[L].tracks.map((k, i) => '<button class="opt' + (k === T ? ' sel' : '') + '" data-track="' + k + '" onclick="musicPick(\'track\',\'' + k + '\')"><b>' + (i + 1) + '. ' + TRACKS[k].name + '</b><span class="muted" style="display:block;font-size:13px;">' + esc(TRACKS[k].ko || TRACKS[k].sub) + ' · ' + Math.round(TRACKS[k].len) + 's</span></button>').join('') + '</div>' +
+@@ 830c46dbd5
+    '<label class="f">Playback</label><div class="seg" id="musicModes"><button class="opt' + (M === 'seq' ? ' sel' : '') + '" data-mode="seq" onclick="musicPick(\'mode\',\'seq\')">Play in order</button><button class="opt' + (M === 'one' ? ' sel' : '') + '" data-mode="one" onclick="musicPick(\'mode\',\'one\')">Repeat one</button></div>' +
+@@ 89d8c49ddd
+    '<p class="muted" style="margin-top:4px;">' + (M === 'seq' ? 'Plays the list smoothly one after another, then starts over from the top.' : 'Repeats just the track you chose, without a break.') + '</p>' +
+@@ e61629eeb4
+    '<button class="btn sm sec" id="musicSet" onclick="musicToggle()" style="margin-top:10px;">' + (on ? 'Turn music off' : 'Turn music on') + '</button></div>';
+@@ 38846aeaa2
+  if (on) { musicStart(); toast('🎵 Background music on.'); } else { musicStop(); toast('Background music off.'); }

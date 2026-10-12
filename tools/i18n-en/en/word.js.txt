@@ -1,0 +1,186 @@
+@@ ae1c9b7c6f
+  water:['John 4:14', 'John 7:37-38', 'Isaiah 55:1', 'Psalm 42:1'],
+@@ ae08ca23fc
+  meal:['Matthew 4:4', '1 Corinthians 10:31', 'Proverbs 23:20-21', 'Psalm 34:8', '1 Timothy 4:4', 'Deuteronomy 8:10'],
+@@ 6d0b557117
+  exercise:['1 Corinthians 9:24', '1 Corinthians 9:25', '1 Corinthians 9:26', '1 Timothy 4:8', 'Isaiah 40:31', 'Hebrews 12:1'],
+@@ b08a21143d
+  weight:['2 Corinthians 5:17', 'Romans 12:1', 'Romans 12:2', 'Philippians 3:13-14', 'Galatians 6:9'],
+@@ 90fa46d82e
+  slip:['Lamentations 3:22-23', '2 Corinthians 12:9', 'Proverbs 24:16', 'Psalm 37:24', 'Micah 7:8'],
+@@ b35cfcc2a4
+  evening:['Psalm 4:8', 'Psalm 127:2', 'Matthew 11:28', 'Psalm 121:3-4'],
+@@ 6b9946dfa4
+  toast:['Philippians 4:13', 'Psalm 118:24', '1 Thessalonians 5:16', '1 Thessalonians 5:18', 'Psalm 23:1', 'Matthew 6:11']
+@@ f21c794005
+  basic:{ stars:1, what:'The most basic kind of self-control: no fasting, just three meals a day, on time and in the right amounts. You’ll build four daily habits — the meal plan, water, exercise and Scripture.',
+@@ 98058ae9f1
+    refs:['1 Corinthians 10:31'], bg:'Even ordinary eating and drinking can be done for the glory of God. Self-control isn’t starving — it’s enjoying the right amount with thanksgiving.',
+@@ fb1d90c001
+    who:'Beginners, those whose health makes fasting hard — anyone', period:'30 days', eat:'Brown or mixed-grain rice, vegetables, fish, tofu or lean meat, a little fruit, water', avoid:'Overeating, late-night snacks, sweet drinks, mostly fried meals',
+@@ 55aa4d5624
+    day:['7–9 am breakfast', '12–1 pm lunch · walk after eating', '3–4 pm snack (fruit)', '6–7 pm dinner', 'Evening: reflection and one verse'], effect:'A steady meal rhythm, gentle weight loss of about ' + wRate(0.25, 0.5) + ' a week, less grazing' },
+@@ 62dc36af88
+  if168:{ stars:3, what:'Out of 24 hours, you fast for 16 and eat only within 8 (12 pm–8 pm). It’s self-control about “when” you eat more than “what”.',
+@@ 0750122cea
+    refs:['Ecclesiastes 3:1'], bg:'The Bible doesn’t prescribe 16:8. But as Scripture says there is a season for everything, setting and keeping mealtimes is a daily way to practice self-control.',
+@@ 36514d1244
+    who:'Healthy adults with a regular routine, anyone wanting to break late-night snacking', period:'7 days (continue once it feels natural)', eat:'In the window: two protein-and-vegetable meals + one snack · While fasting: water, unsweetened tea, black coffee', avoid:'Food after 8 pm, sweet drinks while fasting, bingeing in the eating window',
+@@ 2ccf3cc3fa
+    day:['Morning: a glass of water and prayer (still fasting)', '12 pm: first meal', '4 pm: snack', 'Before 8 pm: last meal', 'After 8 pm: fast begins · timer'], effect:'Fewer late-night snacks and a naturally smaller daily intake. You grow stronger at handling hunger.' },
+@@ 16f783d3ab
+  daniel:{ stars:3, what:'For 21 days, set aside meat, sweets and alcohol and eat vegetables, grains, beans, fruit and water. It’s not going without food — it’s a fast from certain “kinds” of food.',
+@@ b956dec020
+    refs:['Daniel 1:8', 'Daniel 1:12', 'Daniel 10:2-3'], bg:'Daniel asked for vegetables and water instead of the Babylonian king’s food (ch. 1), and for three full weeks he ate no pleasant bread, meat or wine while he prayed (ch. 10).',
+@@ d87ee758d9
+    who:'Adults who want simpler, cleaner eating; those who want self-control while still eating three meals', period:'21 days', eat:'Brown rice and whole grains, vegetables, beans, tofu, natto, nuts, fruit, water', avoid:'Meat and fish, sweets and desserts, alcohol and sweet drinks, fried and processed foods',
+@@ 79995f3326
+    day:['Breakfast: oatmeal (soy milk) + fruit', 'Lunch: mixed-grain rice + tofu & greens + miso soup', 'Snack: a handful of nuts', 'Dinner: lentils or chickpeas + vegetables', '15 min of prayer & Scripture'], effect:'More vegetables and fiber, less of a sweet tooth. Tends toward ' + wRate(0.3, 0.7) + ' of weight loss a week.' },
+@@ 3372941fb2
+  lent:{ stars:2, what:'For 40 days, choose one thing to give up (snacks, coffee, social media, meat…) and fill that empty space with Scripture and prayer. It doesn’t have to be food.',
+@@ 8475f4f5c9
+    refs:['Matthew 4:1-2'], bg:'Remembering Jesus’ 40 days of fasting in the wilderness, the church has kept the 40 days before Easter (not counting Sundays) as Lent, a season of self-denial and prayer. In this app you can start a 40-day fast anytime.',
+@@ 46188a4bfe
+    who:'Those who want to lay down a non-food habit too; those who want to go slow and long', period:'40 days', eat:'Balanced, as usual (the basic meal plan, apart from the one thing you chose)', avoid:'The one thing you chose (e.g. snacks, coffee & sweet drinks, social media)',
+@@ 8ecca26587
+    day:['Morning: read one chapter of Scripture', 'All day: keep your one fast', 'Evening: 10 minutes of prayer', 'One small kindness for a neighbor'], effect:'Strength to break one habit, and a habit of reading Scripture. Weight loss is small, depending on what you give up.' },
+@@ 5007ceb34b
+  oneday:{ stars:4, what:'From after dinner until dinner the next day, go 24 hours without food — just water and prayer. Short, but a fast of deep focus in prayer.',
+@@ 24cf788223
+    refs:['Esther 4:16', 'Acts 13:2-3'], bg:'Esther asked her people to fast before she went in to the king, and the church at Antioch fasted and prayed before sending out Barnabas and Saul. These were times of turning wholly to God before big decisions.',
+@@ 303274f74c
+    who:'Healthy adults who have fasted before or want to start with something short', period:'1 day (24 hours)', eat:'Water, unsweetened tea · Breaking the fast: something light like vegetable porridge or a banana', avoid:'Food during the fast; overeating or greasy food when you break it',
+@@ 55866eca3b
+    day:['Evening before, 6–7 pm: begin after your last meal', 'Morning & noon: water and prayer (3 set times)', 'Afternoon: gentle walk & Scripture meditation', '6–7 pm: break the fast gently with porridge'], effect:'The experience of focusing on prayer in the midst of hunger. Most of the weight you lose is water and comes right back.' },
+@@ 0143cde5ff
+  intensive:{ stars:4, what:'For 2–3 weeks, cut about 750 kcal a day (at least 1,200 kcal for women, 1,500 for men), with a 16:8 eating window, 30–45 minutes of exercise daily and high-protein meals.',
+@@ ef97df2a94
+    refs:['1 Corinthians 9:25'], bg:'The Bible doesn’t give a diet plan. But just as an athlete going for the prize is temperate in all things, you train your body for a set season with that same heart.',
+@@ e6829078bd
+    who:'Healthy adults with a BMI of 23 or higher who want a short, clear push', period:'14 or 21 days → followed by a 14-day maintenance season', eat:'Protein (chicken breast, fish, tofu, eggs), vegetables, a little whole grain, 2+ liters (about 8 cups) of water', avoid:'Salty food & broths, sweets & sweet drinks, alcohol, late-night eating',
+@@ bfc96009a4
+    day:['Morning: fasting (water, black coffee)', '12 pm: high-protein first meal', 'Afternoon: 30-min interval walk + strength', 'Before 8 pm: last meal', 'Night: 7+ hours of sleep'], effect:wRate(0.5, 1) + ' of weight loss a week (faster early on from water), better stamina and strength' },
+@@ 7c5a65ff59
+  companion:{ stars:1, what:'Keep taking medications like Wegovy or Zepbound as your doctor prescribed, while spending 28 days building eating, exercise and heart habits you could keep someday even without them.',
+@@ 5636cc7c33
+    refs:['Galatians 6:9'], bg:'As Scripture says, let us not be weary in well doing — small habits built steadily bear fruit in due season.',
+@@ 5d925fed2c
+    who:'People using a weight-loss medication', period:'28 days', eat:'Protein and vegetables first, three regular meals (don’t skip, even if you eat little)', avoid:'Skipping meals, sweet drinks, alcohol',
+@@ 3082a23a14
+    day:['Breakfast with protein', 'After lunch: 20-min walk', 'Evening: 10 min of strength training', 'Night: appetite & mood journal + one verse'], effect:'Keeping weight off while protecting muscle; habits that hold steady when your medication is adjusted' },
+@@ ff9b89347a
+  waterfast:{ stars:0, what:'For the days you choose, you eat no food and drink only water (and unsweetened tea), turning hunger into prayer. It’s a fast of devotion — not a way to lose weight.',
+@@ efd226e6a0
+    refs:[], bg:'', who:'Healthy adults · 1 or 3 days at a healthy weight, 1–40 days at BMI 25+ · who have fasted before and talked with a doctor', period:'Choose 1, 3, 7, 14, 21 or 40 days → refeeding',
+@@ 1c04a71af3
+    eat:'Water, unsweetened tea (ask your doctor about salt and electrolytes)', avoid:'All food, sweet drinks, too much caffeine, strenuous exercise', day:['Morning: check blood pressure & blood sugar (weight optional) and symptoms', 'All day: small sips of water often · prayer at set times', 'Afternoon: Scripture meditation and rest', 'Night: record today’s prayer'],
+@@ 6853042538
+    effect:'A time of deep focus in prayer — an experience of commitment and devotion (weight change is not the goal)' }
+@@ b469064151
+  ['', '⏱ 16:8', '🥗 Daniel', '✝ Lent'],
+@@ f6e84106fc
+  ['What do you give up?', 'When you eat', 'Kinds of food (meat, sweets, alcohol)', 'One thing you choose'],
+@@ af3ec16442
+  ['Length', '7 days+', '21 days', '40 days'],
+@@ edce5bdb8f
+  ['Daily meals', 'Two meals + a snack in 8 hours', 'Three plant-based meals', 'Balanced, as usual'],
+@@ 5e2bcfafbf
+  ['Heart of it', 'Setting the time', 'Simplifying food', 'Laying down a habit'],
+@@ f09ad22450
+  ['Difficulty', '★★★', '★★★', '★★']
+@@ be689ccc14
+  ['Exodus 34:28', 'Moses', 'He stayed 40 days with God on Mount Sinai and received the words of the covenant.'],
+@@ e4984901d9
+  ['1 Kings 19:8', 'Elijah', 'When Elijah was exhausted, God first fed him and strengthened him, then sent him on a 40-day journey.'],
+@@ 05c7814470
+  ['Matthew 4:2', 'Jesus', 'After fasting 40 days in the wilderness, He overcame temptation with the Word.'],
+@@ 568f6c0c1a
+  ['Esther 4:16', 'Esther', 'To save her people she fasted three days and resolved, “if I perish, I perish.”'],
+@@ d7b8d0a98f
+  ['Nehemiah 1:4', 'Nehemiah', 'Hearing that Jerusalem lay in ruins, he wept, fasted and prayed.'],
+@@ acc6e4e00a
+  ['Joel 2:12', 'Joel', 'Fasting is turning back to God with all your heart.'],
+@@ 506db036f2
+  ['Isaiah 58:6-8', 'Isaiah', 'The fast God delights in loosens what binds and shares with the hungry neighbor.'],
+@@ ed17de3fa2
+  ['Matthew 6:16-18', 'Jesus’ teaching', 'Fasting isn’t for being seen by others, but an offering to the Father who sees in secret.']
+@@ a2f728e7ef
+  { a:1, b:1, n:'1 day (24 hours)', stars:3, body:'Your body uses the sugar stored in your liver (glycogen), and hunger comes and goes in waves.', sym:'Hunger, headache, trouble concentrating, irritability',
+@@ d5d0c516ad
+    risks:['Low blood sugar (especially on diabetes medication)', 'Low blood pressure / dizziness on standing (a head rush when you get up)'], not:'If you take diabetes or blood-pressure medication, only after your doctor says it’s okay' },
+@@ 6a27287746
+  { a:2, b:3, n:'3 days', stars:4, body:'From day 2 your body begins burning fat and making ketones. Days 2–3 are usually the hardest.', sym:'Strong hunger, headache, fatigue, bad breath, poor sleep, feeling cold',
+@@ 0aa37b8692
+    risks:['Electrolyte imbalance (sodium, potassium)', 'Low blood pressure / dizziness on standing', 'Low blood sugar', 'Dehydration'], not:'With diabetes, high blood pressure or medication, a doctor’s OK is required' },
+@@ a2ada53584
+  { a:4, b:7, n:'7 days', stars:4, body:'Many people feel hunger ease, but muscle breakdown and electrolyte loss increase.', sym:'Dizziness, muscle cramps, lethargy, feeling cold, racing heart',
+@@ 622ea5164f
+    risks:['Electrolyte imbalance', 'Low blood pressure / dizziness on standing', 'Gout flare from rising uric acid', 'Muscle loss', 'Irregular heartbeat', 'Refeeding syndrome (5+ days)'], not:'With heart or kidney disease, a history of gout or gallstones, or age 65+, a doctor’s OK is required' },
+@@ f21d5560fd
+  { a:8, b:14, n:'14 days', stars:5, body:'This is extended-fasting territory. More of your energy comes from protein (muscle).', sym:'Severe lethargy, dizziness, risk of fainting, poor concentration',
+@@ 515ea20295
+    risks:['Electrolyte imbalance', 'Irregular heartbeat', 'Muscle loss', 'Gallstones', 'Gout flare', 'Refeeding syndrome'], not:'No one should do this without medical supervision' },
+@@ ae3688870e
+  { a:15, b:21, n:'21 days', stars:5, body:'A very long fast that places a heavy load on muscles and organs.', sym:'Extreme fatigue, fainting on standing, abnormal heartbeat, reduced sensation',
+@@ 2d04236614
+    risks:['Irregular heartbeat', 'Severe electrolyte imbalance', 'Muscle loss', 'Gallstones', 'Refeeding syndrome (high risk)'], not:'Only under medical supervision with regular exams and blood tests (electrolytes)' },
+@@ 3e1914de2f
+  { a:22, b:40, n:'40 days', stars:5, body:'An extremely long fast. The 40-day fasts in Scripture (Moses, Elijah, Jesus) were events of a special calling. Today, it can be life-threatening.', sym:'Severe weakness, fainting, confusion, heart problems',
+@@ 628bd26345
+    risks:['Irregular heartbeat / risk of sudden death', 'Severe electrolyte imbalance', 'Severe muscle loss', 'Gallstones', 'Refeeding syndrome (very high risk)'], not:'Only under continuous medical observation. Doing this alone can cost your life' }
+@@ b98dd246bf
+  1:{ note:'One day — offer one set-apart day wholly to God. Before a long journey, Ezra and the people fasted and sought God.', refs:['Ezra 8:23'] },
+@@ 8fe2ed2eeb
+  3:{ note:'Three days — Esther fasted three days, night and day, for her people, and Jonah spent three days and nights in the belly of the fish. Jesus called this “the sign of Jonah.”', refs:['Esther 4:16', 'Jonah 1:17', 'Matthew 12:40'] },
+@@ 7f6011597a
+  7:{ note:'Seven — a number in Scripture that brings to mind completeness and rest. God rested on the seventh day, and Israel marched around Jericho for seven days (Joshua 6).', refs:['Genesis 2:2', 'Joshua 6:15'] },
+@@ c8b3f36fa3
+  14:{ note:'Two weeks — Scripture doesn’t set a 14-day fast. Those on the ship with Paul went fourteen days in a storm without eating, and Paul urged them, “take some meat: for this is for your health.” Finishing well and recovering are acts of faith, too.', refs:['Acts 27:33', 'Acts 27:34'] },
+@@ 64e36275f2
+  21:{ note:'Three weeks — for three full weeks Daniel ate no pleasant bread, meat or wine while he prayed.', refs:['Daniel 10:2-3'] },
+@@ 2f6a11c504
+  40:{ note:'Forty — Moses on Mount Sinai, Elijah on the way to Horeb, and Jesus in the wilderness each spent 40 days. These were times of a special calling.', refs:['Exodus 34:28', '1 Kings 19:8', 'Matthew 4:2'] }
+@@ f66150c3cc
+const WF_DAILY = ['Matthew 4:4', 'Psalm 63:1', 'Esther 4:16', 'Isaiah 40:31', 'Matthew 6:17-18', 'John 4:34', 'Isaiah 58:6', 'Psalm 42:1', 'Isaiah 41:10', 'Jeremiah 29:12-13',
+@@ 111167e87b
+  'James 4:8', 'Psalm 51:10', 'Psalm 139:23-24', 'Nehemiah 1:4', 'Matthew 7:7', 'John 15:5', 'Romans 8:26', 'Psalm 119:105', 'Psalm 16:11', 'Isaiah 26:3',
+@@ 871e85098a
+  'Daniel 10:12', 'Hebrews 4:16', '2 Corinthians 4:16', 'Psalm 121:1-2', 'Deuteronomy 8:3', 'John 6:35', '2 Corinthians 12:9', 'Psalm 46:1', 'Philippians 4:6', 'Joel 2:12',
+@@ 0e2af32220
+  'Matthew 11:28', 'Psalm 73:26', 'Isaiah 30:15', '1 Peter 5:7', 'John 14:27', 'Romans 15:13', 'Psalm 23:1', 'Isaiah 58:8', 'Matthew 5:6', 'Matthew 4:11'];
+@@ 8ab97c8444
+  1:'Day one. Each time hunger comes, remember “man shall not live by bread alone.” We’re cheering you on in your commitment.',
+@@ 08145a8627
+  3:'Day three. Esther, too, fasted three days and made her stand. Today may be the hardest — listen closely to the signals your body sends.',
+@@ daf7eef8d5
+  7:'You’re passing one week. May this fast loosen what binds you and your neighbors. Don’t skip your symptom check.',
+@@ 4e2ced11da
+  14:'Week two. Like Nehemiah, pray for the people and community on your heart. Don’t forget your medical check-ins.',
+@@ ca6f626e32
+  21:'Three weeks — 21 days. Hold on to the word that you were heard from the first day you set your heart. Check your body’s signals every day.',
+@@ 46609db3ee
+  30:'Day thirty. “Turn ye even to me with all your heart.” Entrust the remaining days to God, and stay close to your medical team.',
+@@ a214ac8a8f
+  40:'Day forty. The wilderness season ended and angels came and ministered. Now gently raise your body back up with refeeding. Finishing is obedience, too.'
+@@ fb31c271e6
+const WF_MSGS = ['Your commitment is precious. And stopping can be a wise choice too.', 'Sip water often. Caring for your body is part of prayer.', 'When hunger comes, fill that space with a short word of thanks.',
+@@ a2f5c86edf
+  'Do today’s symptom check first. Don’t brush off the signals your body sends.', 'Today, choose one person and pray for them.', 'If it’s hard, it’s okay to lie down and rest. Rest is part of fasting.',
+@@ 7386565b47
+  'Think of a way to help a neighbor with what you’ve saved on food.', 'Write down what comes to mind in your reflection. It will strengthen you later.', 'Get up slowly. If you feel dizzy, sit down right away.', 'You’re not alone. Share today’s heart with someone who’s praying with you.'];
+@@ 6945362966
+const WF_PRAYERS = ['Let this fast be a time of seeking You, not showing myself off.', 'In every moment of hunger, fill me with Your Word.', 'Give me wisdom not to ignore my body’s signals.',
+@@ 9e74db1321
+  'I pray for the people and families on my heart.', 'Loose what binds me.', 'Help me discern when to stop and when to go on.', 'Help me remember my hungry neighbors.',
+@@ faa487d469
+  'Create in me a clean heart and renew a right spirit within me.', 'Give me peace instead of fear.', 'Let the fruit of self-control remain even after this season ends.', 'Keep me from losing a thankful heart.', 'Let me feel Your hand keeping and caring for me.', 'Let Your Word be a lamp unto my feet.', 'Not “to the end” — but with You, Lord, let me go.'];
+@@ 5f5ddc1650
+const REFEED_DAILY = [['1 Kings 19:7', 'Even to exhausted Elijah, God said, “Arise and eat.” Building your body back up is God’s care, too.'],
+@@ fa1a9a3b78
+  ['John 21:12', 'The risen Jesus made breakfast for His disciples. Eat slowly and gratefully.'], ['Psalm 34:8', 'Taste each spoonful with thanks. There’s no need to hurry.'],
+@@ 7fe99141ae
+  ['Deuteronomy 8:10', 'When you have eaten and are full, give thanks. Stopping before you’re full is self-control, too.'], ['Matthew 6:11', 'Only what you need for today. Give thanks for daily bread.'],
+@@ b81a03725e
+  ['1 Timothy 4:4', 'Food is a gift received with thanksgiving. Fried and sweet foods can wait a little longer.'], ['Psalm 145:15-16', 'Remember the One who gives food in due season — a little at a time, at set times.'],
+@@ 9e7fa3e464
+  ['1 Thessalonians 5:18', 'Finishing the fast and recovering are both reasons to give thanks.'], ['Psalm 103:2', 'Write down the grace you received in this season so you won’t forget it.'], ['Psalm 23:2-3', 'A time for body and soul to be restored together. Rest well.']];

@@ -1,0 +1,26 @@
+@@ 07e64ddbfc
+<html lang="en">
+@@ a9372f866d
+<title>Purify — The Path of Cleansing</title>
+@@ f367299ad9
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; background:#192428; color:var(--t); font-size:16px; line-height:1.55; }
+@@ d7d2c20625
+      <button class="iconbtn" id="obBack" onclick="obPrev()" aria-label="Back">‹</button>
+@@ 9fbe81b2b7
+    <div class="foot"><button class="btn" id="obNext" onclick="obNextStep()">Next</button><button class="skip hide" id="obSkip" onclick="introSkip()">Skip</button><p class="obnote hide" id="obNote">Purify does not replace medical treatment. If you’re under treatment or take medication, talk with your doctor first.</p></div>
+@@ 5fb83a76e3
+      <button class="iconbtn hide" id="mainBack" onclick="goBack()" aria-label="Back">‹</button>
+@@ b2af61889b
+      <button class="iconbtn sm" onclick="shareToday()" aria-label="Share today’s summary">⤴</button>
+@@ 193cc29164
+      <button data-tab="today" onclick="showTab('today')"><i>☀</i>Today</button>
+@@ 9896d819a7
+      <button data-tab="history" onclick="showTab('history')"><i>📈</i>Journal</button>
+@@ 92d3f64617
+      <button data-tab="word" onclick="showTab('word')"><i>📖</i>Word</button>
+@@ b2af96e92d
+      <button data-tab="health" onclick="showTab('health')"><i>🌿</i>Health</button>
+@@ e42554f571
+      <button data-tab="me" onclick="showTab('me')"><i>👤</i>Me</button>
+@@ 1b26208490
+  <button id="musicBtn" class="musicbtn" onclick="musicToggle()" aria-pressed="true" aria-label="Turn background music off" title="Turn background music off">♪</button>

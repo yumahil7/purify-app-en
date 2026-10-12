@@ -1,0 +1,104 @@
+@@ 99e1f59734
+const ELECTRO = 'Drinking only water can leave you short on sodium, potassium and magnesium, which can bring dizziness, a racing heart or muscle cramps. Keep salt to a very small amount (such as a pinch in water), and always decide with your doctor how much potassium or magnesium to take and how. This matters even more if you take medication (especially blood-pressure pills or diuretics).';
+@@ 47a654c782
+  return '<div class="card"><h3>🧂 Tips for Focused Weight Loss</h3><ul class="l">' +
+@@ 3be8bc6a31
+    '<li><b>Low salt</b> · With soups, eat the solids and leave the broth; cut back on pickled foods, cured meats and instant-noodle seasoning (aim for 2,000 mg of sodium a day or less).</li>' +
+@@ b460906e7e
+    '<li><b>Low sugar</b> · Water or sparkling water instead of sweet drinks and desserts; fruit in moderation, once or twice a day.</li>' +
+@@ f67f1044e7
+    '<li><b>No alcohol</b> · Alcohol is high in calories and stirs up appetite. Give it a rest during this season.</li>' +
+@@ 8ce941f6f8
+    '<li>Eat protein and vegetables first, and sleep 7+ hours.</li>' +
+@@ 2f0f99056a
+    '<li>The quick loss in the first few days is mostly water. Don’t be discouraged — or overconfident.</li></ul></div>';
+@@ 7004da0e62
+  return '<div class="card' + (today ? '' : ' hl') + '"><h3>🤝 Doctor-Guided Companion for Medication Users</h3><ul class="l">' +
+@@ a73c606bef
+    '<li>Keep taking your medication <b>as your doctor prescribed</b>. This app never tells you to stop or reduce it.</li>' +
+@@ 8b49b790c7
+    '<li>Any change in dose (lowering or stopping) must be <b>decided with your doctor</b>. Write down questions for your next visit below.</li>' +
+@@ bbf0dd4cda
+    '<li>After lowering or stopping medication, <b>appetite can come back strongly (rebound)</b>. The eating, exercise and heart habits you build now will hold you up then.</li>' +
+@@ e0068d9e94
+    '<li>Even as you eat less, protect your muscle with protein and strength training. Tell your doctor about nausea or severe stomach pain.</li></ul>' +
+@@ b1248fb0fa
+    '<div class="' + (f.diab || f.t1d ? 'warn' : 'good') + '">⚠ <b>If you also take diabetes medication (insulin, sulfonylureas, etc.), the risk of low blood sugar goes up.</b> Don’t skip meals, and if you get shaky, break into a cold sweat or your blood sugar is under 70, take sugar right away.</div>' +
+@@ e55d1c3b25
+    (today ? '<label class="f">Questions for my doctor at the next visit</label><textarea class="inp" id="docQ" placeholder="e.g. When might I try lowering my dose? What should I do if my appetite comes back?" onchange="S.program.docQ=this.value.trim(); save(); toast(\'Saved.\')">' + esc(S.program.docQ || '') + '</textarea>' : '') + '</div>';
+@@ 318ba97a9c
+  return '<div class="card"><h3>🥣 Refeeding · ' + dayTxt(L) + ' (follows automatically)</h3><p>Start at about ' + comma(a) + ' kcal a day and slowly build up to maintenance calories of ' + comma(Math.max(a, P.target)) + ' kcal.</p>' +
+@@ ac63dd4b90
+    (n >= 5 ? '<div class="warn">⚠ <b>After fasting 5 days or more, there is a risk of refeeding syndrome</b> (sudden electrolyte shifts that endanger the heart and breathing). <b>Always talk with your doctor</b> before you begin refeeding, and if possible do it under medical observation.</div>' : '') + '</div>';
+@@ da27cdc373
+  const t = wfTier(len), f = WF_FRAME.find(x => x[1] === (len >= 30 ? 'Jesus' : len >= 3 ? 'Esther' : 'Nehemiah'));
+@@ 8ad5c57346
+  return '<h2>' + who + ' Water Fast<br>of Prayer &amp; Devotion</h2><p class="lead">🕯 ' + dayTxt(len) + ' · your own choice and commitment</p>' +
+@@ 0f67e6ae5c
+    '<p class="muted">This is a time to gather your heart in prayer, not to lose weight. That’s why there are no weight-loss predictions here.</p>' +
+@@ 873aeea5d0
+    '<div class="warn">We respect <b>your own choice and commitment</b>. You can stop anytime — and stopping takes courage and wisdom, too.' + (len > 7 ? '<br><b>Over 7 days: continue only under medical supervision.</b>' : len > 3 ? '<br>Over 3 days: follow what you discussed with your doctor.' : '') + '</div>' +
+@@ 539fe23068
+    '<div class="stats"><div class="stat"><b>' + dayTxt(len) + '</b><span>water fast</span></div><div class="stat"><b>' + volTxt(P.water) + '</b><span>daily water</span></div><div class="stat"><b>' + dayTxt(L) + '</b><span>refeeding</span></div></div>' + tierCard(t, len) +
+@@ 7de611bc8d
+    '<div class="card"><h3>📋 Every day, together</h3><ul class="l"><li>Reach your water goal · read the electrolyte guidance</li><li>Symptom check (dizziness, racing heart, confusion, fainting, vomiting → stop immediately + call 911)</li><li>Log blood pressure, blood sugar & weight (stop immediately if blood sugar is under 70)</li><li>Today’s body-change guide · Scripture and prayer</li><li>Anytime, one tap on <b>“Stop today”</b> switches you to refeeding</li></ul></div>' +
+@@ 8e9fc882d8
+    '<div class="card"><h3>🧂 Electrolytes</h3><p style="font-size:15px;">' + ELECTRO + '</p></div>' +
+@@ 37a60be764
+    '<div class="card"><h3>➡ What comes next</h3><p>When refeeding ends, you’ll continue with a <b>maintenance season</b> at maintenance calories (about ' + comma(M.target) + ' kcal a day) or the <b>Basic program</b>.</p></div>' +
+@@ a1f932850a
+    '<details class="card" open><summary>🛑 Stop immediately if…</summary><ul class="l">' + STOP_LIST.map(s => '<li>' + s + '</li>').join('') + '</ul><p class="muted">In an emergency, call 911.</p></details>';
+@@ ff6a48f214
+  if (L > 7 || n > 3) h += '<div class="warn"' + (n > 7 ? ' style="border-width:2px;"' : '') + '>' + (n > 7 || L > 7 ? '⚠ <b>Do a water fast longer than 7 days only under medical supervision.</b> Get regular exams and electrolyte tests.' : '⚠ You’re past 3 days. Continue as you discussed with your doctor, and stop if anything feels even a little off.') + '</div>';
+@@ 1b111dc99e
+  if (any) h += '<div class="warn" style="border-width:2px;">🚨 <b>You have symptoms. Stop fasting right now.</b> If you faint, feel confused, have chest pain, or symptoms are severe, call <b>911</b> immediately.<a class="btn stop" href="tel:911" style="text-align:center; text-decoration:none; line-height:28px;">📞 Call 911</a><button class="btn" onclick="stopFast()">Stop fasting → start refeeding</button></div>';
+@@ 480aa07d16
+  if (progActive()) { afCheck(true); h += afNoteCard() + '<div class="card"><h3>⏱ Fasting Progress · Autophagy</h3>' + afSwitch(afHours()) + '</div>'; }
+@@ 22fc500a3f
+  h += '<div class="card"><h3>🫀 Today’s Body Changes · Day ' + n + '</h3><p style="font-size:15px;">' + bodyChange(n) + '</p>' +
+@@ 7d176a9cdd
+    '<details class="more"><summary>Review the risks and difficulty of a ' + L + '-day fast</summary>' + tierCard(wfTier(L), L) + '</details></div>';
+@@ 893442b895
+  h += '<div class="card"><h3>🩺 Today’s Symptom Check</h3><p class="muted">If you have even one, stop immediately; if it’s severe, call 911.</p>' +
+@@ 2fa49ece78
+    '<label class="chk"><input type="checkbox" ' + (sym.none ? 'checked' : '') + ' onchange="toggleSym(\'none\',this.checked)">I have none of these symptoms today</label></div>';
+@@ aeb4255b47
+  h += '<div class="card"><div class="sec-title"><h3>💧 Water</h3><b style="color:var(--p)">' + volTxt(x.water, true) + ' / ' + volTxt(P.water) + '</b></div><div class="bar"><i style="width:' + wp + '%"></i></div>' +
+@@ e9fb8f1335
+    '<div class="row"><button class="btn sec" style="width:72px;" onclick="addWater(-250)" aria-label="Remove one glass">−</button><button class="btn grow" onclick="addWater(250)">+ 1 glass (' + volTxt(250, true) + ')</button><button class="btn sec" style="width:96px;" onclick="addWater(500)">+' + volTxt(500, true).replace(/ .*/, '') + '</button></div>' +
+@@ e5fe61ce2b
+    '<p class="muted" style="margin-top:8px;">Small sips often, rather than a lot at once. More than 4 liters (about 135 oz) a day can actually be dangerous.</p>' + vline('water', T) + '</div>';
+@@ 832ea927ab
+  h += '<div class="card"><h3>🧂 Electrolyte Guidance</h3><p style="font-size:15px;">' + ELECTRO + '</p></div>';
+@@ e3cebaab7c
+  h += '<div class="card"><h3>🤸 Today’s Movement <span class="tag">' + EX_LEVEL[R.lvl].n + '</span></h3><p class="muted">While fasting, rest comes before exercise. If you feel dizzy, sit down right away.</p>' +
+@@ 68672dcbec
+    R.ids.map(id => { const e = EX[id], on = x.ex[id] !== undefined, k = exKcal(id); return '<div class="item"><span class="ic">' + e.a + '</span><div class="txt"><b>' + e.t + '</b><div>' + e.rx + '</div></div><button class="tick' + (on ? ' on' : '') + '" aria-label="Done: ' + e.t + '" onclick="toggleEx(\'' + id + '\',' + k + ')">✓</button></div>'; }).join('') + '</div>';
+@@ e1dabe7ca5
+  return '<div class="card hl"><h3>🥣 Refeeding day ' + n + ' of ' + L + ' · about ' + comma(mp.target) + ' kcal today</h3>' +
+@@ ff77834010
+    '<div class="stage">' + REFEED_STAGES.map((s, i) => '<span class="' + (i === st.i ? 'on' : i < st.i ? 'done' : '') + '">' + ['Rice water & broth', 'Porridge', 'Soft foods', 'Regular meals'][i] + '</span>').join('') + '</div>' +
+@@ ea857230b8
+    '<p style="font-size:15px;">' + st.tip + '</p><p class="muted">Small amounts, often; chew slowly and well. Stop before you’re full. Save sugar, fried food, big pieces of meat and alcohol for after refeeding.</p>' +
+@@ 477ac1c9c9
+    (from >= 5 ? '<div class="warn">⚠ This is refeeding after a ' + from + '-day fast. Talk with your doctor to prevent <b>refeeding syndrome</b> (sudden electrolyte shifts that endanger the heart and breathing). If you notice swelling, shortness of breath, a racing heart or severe fatigue, contact a medical provider immediately.</div>' : '') + '</div>';
+@@ c0244b9ae1
+  const other = '<button class="btn sm sec" onclick="startOnboarding(\'program\',\'edit\')">Choose a different journey</button>';
+@@ 9e2a34983a
+  if (pid === 'intensive') return '<p style="margin-top:4px;">🏅 You finished Focused Weight Loss!</p><p class="muted">Now let your body settle into its new weight with a <b>14-day maintenance season</b> — the most important time for preventing rebound.</p><button class="btn sm" onclick="startNext(\'maintain\')">Start the 14-day maintenance season</button>' + other;
+@@ 9ee66eddc4
+  if (pid === 'refeed') return '<p style="margin-top:4px;">🌱 You finished refeeding well.</p><p class="muted">Now protect your body at maintenance calories.</p><button class="btn sm" onclick="startNext(\'maintain\')">Start 14-day maintenance</button><button class="btn sm sec" onclick="startNext(\'basic\')">Go to the Basic program</button>';
+@@ 3037486de1
+  if (pid === 'maintain') return '<p style="margin-top:4px;">⚖ You finished the maintenance season.</p><button class="btn sm" onclick="startNext(\'basic\')">Continue with the Basic habits program</button>' + other;
+@@ cc3650aca5
+  return '<button class="btn sm" onclick="startOnboarding(\'program\',\'edit\')">Choose your next journey</button>';
+@@ 74009452cd
+  toast(PROGRAMS[id].icon + ' Starting ' + PROGRAMS[id].name + '.');
+@@ 480a6f8d9e
+  if (!confirm('Stop the water fast today and begin refeeding?\n(' + dayTxt(n) + ' fast → ' + dayTxt(refeedLen(n)) + ' of refeeding)\nStopping is a wise and courageous choice, too.')) return;
+@@ a9236dedaf
+  if (n >= 5) alert('⚠ After a ' + n + '-day fast there is a risk of refeeding syndrome. Talk with your doctor before refeeding.');
+@@ 44769b55b9
+  if (k !== 'none' && on) alert('🚨 ' + SYMPTOMS.find(s => s[0] === k)[1] + ' — stop fasting right now.\n\nSip a little water and sit or lie down to rest. If you faint, feel confused, have chest pain, or symptoms are severe, call 911 immediately.\n\nPlease tap “Stop fasting → start refeeding” on the screen.');
+@@ 2b9e149e0e
+    setTimeout(() => toast('💧 You finished your ' + L + '-day water fast. Now refeeding begins.'), 50);

@@ -1,0 +1,245 @@
+@@ a1afa7ebb4
+function greet() { const h = new Date(now()).getHours(); return h < 5 ? 'Peace in the quiet night' : h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening'; }
+@@ a0730c10f3
+  return '<div class="verse">“' + v.t + '”</div><div class="ref">— ' + v.r + ' (KJV)</div>' +
+@@ d53139f723
+    '<details class="xpl"' + (opts.open ? ' open' : '') + '><summary>💡 In plain words <small>tap to open</small></summary><div class="explain">' + v.e + '</div></details>' +
+@@ c126020e76
+    '<div class="apply"><b>✔ Today’s step</b> · ' + v.a + '</div>';
+@@ 1397ee5748
+  return '<div class="card afstory" id="afStory"><h3>🔆 The Story of Autophagy</h3>' +
+@@ ac1664ac84
+    '<p>When your stomach is empty, your cells start cleaning house. They gather up old proteins and tired mitochondria, break them down, and reuse the materials.</p>' +
+@@ 4273618913
+    '<p>This cleanup slows with age, and in brain diseases like Alzheimer’s it is seen to be weakened.</p>' +
+@@ 98ee6f1658
+    '<p>Today’s fasting window gives your body time to tidy up.</p>' +
+@@ 5fd7c402e8
+    '<p class="note">Exactly how many hours in it switches on in humans is not yet known.</p>' +
+@@ f4fcdf1e53
+    '<button class="btn sm sec" onclick="openHealth(\'auto\')">Learn more →</button></div>';
+@@ db6e47669d
+  const who = '';
+@@ 0c826cb923
+  let h = '<h2 style="margin-bottom:2px;">' + greet() + (S.name ? ', ' + esc(S.name) : '') + '</h2><p class="muted" style="margin-bottom:14px;">' + fmtMD(T) + ' · ' + tone().greet + '</p>';
+@@ 9f86e3c597
+  h += '<div class="card hl"><div class="ringwrap">' + ring(dc / progLen(), active ? 'Day ' + n : 'Done', 'of ' + progLen()) +
+@@ d59d3877d8
+    '<div class="grow"><b>' + pr.icon + ' ' + progName() + '</b>' + (pr.water ? '<span class="tag" style="color:#efcdbf;">' + pr.label + '</span>' : '') + (S.program.done ? '<span class="badge">🏅 Finished</span>' : '') +
+@@ 1689380fd1
+    '<p class="muted">' + dc + ' days complete · today ' + (active ? todayDone + '/' + pr.items.length : '-') + '</p>' +
+@@ 42b26e6e35
+    (wf ? '<button class="btn stop" onclick="stopFast()">🛑 Stop today (move to refeeding)</button>' : '') + '</div>';
+@@ cf6b0a1b0f
+  const v = verseFor(T), seekLink = '<button class="link" onclick="showTab(\'seek\')">New to the Bible? ›</button>';
+@@ 91ec5a7e83
+    h += '<div class="card ' + (v.wf ? 'devo-today' : 'hl') + '" id="dayVerse"><div class="sec-title"><h3>' + (v.wf ? '🕯 Day ' + n + ' · Today’s Word & Encouragement' : '🥣 Refeeding day ' + n + ' · Today’s Word') + '</h3></div>' +
+@@ f455db3111
+      '<div class="verse">“' + v.t + '”</div><div class="ref">— ' + v.r + ' (KJV)</div><div class="apply">' + (w && w.milestone ? '🌟 ' : '💛 ') + v.e + '</div>' +
+@@ 3296fb13f1
+      '<div class="prayer">🙏 Today’s prayer · ' + (w ? w.pray : prayerFor(T)) + '</div></div>';
+@@ 6e5eb26a96
+      '<div class="prayer">🙏 A one-line prayer for today · ' + prayerFor(T) + '</div></div>';
+@@ c7e63dc9c1
+  h += '<div class="stats"><div class="stat"><b>' + comma(eaten) + '</b><span>eaten / ' + comma(mp.target) + '</span></div><div class="stat"><b>' + comma(burned) + '</b><span>exercise kcal</span></div><div class="stat"><b>' + volTxt(x.water) + '</b><span>water / ' + volTxt(P.water) + '</span></div></div>' +
+@@ 18fa95c0ed
+  h += '<div class="card"><div class="sec-title"><h3>🍽 Today’s Meal Plan</h3><button class="link" onclick="shuffleMeals()">↻ Other options</button></div>' +
+@@ 27b574ffb4
+    '<p class="muted">About ' + comma(mp.total) + ' kcal' + (mp.plant ? ' · vegetables, grains & beans' : '') + (mp.win ? ' · eating window 12–8 pm' : '') + (mp.hp ? ' · high protein' : '') + (mp.refeed ? ' · small and often' : '') + (mp.noSnack ? ' · fasting from snacks' : '') + (mp.fastDay ? ' · fast day' : '') + '</p>' + vline('meal', T);
+@@ fae93dbb36
+      (m.fast ? '<span class="ic">💧</span>' : '<button class="tick' + (on ? ' on' : '') + '" aria-label="Ate ' + m.n + '" onclick="toggleMeal(\'' + m.key + '\',' + m.k + ')">✓</button>') + '</div>';
+@@ 07eba4b2bb
+  h += '<details><summary>＋ Log other food</summary><div style="margin-top:4px;">' + QUICK_FOODS.map((q, i) => '<button class="chip" onclick="addQuick(' + i + ')">' + q[0] + ' <small>' + q[1] + '</small></button>').join('') +
+@@ 9305db6937
+    '<div class="row" style="margin-top:4px;"><input class="inp grow" id="exName" placeholder="Food name"><input class="inp" id="exKcal" type="number" inputmode="numeric" placeholder="kcal" style="width:96px;"></div><button class="btn sm sec" onclick="addCustomFood()">Log</button></div></details>';
+@@ 53425c6524
+  if (x.extras.length) h += '<div class="muted" style="margin-top:6px;">' + x.extras.map((e, i) => esc(e.n) + ' ' + comma(e.k) + ' kcal <button class="link" onclick="delExtra(' + i + ')" aria-label="Delete">✕</button>').join('<br>') + '</div>';
+@@ ba251a3ebc
+    h += afNoteCard() + '<div class="card"><h3>⏱ Fasting Timer · goal ' + pr.timer + ' hours</h3><div class="timer" id="tmv">' + fmtHMS(timerSec()) + '</div><div class="bar"><i id="tmbar" style="width:' + Math.min(100, timerSec() / (pr.timer * 3600) * 100) + '%"></i></div>' +
+@@ cefbabd947
+      '<div class="row"><button class="btn grow" onclick="toggleTimer()">' + (S.timer.running ? 'Pause' : 'Start fast') + '</button><button class="btn sec" style="width:96px;" onclick="resetTimer()">Reset</button></div>' +
+@@ 8528b1db5e
+      '<p class="muted" style="margin-top:8px;">If you feel dizzy or unwell, stop and eat right away — no matter the goal.</p>' + afSwitch(timerSec() / 3600) + '</div>';
+@@ a5b0c57216
+  h += '<div class="card"><h3>🏃 Today’s Exercise <span class="tag">' + EX_LEVEL[R.lvl].n + '</span></h3>' +
+@@ 853aa0a860
+    ((pid === 'if168' || pid === 'intensive') && active ? '<p class="muted">' + (pid === 'intensive' ? '30–45 minutes daily. ' : '') + 'Avoid hard workouts while fasted — exercise during your eating window.</p>' : '') + vline('exercise', T);
+@@ 5cce870ad7
+    h += '<div class="item"><span class="ic">' + e.a + '</span><div class="txt"><b>' + e.t + '</b><div>' + e.rx + ' · about ' + k + ' kcal</div><details><summary style="min-height:36px; font-size:14px;">How to do it</summary><div class="explain" style="font-size:14.5px;">' + e.d + '</div></details></div>' +
+@@ 150a788f18
+      '<button class="tick' + (on ? ' on' : '') + '" aria-label="Done: ' + e.t + '" onclick="toggleEx(\'' + id + '\',' + k + ')">✓</button></div>';
+@@ aeb4255b47
+  h += '<div class="card"><div class="sec-title"><h3>💧 Water</h3><b style="color:var(--p)">' + volTxt(x.water, true) + ' / ' + volTxt(P.water) + '</b></div><div class="bar"><i style="width:' + wp + '%"></i></div>' +
+@@ f69e00a08e
+    '<div class="row"><button class="btn sec" style="width:72px;" onclick="addWater(-250)" aria-label="Remove one glass">−</button><button class="btn grow" onclick="addWater(250)">+ 1 glass (' + volTxt(250, true) + ')</button><button class="btn sec" style="width:96px;" onclick="addWater(500)">+' + volTxt(500, true).replace(/ .*/, '') + '</button></div>' + vline('water', T) + '</div>';
+@@ 5363894407
+    h += '<div class="card"><h3>✅ Today’s Checklist · Day ' + n + '</h3>' + progItems().map((it, i) => '<label class="chk"><input type="checkbox" ' + (checks[i] ? 'checked' : '') + ' onchange="toggleCheck(' + i + ',this.checked)">' + esc(it) + '</label>').join('') + '</div>';
+@@ dc46a79f20
+  h += '<button class="btn sec" onclick="shareToday()">📤 Share today’s summary & verse</button>';
+@@ 6c17d714c7
+  h += '<details class="card" style="margin-top:14px;"' + ((pr.fasting || pid === 'refeed') && active ? ' open' : '') + '><summary>🛑 Stop immediately if…</summary><ul class="l">' + STOP_LIST.map(s => '<li>' + s + '</li>').join('') + '</ul><p class="muted">Contact a medical provider. In an emergency, call 911.</p></details>';
+@@ d9f2d10bc6
+  return '<div class="card soft" id="slipCard"><h3>🌅 It’s okay — begin again</h3>' + vline('slip', T) +
+@@ eeca2533ee
+    '<p class="muted">' + (over ? 'You ate a little more than today’s goal. ' : missed ? 'It’s okay that you didn’t finish yesterday’s checklist. ' : '') + 'Stumbling isn’t failing. Start again with the next meal, the next step.</p></div>';
+@@ 0316593e7b
+  const form = '<div class="row" style="margin-top:8px;"><div class="unit grow"><input class="inp" id="wIn" type="number" inputmode="decimal" step="0.1" placeholder="Weight"><span>' + wU() + '</span></div></div>' +
+@@ e2ed95e475
+    '<div class="row" style="margin-top:8px;"><input class="inp grow" id="bpIn" type="number" inputmode="numeric" placeholder="Systolic BP (optional)"><input class="inp grow" id="bsIn" type="number" inputmode="numeric" placeholder="Fasting blood sugar (optional)"></div>' +
+@@ d9050d5ea6
+    (f.diab || f.htn ? '<p class="muted" style="margin-top:6px;">' + (f.diab ? 'If you have diabetes, please log your blood sugar too. ' : '') + (f.htn ? 'Please log your blood pressure too.' : '') + '</p>' : '') +
+@@ dcdf971a12
+    '<button class="btn sm" onclick="saveCheckin()">Save</button>';
+@@ 3de753b48f
+  if (daily) return '<div class="card hl"><h3>🩺 Today’s Check · Blood Pressure · Blood Sugar' + (progId() === 'waterfast' ? ' (weight optional)' : ' · Weight') + '</h3><p class="muted">While fasting or refeeding, measure every morning. If blood sugar is under 70, stop immediately.</p>' +
+@@ a3f4b98019
+    (last && last.d === T || todayH ? '<p class="good">Logged today: ' + (last && last.d === T ? wTxt(last.kg) + ' ' : '') + (todayH ? (todayH.bp ? '· BP ' + todayH.bp + ' ' : '') + (todayH.bs ? '· blood sugar ' + todayH.bs : '') : '') + '</p>' : '') + form + '</div>';
+@@ af555dcfeb
+  if (due) return '<div class="card hl"><h3>⚖ This Week’s Weigh-In</h3><p class="muted">Once a week, at the same time (morning, before eating), works best.</p>' + form + vline('weight', T) + '</div>';
+@@ b0e1aa3304
+  return '<div class="card"><div class="sec-title"><h3>⚖ Weight</h3><span class="muted">Next weigh-in in ' + dayTxt(7 - diffDays(last.d, T)) + '</span></div>' + weightChart(340, 150) +
+@@ e74eb2a423
+    '<details><summary>Log now</summary>' + form + '</details></div>';
+@@ 1f577932f7
+  const pts = S.weights.slice().sort((a, b) => a.d < b.d ? -1 : 1).map(p => ({ d:p.d, kg:wNum(p.kg) })), goal = +S.profile.goal ? wNum(+S.profile.goal) : 0;
+@@ e22a265d59
+  if (!pts.length) return '<p class="muted">No weight logged yet.</p>';
+@@ a0dbaee1a3
+  let s = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" role="img" aria-label="Weight trend chart">';
+@@ 8bea364b51
+  if (goal) s += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + Y(goal) + '" y2="' + Y(goal) + '" stroke="#a9c79a" stroke-dasharray="5 4"/><text x="' + (W - R) + '" y="' + (Y(goal) - 5) + '" text-anchor="end" fill="#a9c79a" font-size="11">Goal ' + goal + ' ' + wU() + '</text>';
+@@ 831cb2b756
+  s += '<text x="' + L + '" y="' + (H - 6) + '" fill="#a9b4ac" font-size="10.5">' + fmtMD(pts[0].d) + '</text><text x="' + (W - R) + '" y="' + (H - 6) + '" text-anchor="end" fill="#a9b4ac" font-size="10.5">' + fmtMD(pts[pts.length - 1].d) + ' · ' + pts[pts.length - 1].kg + ' ' + wU() + '</text>';
+@@ e69ccf9adc
+function toggleMeal(k, kcal) { const x = day(); if (x.meals[k] !== undefined) delete x.meals[k]; else { x.meals[k] = kcal; ktoast(['Well done — a meal received with thanks!', 'Good choice.', 'Your body will thank you.'][Object.keys(x.meals).length % 3], 'toast'); } save(); rerender(); }
+@@ 8efb29746c
+function shuffleMeals() { const x = day(); x.shuffle++; save(); rerender(); toast('Switched to other options.'); }
+@@ 1518fddea0
+function addQuick(i) { const q = QUICK_FOODS[i]; day().extras.push({ n:q[0], k:q[1], t:now() }); save(); rerender(); ktoast('Logged. It’s okay — keep the next meal light.', 'slip'); }
+@@ e06b9cad07
+  if (!n || !(k > 0 && k < 5000)) return alert('Please enter a food name and calories (1–5000).');
+@@ 189e395aac
+  day().extras.push({ n, k:Math.round(k), t:now() }); save(); rerender(); toast('Logged.');
+@@ b4e34c6ff3
+function toggleEx(id, k) { const x = day(); if (x.ex[id] !== undefined) delete x.ex[id]; else { x.ex[id] = k; ktoast('Great job! Movement renews your body.', 'exercise'); } save(); rerender(); }
+@@ f0d05c7c24
+function addWater(ml) { const x = day(); x.water = Math.max(0, x.water + ml); save(); rerender(); if (ml > 0) { if (x.water >= plan().water && x.water - ml < plan().water) ktoast('Water goal reached for today! 💧', 'water'); else toast('Water ' + volTxt(x.water, true)); } }
+@@ 904d849127
+  if (!S.program.done && doneCount() === progLen()) { S.program.done = true; S.program.doneAt = now(); save(); rerender(); alert('🏅 Congratulations! You finished ' + progLen() + ' days of ' + progName() + '.\n“' + vt('Philippians 4:13') + '” (Philippians 4:13)' + (progId() === 'intensive' ? '\n\nWhen this ends, we suggest continuing with the 14-day maintenance season.' : '')); return; }
+@@ cff0cb4451
+  save(); rerender(); if (on && dayDone(n)) toast('Day ' + n + ' complete! Well done.');
+@@ 9807b728ab
+function saveRefl(v) { day().refl = v.trim(); save(); toast('Saved.'); }
+@@ 24d0c6be7a
+  const wv = +document.getElementById('wIn').value, kg = wv ? Math.round(wInKg(wv) * 100) / 100 : 0, bp = +document.getElementById('bpIn').value || 0, bs = +document.getElementById('bsIn').value || 0;
+@@ d317e926ac
+  if (!kg && !bp && !bs) return alert('Please enter at least one: weight, blood pressure or blood sugar.');
+@@ 32de2cfd16
+  if (kg && !(kg >= 30 && kg <= 250)) return alert(uMode() === 'us' ? 'Please enter a weight between 66 and 551 lb.' : 'Please enter a weight between 30 and 250 kg.');
+@@ dedaff85dd
+  if (bp && !(bp >= 60 && bp <= 250)) return alert('Please check your blood pressure value (60–250).');
+@@ b42cc99ed7
+  if (bs && !(bs >= 20 && bs <= 600)) return alert('Please check your blood sugar value (20–600).');
+@@ 62accc24d2
+  if (warns.length) { alert('⚠ Safety notice\n\n' + warns.join('\n\n') + '\n\nThis app is not medical advice.'); toast('⚠ Please double-check your readings.'); }
+@@ cd5cb4f2b1
+  else if (kg) ktoast('Weigh-in done! Consistency is strength.', 'weight'); else toast('Logged.');
+@@ c5167b9042
+  let h = '<h2>My Journal</h2>';
+@@ ac44fa1d34
+  h += '<div class="card"><h3>⚖ Weight Trend</h3>' + weightChart(340, 180);
+@@ f74a8f512f
+  if (ws.length) { const f = ws[0].kg, l = ws[ws.length - 1].kg; h += '<p class="muted">Start ' + wTxt(f) + ' → now ' + wTxt(l) + ' (' + (l - f > 0 ? '+' : '') + wTxt(l - f) + ') · to goal ' + wTxt(Math.max(0, l - S.profile.goal)) + '</p>'; }
+@@ 609404fbda
+  h += '<details><summary>Log weight</summary><div class="row"><div class="unit grow"><input class="inp" id="wIn" type="number" step="0.1" inputmode="decimal" placeholder="Weight"><span>' + wU() + '</span></div></div><input type="hidden" id="bpIn"><input type="hidden" id="bsIn"><button class="btn sm" onclick="saveCheckin()">Save</button></details></div>';
+@@ 686d886084
+  let svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" role="img" aria-label="Calories eaten, last 7 days">';
+@@ 1699b038ea
+  days7.forEach((d, i) => { const x = 10 + i * (bw + gap), v = vals[i]; svg += '<rect x="' + x + '" y="' + Y(v) + '" width="' + bw + '" height="' + (120 - Y(v)) + '" rx="6" fill="' + (v > P.target * 1.1 ? '#d9a78a' : '#b4c9a6') + '" opacity="' + (d === T ? 1 : .75) + '"/><text x="' + (x + bw / 2) + '" y="138" text-anchor="middle" fill="#a9b4ac" font-size="10.5">' + (+d.split('-')[2]) + '</text>'; });
+@@ 5415a1b741
+  h += '<div class="card"><h3>🍽 Eaten, Last 7 Days</h3>' + svg + '<p class="muted">Dotted line: goal ' + comma(P.target) + ' kcal</p></div>';
+@@ a3dfb305b6
+  h += '<div class="card"><h3>💧 Water · 🏃 Exercise (7 days)</h3>' + days7.map((d, i) => '<div class="row" style="font-size:14.5px; min-height:34px;"><span style="width:52px;" class="muted">' + (+d.split('-')[1]) + '/' + (+d.split('-')[2]) + '</span><div class="grow"><div class="bar" style="margin:0;"><i style="width:' + Math.min(100, wv[i] / P.water * 100) + '%"></i></div></div><span style="width:110px; text-align:right;">' + volTxt(wv[i]) + ' · ' + ev[i] + ' kcal</span></div>').join('') + '</div>';
+@@ 5075e7d47c
+  h += '<div class="card"><h3>📋 Program</h3><p>' + pr.icon + ' ' + progName() + (S.program.done ? '<span class="badge">🏅 Finished</span>' : '') + '</p><div class="bar"><i style="width:' + dc / progLen() * 100 + '%"></i></div><p class="muted">' + dc + ' / ' + progLen() + ' days complete · started ' + (S.program.start ? fmtMD(S.program.start) : '-') + '</p>' +
+@@ 1f8703a448
+    (S.history.length ? '<p class="muted" style="margin-top:6px;">Earlier: ' + S.history.map(x => (PROGRAMS[x.id] ? progName(x.id, x.len || PROGRAMS[x.id].days) : x.id) + (x.done ? ' 🏅' : '')).join(', ') + '</p>' : '') + '</div>';
+@@ 7d42f0fcb9
+  if (S.health.length) h += '<div class="card"><h3>❤ Blood Pressure · Blood Sugar</h3>' + S.health.slice(-10).reverse().map(r => { const w = safetyWarnings(r.bp, r.bs).length; return '<div class="row" style="min-height:36px; font-size:15px;"><span class="muted" style="width:70px;">' + fmtMD(r.d) + '</span><span class="grow"' + (w ? ' style="color:#e9b8a8;"' : '') + '>' + (r.bp ? 'BP ' + r.bp : '') + (r.bp && r.bs ? ' · ' : '') + (r.bs ? 'Blood sugar ' + r.bs : '') + (w ? ' ⚠' : '') + '</span></div>'; }).join('') + '</div>';
+@@ 2a92017bdb
+  if (refl.length) h += '<div class="card"><h3>🌙 Reflection Notes</h3>' + refl.map(d => '<p style="font-size:15px; margin:8px 0;"><span class="muted">' + fmtMD(d) + '</span><br>' + esc(S.days[d].refl) + '</p>').join('') + '</div>';
+@@ 4f990cad81
+  if (S.legacyFast.length) h += '<details class="card"><summary>Earlier fasting logs (' + S.legacyFast.length + ')</summary>' + S.legacyFast.slice().reverse().map(r => '<p class="muted" style="margin:6px 0;">' + esc(r.day || '') + (r.wloss ? ' · weight ' + esc(r.wloss) + ' kg' : '') + (r.bp ? ' · BP ' + esc(r.bp) : '') + (r.bs ? ' · blood sugar ' + esc(r.bs) : '') + (r.note ? '<br>' + esc(r.note) : '') + '</p>').join('') + '</details>';
+@@ e801625e35
+  let h = '<h2>The Word</h2>';
+@@ 93ae609aa5
+  h += '<button class="opt" onclick="showTab(\'seek\')" style="border-color:rgba(180,201,166,.55);">🌱 <b>New to the Bible?</b><small>A gentle guide for anyone curious about God, Jesus and prayer</small></button>';
+@@ 611bba9acf
+  h += '<div class="card hl"><h3>Today’s Verse · ' + fmtMD(T) + '</h3>' + verseCard(VERSES[ti], { full:true }) + '</div>';
+@@ cb9672373c
+  h += '<h3 style="margin:18px 0 10px;">Verse collection (' + VERSES.length + ')</h3>';
+@@ d3888c337a
+    h += '<details class="card"><summary style="display:block; min-height:auto; color:var(--t); font-weight:400;"><span class="ref" style="margin:0 0 4px; display:block;">' + v.r + '</span>' + v.t + '</summary><div class="explain">💡 ' + v.e + '</div><div class="apply"><b>✔ Step</b> · ' + v.a + '</div></details>';
+@@ 2e8dd3dabf
+  h += '<p class="muted" style="text-align:center; margin-top:10px;">Scripture: King James Version (KJV), public domain</p>';
+@@ 89c0adb905
+  el.innerHTML = '<h2>New to the Bible?</h2><p class="lead">Nothing here is forced on you. Read slowly, only as much as you’re curious about.</p>' +
+@@ d47d433729
+    '<div class="card"><h3>📖 What kind of book is the Bible?</h3><p>It’s a collection of 66 books written over a long span of time. It speaks about how we can live well — and how deeply God loves people.</p></div>' +
+@@ 04589434f7
+    '<div class="card"><h3>✨ Who is God?</h3><p>The Bible introduces God as the One who made the world, who knows each of us by name, and who loves us. Not only when we do well — He waits for us to get back up when we fall.</p></div>' +
+@@ 2f1a2fab1d
+    '<div class="card"><h3>✝ Who is Jesus?</h3><p>He lived in Israel about two thousand years ago. He healed the sick and became a friend to the lonely. The Bible says Jesus took our wrongs upon Himself, died on the cross, and rose again — opening a way for anyone to begin again.</p>' +
+@@ 1725ea3798
+    '<div class="prayer">“' + vt('John 3:16') + '”<br><small class="muted">— John 3:16 (KJV)</small></div></div>' +
+@@ 42056c4871
+    '<div class="card"><h3>🌱 What it means to be born again</h3><p>Just as the habits of your body can be renewed, so can your heart. The Bible calls this being “born again.” Your past doesn’t define you; anyone can start fresh.</p>' +
+@@ 0ace440f85
+    '<div class="prayer">“' + vt('2 Corinthians 5:17') + '”<br><small class="muted">— 2 Corinthians 5:17 (KJV)</small></div></div>' +
+@@ 1464728834
+    '<div class="card"><h3>🙏 How do I pray?</h3><p>There’s no set formula. Just talk honestly, the way you would with a friend. You might begin like this:</p>' +
+@@ 541bec7d82
+    '<div class="prayer">God, I don’t know much yet, but I’m curious. Please watch over this time of caring for my body and heart. If You know me, please let me know You too. In Jesus’ name I pray. Amen.</div></div>' +
+@@ 9dccdb552e
+    '<div class="card"><h3>⛪ If you’d like to know more</h3><p>Feel free to ask the friend who told you about this app, or stop by a worship service at a church near you. Tell them it’s your first time — they’ll be glad to welcome you.</p><p class="muted" style="margin-top:8px;">And of course, simply building healthy habits with the app, as you are now, is perfectly okay. No one can force faith.</p>' +
+@@ 3e9a0b486a
+    '<button class="btn sec" onclick="askFriend()">💬 Tell a friend I’m curious</button><button class="btn ghost" onclick="showTab(\'word\')">See the verse collection</button></div>';
+@@ 44183a716e
+  let h = '<h2>' + (S.name ? esc(S.name) : 'Me') + '</h2>';
+@@ 9705f08747
+  h += '<div class="card"><h3>👤 Profile</h3><p>' + (p.sex === 'M' ? 'Male' : 'Female') + ' · ' + p.age + ' yrs · ' + hTxt(p.height) + ' · ' + wTxt(p.weight) + ' → goal ' + wTxt(p.goal) + '</p>' +
+@@ 7dcd268c54
+    '<p class="muted">BMI ' + P.bmi.toFixed(1) + ' · ' + comma(P.target) + ' kcal a day · water ' + volTxt(P.water) + ' · ' + (ACT.find(a => a.id === p.activity) || {}).n + '</p>' +
+@@ 57abca202a
+    (flags.length ? '<p class="muted">Health: ' + flags.join(', ') + '</p>' : '') + (P.goalDate && !pr.water && progId() !== 'refeed' ? '<p class="muted">Expected to reach goal ' + fmtYMD(P.goalDate) + '</p>' : '') +
+@@ a1b30a2f77
+    '<div class="seg" id="meUnits" style="margin-top:8px;">' + [['us', 'lb · ft/in'], ['metric', 'kg · cm']].map(o => '<button class="opt' + (uMode() === o[0] ? ' sel' : '') + '" data-units="' + o[0] + '" onclick="setUnits(\'' + o[0] + '\')">' + o[1] + '</button>').join('') + '</div>' +
+    '<button class="btn sm sec" onclick="startOnboarding(\'basic\',\'edit\')">Edit profile · recalculate plan</button></div>';
+@@ 91d44885cf
+  const glp = { using:'Using a weight-loss medication', considering:'Considering a weight-loss medication', no:'Not using a weight-loss medication' }[p.glp1];
+@@ f7d8b085fa
+  h += '<div class="card"><h3>🧭 The Path That Fits You</h3><p class="muted">' + (glp ? glp + ' · ' : '') + 'Review the guidelines for weight-loss medications (GLP-1) and the programs that fit you.</p><button class="btn sm sec" onclick="startOnboarding(\'path\',\'edit\')">See the path that fits me</button></div>';
+@@ 4e5fd2f861
+  h += '<div class="card"><h3>📋 Program</h3><p>' + pr.icon + ' ' + progName() + (S.program.done ? '<span class="badge">🏅 Finished</span>' : '') + '</p><p class="muted">Day ' + progDay() + ' · started ' + (S.program.start ? fmtMD(S.program.start) : '-') + '</p>' +
+@@ bf303d209e
+    (pr.hasOpt ? '<label class="f">What I’m giving up</label><select class="inp" onchange="S.program.opt=this.value; save(); toast(\'Updated.\')">' + LENT_OPTS.map(o => '<option' + (o === S.program.opt ? ' selected' : '') + '>' + o + '</option>').join('') + '</select>' : '') +
+@@ 91c195ff15
+    '<button class="btn sm sec" onclick="startOnboarding(\'program\',\'edit\')">Change program</button></div>';
+@@ 98c71db3d1
+  h += '<div class="card"><h3>🎯 My Goal</h3><p class="muted">' + (pace ? pace[1] : 'Pace not chosen') + ' · ' + (mot ? mot[1] : 'Reason not chosen') + '</p><button class="btn sm sec" onclick="startOnboarding(\'goal\',\'edit\')">Reset my goal</button></div>';
+@@ 2d42631491
+  h += '<div class="card"><h3>📤 Share Card</h3><p class="muted">Share today’s summary and verse by text, WhatsApp, or social media.</p><div class="share-pre" id="sharePre">' + esc(buildShareText()) + '</div><button class="btn" onclick="shareToday()">Share</button></div>';
+@@ 6185e46abc
+  h += '<div class="card"><h3>💾 Backup</h3><p class="muted">Save all your records to a file or restore them. Use this when you switch devices.</p><button class="btn sm sec" onclick="downloadBackup()">⬇ Export backup</button><button class="btn sm sec" onclick="document.getElementById(\'importFile\').click()">⬆ Import backup</button><input type="file" id="importFile" accept="application/json,.json" style="display:none;" onchange="importFromFile(this)"></div>';
+@@ 8b878154c7
+  h += '<div class="card"><h3>✦ The Purify Story</h3><p class="muted">' + TAGLINE + ' — ' + TAGSUB + '</p><button class="btn sm sec" id="introAgain" onclick="showIntroTour()">See the welcome screens again</button></div>';
+@@ 2f4120263e
+  h += '<div class="card" id="langCard"><h3>🌐 Language</h3><a class="btn sm sec" id="langLink" href="https://yumahil7.github.io/purify-app/" hreflang="ko" lang="ko">한국어 버전</a></div>';
+@@ 9cdd5c884e
+  h += '<div class="card"><h3>⚕ Safety Information</h3><details><summary>This app is not medical advice</summary><p style="font-size:15px;">If you’re pregnant or breastfeeding, have diabetes, take medication, are under 18, have a history of an eating disorder, or have heart or kidney disease, always talk with your doctor before changing your diet or fasting. Calories and reference values are general estimates.</p></details>' +
+@@ 00dbf8a22f
+    '<details><summary>🛑 When to stop immediately</summary><ul class="l">' + STOP_LIST.map(s => '<li>' + s + '</li>').join('') + '</ul><p class="muted">Contact a medical provider. In an emergency, call 911.</p></details>' +
+@@ 04e735a44b
+    '<details><summary>Blood pressure · blood sugar reference</summary><p class="muted">Systolic BP under 120 normal · 140+ high range · 90 or below, watch for low<br>Fasting blood sugar 70–99 normal · 100–125 prediabetes · 126+ caution · under 70 low</p></details></div>';
+@@ 2e31b0d53f
+  h += '<button class="btn ghost" onclick="resetAll()" style="opacity:.8;">Reset all records</button><p class="muted" style="text-align:center; margin-top:12px;">Purify v3 (English) · Scripture: KJV</p>';
