@@ -1,5 +1,5 @@
 // Purify (English) service worker — offline cache (user data lives in localStorage; the SW never touches it)
-const CACHE = 'purify-en-v1';
+const CACHE = 'purify-en-v2';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './favicon.png',
   './icons/icon-192.png', './icons/icon-512.png', './icons/icon-512-maskable.png', './icons/apple-touch-icon.png',
   './audio/purify-bgm.mp3', './audio/ave-maria.mp3',
